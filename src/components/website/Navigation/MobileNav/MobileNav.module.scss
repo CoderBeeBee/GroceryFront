@@ -1,0 +1,54 @@
+.mobileNav {
+	position: fixed;
+	inset: 0;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-height: 100dvh;
+	height: 100%;
+	background-image: url('../../../../../public/images/hero/groceryWebp.webp');
+	background-position: center;
+	background-size: cover;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-100%);
+	z-index: 10001;
+	transition: all 0.5s ease-in-out;
+	.mobileNavWrapper {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		margin-bottom: 4rem;
+		width: 100%;
+		max-width: 500px;
+		background-color: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(5px);
+
+		
+
+		.userWrapper {
+			padding: var(--padding_08);
+			margin-bottom: 2rem;
+		}
+		
+	}
+}
+
+.activeMobile {
+	display: flex;
+}
+.activeAnim {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0%);
+}
+.scrollMenu {
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+@media (width >= 900px) {
+	.mobileNav {
+		display: none;
+	}
+}

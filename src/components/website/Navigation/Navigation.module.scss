@@ -1,0 +1,28 @@
+.navigationContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1rem 0;
+	background: transparent;
+
+	.navigationWrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
+		gap: 2rem;
+		width: 100%;
+		height: var(--headerHeight);
+		background-color: var(--white);
+		border-radius: var(--borderRadius_12);
+		
+		.additionalNavWrapper{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 2rem;
+		}
+	}
+}

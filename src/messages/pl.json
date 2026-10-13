@@ -1,0 +1,36 @@
+{
+	"Mobile": {
+		"Menu": "Menu",
+		"Site Settings": "Ustawienia strony",
+		"Close mobile menu": "Zamknij menu mobilne",
+		"Language": "Język"
+	},
+	"Menu": {
+		"Home": "Strona główna",
+		"Shop": "Sklep",
+		"Categories": "Kategorie",
+		"Fruits": "Owoce",
+		"Juices": "Soki",
+		"Vegetables": "Warzywa",
+		"Nuts & Seeds": "Orzechy i nasiona",
+		"Dairy & Eggs": "Nabiał i jajka",
+		"Jams": "Dżemy",
+		"Honey & Sweeteners": "Miody i słodziki",
+		"Honey": "Miody",
+		"Sweeteners": "Słodziki",
+		"Blog": "Blog",
+		"About": "O nas",
+		"Contact": "Kontakt"
+	},
+	"AuthLink": {
+		"Log in": "Zaloguj się",
+		"Log out": "Wyloguj się",
+		"Register": "Utwórz konto"
+	},
+	"UserAccount": {
+		"User Account": "Konto Użytkownika",
+		"Profile": "Profil",
+		"Settings": "Ustawienia",
+		"Log out": "Wyloguj się"
+	}
+}

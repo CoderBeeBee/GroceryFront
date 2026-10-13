@@ -1,0 +1,38 @@
+{
+  "Mobile":{
+    "Menu":"Menu",
+    "Site Settings":"Site Settings",
+    "Close mobile menu":"Close mobile menu",
+    "Language":"Language"
+  },
+
+  "Menu": {
+    "Home": "Home",
+    "Shop": "Shop",
+    "Categories": "Categories",
+    "Fruits": "Fruits",
+    "Juices": "Juices",
+    "Vegetables": "Vegetables",
+    "Nuts & Seeds": "Nuts & Seeds",
+    "Dairy & Eggs": "Dairy & Eggs",
+    "Jams": "Jams",
+    "Honey & Sweeteners": "Honey & Sweeteners",
+    "Honey": "Honey",
+    "Sweeteners": "Sweeteners",
+    "Blog": "Blog",
+    "About": "About",
+    "Contact": "Contact"
+  },
+  "AuthLink":{
+    "Log in":"Log in",
+    "Log out":"Log out",
+    "Register":"Create account"
+  },
+  "UserAccount":{
+    "User Account":"User Account",
+    "Profile":"Profile",
+    "Settings":"Settings",
+    "Log out":"Log out"
+
+  }
+}

@@ -1,0 +1,66 @@
+
+
+:root {
+	// Colors
+	--primary: #0a1e08;
+	// --primary: #B92A07;
+	// --secondary: #fcd127;
+	--secondary: #b4b03c;
+	// --secondary: #B92A07;
+	--thirdColor: #fcd127;
+	--hoverColor: #b4b03c;
+	--white: #ffffff;
+	--black: #000000;
+	
+	// Background color
+	--background: #f5f5f5;
+
+
+	// Heights
+	--headerHeight: 60px;
+	--lineHeight20: 20px;
+	--lineHeight30: 30px;
+	--lineHeight40: 40px;
+	--lineHeight50: 50px;
+	--lineHeight60: 60px;
+	// Padding
+	--padding_06: 0.6rem 1.2rem;
+	--padding_08: 0.8rem 1.6rem;
+	--padding_10: 1rem 2rem;
+	--padding_12: 1.2rem 2.4rem;
+	// Gap
+
+	// Font sizes
+	--fontSize_12: 1.2rem;
+	--fontSize_14: 1.4rem;
+	--fontSize_16: 1.6rem;
+	--fontSize_18: 1.8rem;
+	--fontSize_20: 2rem;
+	--fontSize_24: 2.4rem;
+	--fontSize_28: 2.8rem;
+	--fontSize_32: 3.2rem;
+
+	// Border radius
+	--borderRadius_08: 0.8rem;
+	--borderRadius_10: 1rem;
+	--borderRadius_12: 1.2rem;
+	--borderRadius_14: 1.4rem;
+	--borderRadius_16: 1.6rem;
+	--borderRadius_18: 1.8rem;
+	--borderRadius_20: 2rem;
+	--borderRadius_22: 2.2rem;
+	--borderRadius_24: 2.4rem;
+	--borderRadius_26: 2.6rem;
+	--borderRadius_28: 2.8rem;
+	--borderRadius_30: 3rem;
+
+	//
+}
+
+@media (max-width: 900px) {
+	:root {
+		--lineHeight: calc(2.5 * 2rem);
+		
+		
+	}
+}
