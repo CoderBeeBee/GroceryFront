@@ -5,11 +5,7 @@ export const routing = defineRouting({
 	defaultLocale: 'en',
 	localePrefix: 'as-needed',
 	pathnames: {
-		"/":{
-			en:'/',
-			pl:'/',
-			de:'/'
-		},
+		
 		'/about': {
 			en:'/about',
 			pl: '/o-nas',

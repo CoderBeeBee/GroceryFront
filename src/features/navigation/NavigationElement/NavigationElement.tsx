@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { MenuTypes } from '../../../components/website/Navigation/dataMenu'
 
-
 import DropDown from '../DropDown/DropDown'
 import { closeMenu, expandMenu, toggleDropDown, useMenuStore } from '@/src/store/useMenuStore'
 import clsx from 'clsx'
@@ -35,6 +34,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 			className={clsx(styles.navigationElementWrapper, { [styles.activeDropdown]: isActive })}>
 			{item.href ? (
 				<Link
+					locale={`${locale}`}
 					href={item.href}
 					className={clsx(styles.link, { [styles.activeLink]: isActive2 })}
 					onMouseEnter={() => {
@@ -66,14 +66,12 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 						}
 					}}>
 					<span className={styles.title}>{t(item.titleKey)}</span>
-					<ChevronDownSVG className={clsx( { [styles.activeRotateChevron]: isActive })} />
+					<ChevronDownSVG className={clsx({ [styles.activeRotateChevron]: isActive })} />
 				</div>
 			)}
 
 			{item.children?.length && <DropDown data={item} styles={styles} index={index} />}
 		</li>
-
-		
 	)
 }
 
