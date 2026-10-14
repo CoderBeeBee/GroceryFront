@@ -22,7 +22,7 @@ const LanguageSwitcher = () => {
 			locale: el,
 		})
 
-		router.refresh()
+		
 	}
 	const toggleDropdown = () => {
 		setIsActive(prev => !prev)
