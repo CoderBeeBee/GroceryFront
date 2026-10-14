@@ -32,5 +32,15 @@
 		"Profile": "Profil",
 		"Settings": "Ustawienia",
 		"Log out": "Wyloguj się"
+	},
+	"Metadata": {
+		"Home": {
+			"title": "Strona Główna - Moja Firma",
+			"description": "Witaj na naszej stronie głównej."
+		},
+		"About": {
+			"title": "O Nas - Poznaj Nasz Zespół",
+			"description": "Dowiedz się więcej o naszej historii i misji."
+		}
 	}
 }

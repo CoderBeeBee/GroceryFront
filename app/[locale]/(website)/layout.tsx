@@ -1,7 +1,7 @@
 import Navigation from '@/src/components/website/Navigation/Navigation'
 // import '../../global.scss'
 
-const layout = ({ children }: LayoutProps<'/[lang]'>) => {
+const layout = ({ children }: LayoutProps<'/[locale]'>) => {
 	return (
 		<>
 			<Navigation />

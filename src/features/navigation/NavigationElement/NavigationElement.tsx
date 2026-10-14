@@ -18,7 +18,7 @@ interface NavigationElementProps {
 }
 
 const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
-	const { lang } = useParams()
+	const { locale } = useParams()
 
 	const t = useTranslations('Menu')
 	const { activeIndex } = useMenuStore(state => state)
@@ -26,7 +26,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 	const { isMobile } = useWindowSize()
 	const pathname = usePathname()
 	const isActive = activeIndex === index
-	const isActive2 = pathname === `${item.href.toLowerCase()}${lang}` && !isActive
+	const isActive2 = pathname === `${item.href.toLowerCase()}${locale}` && !isActive
 
 	return (
 		<li

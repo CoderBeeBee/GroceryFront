@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
+
 import { Inter } from 'next/font/google'
 import '../global.scss'
-import { globalMetaData } from '@/src/config/metadata/metadata'
+
 import { ReactNode } from 'react'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { routing } from '@/src/lib/i18n/routing'
@@ -14,24 +14,28 @@ const inter = Inter({
 	subsets: ['latin'],
 })
 
-export const metadata: Metadata = globalMetaData
+
+
+export function generateStaticParams() {
+	return routing.locales.map(locale => ({ locale }))
+}
 
 type Props = {
 	children: ReactNode
-	params: Promise<{ lang: string }>
+	params: Promise<{ locale: string }>
 }
 const RootLayout = async ({ children, params }: Props) => {
-	const { lang } = await params
+	const { locale } = await params
 
-	if (!hasLocale(routing.locales, lang)) {
+	if (!hasLocale(routing.locales, locale)) {
 		notFound()
 	}
 
 	const messages = await getMessages()
 	return (
-		<html lang={lang} className={`${inter.variable}  h-full antialiased`}>
+		<html lang={locale} className={`${inter.variable}  h-full antialiased`}>
 			<body>
-				<NextIntlClientProvider locale={lang} messages={messages}>
+				<NextIntlClientProvider locale={locale} messages={messages}>
 					{children}
 				</NextIntlClientProvider>
 			</body>

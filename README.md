@@ -11,6 +11,128 @@ Author: CoderBee
 Contact: coderBee@proton.me
 License: No License
 
+
+
+📄 License / Copyright
+# Licenses of Used Icons
+
+**Office Duotone Filled Vectors**
+Author: BomSymbols
+License: CC Attribution License (CC BY)
+Source: SVG Repo
+*The CC BY license allows the use, modification, and distribution of graphics, including in commercial projects, provided that appropriate credit is given, the source and license are cited, and any changes made are indicated.*
+
+**UIW Icons**
+Author: uiwjs
+License: MIT
+Repository: https://github.com/uiwjs/icons
+*The MIT license allows the use, modification, and distribution of icons, including in commercial projects, provided that the original copyright notice and license text are retained.*
+
+**Calcite UI Icons**
+Author: Esri
+License: MIT
+Repository: https://github.com/Esri/calcite-ui-icons
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright and license notices are retained.*
+
+**Nuiverse Icons**
+Author: Nuiverse Design
+License: BSD
+Repository: https://gitlab.com/nuinalp/open-source/nuiverse/icons
+*The BSD license permits use, modification, and distribution, provided that the original license is included.*
+
+**Unicons**
+Author: Iconscout
+License: Apache License 2.0
+Repository: https://github.com/Iconscout/unicons
+*The Apache License 2.0 permits use, modification, and distribution, including for commercial purposes, subject to the applicable license conditions, including preservation of copyright and license notices.*
+
+**Neuicons**
+Author: Neuicons
+License: MIT
+Repository: https://github.com/neuicons/neu
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright and license notices are retained.*
+
+**Fontisto**
+Author: Kenan Gündoğan
+License: MIT
+Repository: https://github.com/kenangundogan/fontisto
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright and license notices are retained.*
+
+**Ant Design Icons**
+Author: Ant Design
+License: MIT
+Repository: https://github.com/ant-design/ant-design-icons
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright and license notices are retained.*
+
+**Radix UI Icons**
+Author: Radix UI
+License: MIT
+Repository: https://github.com/radix-ui/icons
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright and license notices are retained.*
+
+**Flat UI**
+Author: Designmodo
+License: MIT
+Repository: https://github.com/designmodo/Flat-UI
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright notice and license text are retained.*
+
+**Education Icooon Mono Vectors**
+Author: Icooon Mono
+License: Public Domain (PD)
+*This resource is in the public domain. It may be freely used, modified, and distributed, including for commercial purposes, without the requirement to credit the author.*
+
+**JoyPixels Emojione**
+Author: JoyPixels
+License: MIT
+Repository: https://github.com/joypixels/emojione
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright notice and license text are retained.*
+
+**Clarity Assets (VMware)**
+Author: VMware
+License: MIT
+Repository: https://github.com/vmware/clarity-assets
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright notice and license text are retained.*
+
+**Solar Outline Icons**
+Author: Solar Icons
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+*The CC BY 4.0 license permits use, modification, and distribution, including for commercial purposes, provided that appropriate credit is given to the author and the license information is included.*
+
+**Wolf Kit Rounded Line Icons**
+Author: thewolfkit
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+*The CC BY 4.0 license permits use, modification, and distribution, including for commercial purposes, provided that appropriate credit is given to the author and the license information is included.*
+
+**Laura Reen Icons**
+Author: Laura Reen
+Repository: http://laurareen.com/
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+*The CC BY 4.0 license permits use, modification, and distribution, including for commercial purposes, provided that appropriate credit is given to the author and the license information is included.*
+
+**Jtb Variety Oval Icons**
+Author: jtblabs
+License: MIT
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright notice and license text are included.*
+
+**Teenyicons**
+Author: teenyicons
+License: MIT
+Repository: https://github.com/teenyicons/teenyicons
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright notice and license text are included.*
+
+**GitLab SVG Icons**
+Author: GitLab
+License: MIT
+Repository: https://gitlab.com/gitlab-org/gitlab-svgs
+*The MIT license permits use, modification, and distribution, including for commercial purposes, provided that the original copyright notice and license text are included.*
+
+
+
+
+
+
+PL
+
 📄 Licencja / Prawa autorskie
 
 ## Licencje użytych ikon

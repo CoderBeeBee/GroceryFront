@@ -1,12 +1,27 @@
+import { getAllProducts } from '@/src/api/getAllProducts'
 import { getProduct } from '@/src/api/getProduct'
 import { generateProductJsonLd } from '@/src/config/metadata/jsonLD'
 import { generateMetadata as buildMetadata } from '@/src/config/metadata/metadata'
+import { routing } from '@/src/lib/i18n/routing'
 
 import { Metadata } from 'next'
 import Image from 'next/image'
 
+
+
 type Params = Record<string, string | string[] | undefined>
 type PageProps = { params: Promise<Params> }
+
+export async function generateStaticParams() {
+	const products = await getAllProducts()
+
+	return routing.locales.flatMap(locale =>
+		products.map(product => ({
+			locale,
+			slug: product.slug,
+		})),
+	)
+}
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
 	const resolvedParams = await params
