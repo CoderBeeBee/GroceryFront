@@ -1,38 +1,39 @@
 {
-   "Mobile":{
-    "Menu":"Menü",
-    "Site Settings":"Seiteneinstellungen",
-    "Close mobile menu":"Mobilmenü schließen",
-    "Language":"Sprache"
-  },
-  "Menu": {
-    "Home": "Startseite",
-    "Shop": "Shop",
-    "Categories": "Kategorien",
-    "Fruits": "Obst",
-    "Juices": "Säfte",
-    "Vegetables": "Gemüse",
-    "Nuts & Seeds": "Nüsse & Samen",
-    "Dairy & Eggs": "Milchprodukte & Eier",
-    "Jams": "Konfitüren",
-    "Honey & Sweeteners": "Honig & Süßungsmittel",
-    "Honey": "Honig",
-    "Sweeteners": "Süßungsmittel",
-    "Blog": "Blog",
-    "About": "Über uns",
-    "Contact": "Kontakt"
-  },
-  "AuthLink":{
-    "Log in":"Anmelden",
-    "Log out":"Abmelden",
-    "Register":"Konto erstellen"
-  },
-   "UserAccount":{
-    "User Account":"Benutzerkonto",
-    "Profile":"Profil",
-    "Settings":"Einstellungen",
-    "Log out":"Abmelden"
-
-  }
+	"Mobile": {
+		"Menu": "Menü",
+		"Site Settings": "Seiteneinstellungen",
+		"Close mobile menu": "Mobilmenü schließen",
+		"Language": "Sprache"
+	},
+	"Menu": {
+		"Home": "Startseite",
+		"Shop": "Shop",
+		"Categories": "Kategorien",
+		"Fruits": "Obst",
+		"Juices": "Säfte",
+		"Vegetables": "Gemüse",
+		"Nuts & Seeds": "Nüsse & Samen",
+		"Dairy & Eggs": "Milchprodukte & Eier",
+		"Jams": "Konfitüren",
+		"Honey & Sweeteners": "Honig & Süßungsmittel",
+		"Honey": "Honig",
+		"Sweeteners": "Süßungsmittel",
+		"Blog": "Blog",
+		"About": "Über uns",
+		"Contact": "Kontakt"
+	},
+	"AuthLink": {
+		"Log in": "Anmelden",
+		"Log out": "Abmelden",
+		"Register": "Konto erstellen"
+	},
+	"UserAccount": {
+		"User Account": "Benutzerkonto",
+		"Profile": "Profil",
+		"Settings": "Einstellungen",
+		"Log out": "Abmelden"
+	},
+	"About": {
+		"About": "Über uns"
+	}
 }
-
