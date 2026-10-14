@@ -15,12 +15,14 @@ const LanguageSwitcher = () => {
 	const locale = useLocale()
 	const pathname = usePathname()
 	const router = useRouter()
-
+	
 	const changeLanguage = (el: string) => {
 		if (locale === el) return
 		router.replace(pathname, {
 			locale: el,
 		})
+
+		router.refresh()
 	}
 	const toggleDropdown = () => {
 		setIsActive(prev => !prev)
