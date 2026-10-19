@@ -17,12 +17,12 @@
 		height: var(--headerHeight);
 		background-color: var(--white);
 		border-radius: var(--borderRadius_12);
-		
-		.additionalNavWrapper{
+
+		.navActions {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			gap: 2rem;
+			gap: 1rem;
 		}
 	}
 }

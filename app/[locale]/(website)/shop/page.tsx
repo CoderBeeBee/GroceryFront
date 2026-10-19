@@ -1,9 +1,12 @@
+import { useTranslations } from 'next-intl'
 
-
-const page = () => {
-  return (
-    <div>Shop</div>
-  )
+const Page = () => {
+	const t = useTranslations('Shop')
+	return (
+		<div className={`flex justify-center items-center w-[100dvw] h-[100dvh] text-red-900 text-[40px] underline`}>
+			{t('Shop')}
+		</div>
+	)
 }
 
-export default page
+export default Page

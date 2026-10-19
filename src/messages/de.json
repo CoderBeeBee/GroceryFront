@@ -25,7 +25,7 @@
 	"AuthLink": {
 		"Log in": "Anmelden",
 		"Log out": "Abmelden",
-		"Register": "Konto erstellen"
+		"Create Account": "Konto erstellen"
 	},
 	"UserAccount": {
 		"User Account": "Benutzerkonto",
@@ -35,5 +35,18 @@
 	},
 	"About": {
 		"About": "Über uns"
+	},
+	"Contact": {
+		"Contact": "Kontakt"
+	},
+	"Shop": {
+		"Shop": "Shop"
+	},
+	"Language": {
+		"selectLanguage": "Wähle die Sprache {el} aus"
+	},
+	"NavCart": {
+		"ariaLabel": "Warenkorb anzeigen",
+		"View All":"Alle anzeigen"
 	}
 }

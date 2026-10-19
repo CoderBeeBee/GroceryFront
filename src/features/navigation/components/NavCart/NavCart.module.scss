@@ -1,0 +1,57 @@
+.navCartWrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	.navCartSVG {
+		width: 25px;
+		height: 25px;
+	}
+	.cartCount {
+		position: absolute;
+		top: 0;
+		right: -10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 18px;
+        min-height: 18px;
+        // padding: 0.1rem;
+        color: var(--white);
+        font-size: 10px;
+        border-radius: var(--borderRadius_50);
+        background-color: var(--primary);
+	}
+	.navCartDropdown {
+		position: absolute;
+		top: calc(50% + var(--headerHeight) / 2);
+		right: 0;
+		min-width: 250px;
+		width: 250px;
+
+		padding: 1.2rem;
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transform-origin: top right;
+		background-color: var(--white);
+		border-radius: var(--borderRadius_20);
+		box-shadow: 0px 0px 2px 1px var(--primary);
+		transition:
+			transform 0.3s ease-in-out,
+			opacity 0.3s ease-in-out,
+			visibility 0.3s ease-in-out;
+
+		.navCartProduct {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.activeDropdown {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}

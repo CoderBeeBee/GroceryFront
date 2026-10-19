@@ -1,0 +1,38 @@
+.authNavWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 1rem;
+
+	.actionLink {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: var(--padding_08);
+		gap: 1rem;
+		border: 1px solid var(--primary);
+		border-radius: var(--borderRadius_30);
+		color: var(--black);
+		font-size: var(--fontSize_14);
+		font-weight: 600;
+
+		.actionSVG {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+			padding: 0.5rem;
+			color: var(--primary);
+			border-radius: var(--borderRadius_50);
+			transition:
+				color 0.3s ease-in-out,
+				background-color 0.3s ease-in-out;
+		}
+
+		&:hover .actionSVG {
+			color: var(--secondary);
+			background-color: var(--primary);
+		}
+	}
+}

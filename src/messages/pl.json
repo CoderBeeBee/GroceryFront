@@ -25,7 +25,7 @@
 	"AuthLink": {
 		"Log in": "Zaloguj się",
 		"Log out": "Wyloguj się",
-		"Register": "Utwórz konto"
+		"Create Account": "Utwórz konto"
 	},
 	"UserAccount": {
 		"User Account": "Konto Użytkownika",
@@ -43,7 +43,20 @@
 			"description": "Dowiedz się więcej o naszej historii i misji."
 		}
 	},
-	"About":{
-		"About":"O nas"
+	"About": {
+		"About": "O nas"
+	},
+	"Contact": {
+		"Contact": "Kontakt"
+	},
+	"Shop": {
+		"Shop": "Sklep"
+	},
+	"Language": {
+		"selectLanguage": "Wybierz język {el}"
+	},
+	"NavCart": {
+		"ariaLabel": "Pokaż Koszyk",
+		"View All":"Pokaż wszystkie"
 	}
 }

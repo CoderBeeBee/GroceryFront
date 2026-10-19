@@ -1,0 +1,23 @@
+.siteSettingsWrapper {
+	.menuTitle {
+		padding: 0 1rem;
+		color: var(--primary);
+		font-size: var(--fontSize_12);
+		border-bottom: 1px dotted var(--primary);
+	}
+	.siteSettingsList {
+		.siteSettingsLi {
+			
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem 3rem;
+
+			.siteLiTitle {
+				font-size: var(--fontSize_14);
+				color: var(--black);
+				font-weight: 500;
+			}
+		}
+	}
+}

@@ -1,7 +1,5 @@
-
-
-import { dataMenu } from '../dataMenu'
-import NavigationElement from '../../../../features/navigation/NavigationElement/NavigationElement'
+import { dataMenu } from '../../../../features/navigation/data/dataMenu'
+import NavigationElement from '../../../../features/navigation/components/NavigationElement/NavigationElement'
 import styles from './DesktopNav.module.scss'
 
 const DesktopNav = () => {

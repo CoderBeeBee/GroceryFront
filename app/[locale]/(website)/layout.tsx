@@ -1,5 +1,8 @@
 import Navigation from '@/src/components/website/Navigation/Navigation'
-// import '../../global.scss'
+import { globalMetaData } from '@/src/config/metadata/metadata'
+
+
+export const metadata = globalMetaData
 
 const layout = ({ children }: LayoutProps<'/[locale]'>) => {
 	return (

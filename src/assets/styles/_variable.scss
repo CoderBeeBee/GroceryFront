@@ -2,13 +2,9 @@
 
 :root {
 	// Colors
-	--primary: #0a1e08;
-	// --primary: #B92A07;
-	// --secondary: #fcd127;
-	--secondary: #b4b03c;
-	// --secondary: #B92A07;
-	--thirdColor: #fcd127;
-	--hoverColor: #b4b03c;
+	--primary: #27611E;
+	--secondary: #F2C020;
+	--hoverColor: #27611E;
 	--white: #ffffff;
 	--black: #000000;
 	
@@ -24,6 +20,7 @@
 	--lineHeight50: 50px;
 	--lineHeight60: 60px;
 	// Padding
+	--padding_04: 0.4rem .8rem;
 	--padding_06: 0.6rem 1.2rem;
 	--padding_08: 0.8rem 1.6rem;
 	--padding_10: 1rem 2rem;
@@ -31,6 +28,7 @@
 	// Gap
 
 	// Font sizes
+	--fontSize_10: 1rem;
 	--fontSize_12: 1.2rem;
 	--fontSize_14: 1.4rem;
 	--fontSize_16: 1.6rem;
@@ -53,6 +51,7 @@
 	--borderRadius_26: 2.6rem;
 	--borderRadius_28: 2.8rem;
 	--borderRadius_30: 3rem;
+	--borderRadius_50: 50%;
 
 	//
 }

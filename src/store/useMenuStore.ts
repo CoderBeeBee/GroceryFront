@@ -1,3 +1,4 @@
+import { KeyboardEvent } from 'react'
 import { create } from 'zustand'
 
 type MenutState = {
@@ -97,7 +98,7 @@ export const toggleDropDown = (index: number | null) => {
 	const { activeIndex } = useMenuStore.getState()
 
 	toggleSubDropDown(null)
-	
+
 	if (activeIndex === index) {
 		useMenuStore.setState({ activeIndex: null })
 		return
@@ -111,4 +112,22 @@ export const toggleSubDropDown = (index: number | null) => {
 		return
 	}
 	useMenuStore.setState({ activeSubIndex: index })
+}
+
+export const toggleNavActions = (index: number | null) => {
+	const { activeIndex, timeOutIn } = useMenuStore.getState()
+
+	if (timeOutIn) clearTimeout(timeOutIn)
+
+	if (activeIndex === index) {
+		useMenuStore.setState({ activeIndex: null })
+	} else {
+		useMenuStore.setState({ activeIndex: index })
+	}
+}
+
+export const onKeyDown = (e: KeyboardEvent, index: number) => {
+	if ('key' in e && e.key !== 'Enter') return
+
+	toggleDropDown(index)
 }
