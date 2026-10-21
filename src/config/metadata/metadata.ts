@@ -57,7 +57,7 @@ const globalMetaData : Metadata = {
 	},
 
 	icons: {
-		icon: '/favicon.ico',
+		icon: '/images/logo/coderBee.jpg',
 		apple: '/apple-touch-icon.png',
 	},
 }

@@ -25,6 +25,7 @@ const DropDown = ({ data, styles, index }: DropDownTypes) => {
 	const { activeIndex, activeSubIndex } = useMenuStore(state => state)
 	const { isMobile } = useWindowSize()
 	const isActive = activeIndex === index
+
 	return (
 		<ul
 			id={`menu-${index}`}
@@ -44,7 +45,7 @@ const DropDown = ({ data, styles, index }: DropDownTypes) => {
 					return (
 						<li
 							key={item.titleKey}
-							className={clsx(styles.dropDownElement, { [styles.activeSubDropDown]: isActive })}
+							className={clsx(styles.dropDownElement, { [styles.activeSubDropdown]: isActive })}
 							onMouseEnter={() => {
 								if (isMobile) return
 								if (item.children) expandSubMenu(i)
@@ -58,10 +59,8 @@ const DropDown = ({ data, styles, index }: DropDownTypes) => {
 									type="button"
 									className={clsx(styles.dropDownLink, { [styles.activeLinkDropdown]: isActive })}
 									aria-expanded={isActive}
-									aria-controls={`submenu-${index}`}
-								>
-									{t(item.titleKey)}
-
+									aria-controls={`submenu-${index}`}>
+									<span>{t(item.titleKey)}</span>
 									<ChevronDownSVG className={clsx(styles.chevron, { [styles.activeRotateChevron]: isActive })} />
 								</button>
 							) : (

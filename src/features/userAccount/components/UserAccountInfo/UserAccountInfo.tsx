@@ -9,7 +9,7 @@ const UserAccountInfo = ({styles}:UserAccountInfoProps) => {
 		<div className={`${styles.userAccountInfo}`}>
 			<Image
 				loading="eager"
-				src="/images/logo/Pszczoły.jpg"
+				src="/images/logo/coderBee.jpg"
 				alt="User Avatar"
 				width={50}
 				height={50}

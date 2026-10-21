@@ -106,7 +106,7 @@
 					background-color: var(--primary);
 				}
 
-				.subdropDown {
+				.subDropdown {
 					display: flex;
 					flex-direction: column;
 					width: 100%;
@@ -114,35 +114,33 @@
 					overflow: hidden;
 					transition: all 0.3s ease-in-out;
 
-					.subDropDownLink {
-						display: flex;
-						align-items: center;
-						color: var(--black);
-						padding-left: 6rem;
-						line-height: var(--lineHeight40);
+					.subDropdownElement {
+						
+						.subDropdownLink {
+							display: flex;
+							align-items: center;
+							color: var(--black);
+							padding-left: 6rem;
+							line-height: var(--lineHeight40);
 
-						font-size: var(--fontSize_14);
-						font-weight: 500;
-						transition: background-color 0.3s ease-in-out;
-						text-decoration: none;
-						cursor: pointer;
-						&:hover {
-							background-color: var(--primary);
+							font-size: var(--fontSize_14);
+							font-weight: 500;
+							transition: background-color 0.3s ease-in-out;
+							text-decoration: none;
+							cursor: pointer;
+							&:hover {
+								background-color: var(--primary);
+							}
 						}
 					}
 				}
 			}
-			.activeSubDropDown {
+			.activeSubDropdown {
 				grid-template-rows: var(--lineHeight40) 1fr;
 			}
 		}
-
-
 	}
 	.activeDropdown {
-		
 		grid-template-rows: var(--lineHeight50) 1fr;
-
-		
 	}
 }

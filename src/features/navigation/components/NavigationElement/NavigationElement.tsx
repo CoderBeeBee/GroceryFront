@@ -26,9 +26,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 	const isActive2 = pathname === item.href && !activeIndex
 
 	return (
-		<li
-			
-			className={clsx(styles.navigationElementWrapper, { [styles.activeDropdown]: isActive })}>
+		<li className={clsx(styles.navigationElementWrapper, { [styles.activeDropdown]: isActive })}>
 			{item.href ? (
 				<Link
 					href={item.href}
@@ -47,7 +45,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 						if (isMobile) return
 						onKeyDown(e, index)
 					}}>
-					{t(item.titleKey)}
+					<span className={styles.title}>{t(item.titleKey)}</span>
 				</Link>
 			) : (
 				<button

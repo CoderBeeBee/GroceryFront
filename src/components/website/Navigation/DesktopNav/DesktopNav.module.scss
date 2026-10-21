@@ -1,16 +1,18 @@
 .desktopNav {
 	display: flex;
 	align-items: center;
+	flex-grow: 1;
 	height: var(--headerHeight);
 	background-color: var(--white);
 	border-radius: var(--borderRadius_08);
 
 	.navigationList {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
-		gap: 2rem;
+		gap: 1rem;
 		width: 100%;
+
 		height: 100%;
 
 		.navigationElementWrapper {
@@ -19,6 +21,7 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+
 			list-style: none;
 			border-radius: var(--borderRadius_08);
 			outline: none;
@@ -28,10 +31,11 @@
 			.link {
 				display: flex;
 				align-items: center;
-				padding: var(--padding_08);
+				padding: var(--padding_06);
 				font-size: var(--fontSize_14);
 				font-weight: 600;
 				height: 100%;
+				white-space: nowrap;
 				color: var(--black);
 				border: none;
 				border-radius: var(--borderRadius_08);
@@ -74,22 +78,34 @@
 
 				.dropDownElement {
 					position: relative;
+					display: flex;
 					width: 100%;
 					list-style: none;
 
 					.dropDownLink {
 						display: flex;
 						align-items: center;
-						width: 100%;	
+						justify-content: space-between;
+						width: 100%;
+
 						color: var(--black);
 						padding: var(--padding_08);
 						font-size: var(--fontSize_14);
 						font-weight: 600;
 						text-decoration: none;
 						cursor: pointer;
+
+						span {
+							display: -webkit-box;
+							-webkit-line-clamp: 1;
+							-webkit-box-orient: vertical;
+							line-clamp: 1;
+							text-overflow: ellipsis;
+							word-break: break-all;
+							overflow: hidden;
+						}
 						&:hover {
 							color: var(--white);
-
 							background-color: var(--primary);
 						}
 
@@ -116,7 +132,7 @@
 						background-color: var(--primary);
 					}
 
-					.subdropDown {
+					.subDropdown {
 						position: absolute;
 						top: 0;
 						left: 100%;
@@ -132,26 +148,33 @@
 						z-index: 1000;
 						transition: all 0.3s ease-in-out;
 
-						.subDropDownLink {
+						.subDropdownElement {
 							display: flex;
-							align-items: center;
-							color: var(--black);
-							padding: var(--padding_06);
-							font-size: var(--fontSize_14);
-							font-weight: 600;
-							text-decoration: none;
-							cursor: pointer;
-							&:hover {
-								color: var(--white);
-								background-color: var(--primary);
+							width: 100%;
+							height: 100%;
+							list-style: none;
+							.subDropdownLink {
+								display: flex;
+								align-items: center;
+								width: 100%;
+								color: var(--black);
+								padding: var(--padding_06);
+								font-size: var(--fontSize_14);
+								font-weight: 600;
+								text-decoration: none;
+								cursor: pointer;
+								&:hover {
+									color: var(--white);
+									background-color: var(--primary);
+								}
 							}
 						}
 					}
 
-					.activeSubDropDown {
+					.activeSubDropdown {
+						transform: scaleY(1);
 						opacity: 1;
 						visibility: visible;
-						transform: scaleY(1);
 					}
 				}
 			}
@@ -163,7 +186,7 @@
 		}
 	}
 }
-@media (width <= 900px) {
+@media (width <= 1200px) {
 	.desktopNav {
 		display: none;
 	}

@@ -21,10 +21,10 @@ const MenuSVG = ({ className }: IconsProps) => (
 		/>
 	</svg>
 )
-const SearchSVG = ({ className }: { className: string }) => {
+const SearchSVG = ({ className }:IconsProps) => {
 	return (
 		<svg
-			className={`${styles.icon}${className ? className : ''}`}
+			className={`${styles.icon} ${className ? className : ''}`}
 			width="16"
 			height="16"
 			viewBox="0 0 17.982 17.983"

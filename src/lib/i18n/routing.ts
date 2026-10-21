@@ -1,10 +1,11 @@
 import { defineRouting } from 'next-intl/routing'
 import { menuPathnames } from './pathnames/menuPathnames'
 import { userAccountPathnames } from './pathnames/userAccountPathnames'
+import { productPathnames } from './pathnames/productPathnames'
 
 export const routing = defineRouting({
 	locales: ['en', 'pl', 'de'],
 	defaultLocale: 'en',
 	localePrefix: 'as-needed',
-	pathnames: { ...menuPathnames, ...userAccountPathnames },
+	pathnames: { ...menuPathnames, ...userAccountPathnames, ...productPathnames },
 })

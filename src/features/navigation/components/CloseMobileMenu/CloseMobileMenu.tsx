@@ -7,7 +7,7 @@ const CloseMobileMenu = () => {
 	return (
 		<div className={styles.closeMobileWrapper}>
 			<CloseButton
-				styles={styles}
+				
 				handleClose={() => {
 					toggleMenu()
 				}}

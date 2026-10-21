@@ -9,20 +9,44 @@
 	.navigationWrapper {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
 		align-items: center;
 		padding: 0 1rem;
-		gap: 2rem;
+		gap: 3rem;
 		width: 100%;
 		height: var(--headerHeight);
 		background-color: var(--white);
-		border-radius: var(--borderRadius_12);
 
 		.navActions {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
+			justify-content: flex-end;
+			flex-grow: 1;
 			gap: 1rem;
+			width: 100%;
+		}
+	}
+}
+
+@media (width > 900px) {
+	.navigationContainer {
+		.navigationWrapper {
+			justify-content: space-between;
+
+			.navActions {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 1rem;
+				width: auto;
+			}
+		}
+	}
+}
+@media (width > 1400px) {
+	.navigationContainer {
+		.navigationWrapper {
+			border-radius: var(--borderRadius_12);
 		}
 	}
 }

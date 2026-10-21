@@ -8,6 +8,7 @@ import { ChevronDownSVG } from '@/src/assets/icons/ArrowsIcons'
 import NavButton from '@/src/components/ui/NavButton/NavButton'
 import { toggleNavActions, useMenuStore } from '@/src/store/useMenuStore'
 import { dataMenu } from '@/src/features/navigation/data/dataMenu'
+import { useParams } from 'next/navigation'
 
 const LanguageSwitcher = () => {
 	const t = useTranslations('Language')
@@ -16,13 +17,20 @@ const LanguageSwitcher = () => {
 	const languageIndex = dataMenu.length * 30
 	const locale = useLocale()
 	const pathname = usePathname()
+	const params = useParams()
 	const router = useRouter()
 	const isActive = languageIndex === activeIndex
 	const changeLanguage = (el: string) => {
 		if (locale === el) return
-		router.replace(pathname, {
-			locale: el,
-		})
+		router.replace(
+			{
+				pathname,
+				params,
+			} as never,
+			{
+				locale: el,
+			},
+		)
 	}
 
 	return (

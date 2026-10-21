@@ -5,3 +5,11 @@ export type MenuTypes = {
 	href: NavigationHref | ''
 	children?: MenuTypes[]
 }
+
+export type searchDataTypes = {
+	_id:string
+	name: string
+	images: string
+	slug: string
+	inStock:boolean
+}

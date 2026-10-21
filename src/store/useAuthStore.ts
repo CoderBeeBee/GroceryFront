@@ -5,6 +5,6 @@ type AuthTypes = {
 }
 
 export const useAuthStore = create<AuthTypes>(()=>({
-    isLogged:false,
+    isLogged:true,
 }))
 

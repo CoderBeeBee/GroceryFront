@@ -13,20 +13,20 @@ interface SubDropDownTypes {
 
 const SubDropDown = ({ data, index, styles, parentIndex }: SubDropDownTypes) => {
 	const t = useTranslations('Menu')
-	const { activeIndex, activeSubIndex } = useMenuStore(state => state)
+	const { activeIndex, activeSubIndex } = useMenuStore()
 
 	const isActive = index === activeSubIndex && activeIndex === parentIndex
+
 	return (
 		<ul
 			id={`submenu-${index}`}
-			hidden={!isActive}
-			className={clsx(styles.subdropDown, {
-				[styles.activeSubDropDown]: isActive,
+			className={clsx(styles.subDropdown, {
+				[styles.activeSubDropdown]: isActive,
 			})}>
 			{data.map((item, i: number) => {
 				return (
-					<li key={i} className={`${styles.dropDownElement}`}>
-						<Link href={item.href} className={`${styles.subDropDownLink}`}>
+					<li key={i} className={`${styles.subDropdownElement}`}>
+						<Link href={item.href} className={`${styles.subDropdownLink}`}>
 							{t(item.titleKey)}
 						</Link>
 					</li>

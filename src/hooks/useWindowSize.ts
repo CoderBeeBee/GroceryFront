@@ -40,8 +40,9 @@ const useWindowSize = () => {
 	const widthLess900 = windowSize.width < 900
 	const widthLess800 = windowSize.width < 800
 	const widthLess700 = windowSize.width < 700
+	const widthLess600 = windowSize.width < 600
 
-	const isMobile = windowSize.width <= 900
+	const isMobile = windowSize.width <= 1200
 	const isMobilePanel = windowSize.width < 600
 	return {
 		width: windowSize.width,
@@ -54,6 +55,7 @@ const useWindowSize = () => {
 		widthLess700,
 		isMobile,
 		isMobilePanel,
+		widthLess600
 	}
 }
 
