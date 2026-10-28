@@ -45,7 +45,7 @@ export default async function middleware(request: NextRequest) {
 
 	if (token) {
 		try {
-			const secretKey = process.env.JWT_SECRET || (process.env.NEXT_PUBLIC_JWT_SECRET as string)
+			const secretKey = process.env.JWT_SECRET
 
 			
 			const encodedSecret = new TextEncoder().encode(secretKey)
