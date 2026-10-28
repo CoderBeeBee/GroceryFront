@@ -1,7 +1,5 @@
-
-
-const layout = ({ children }: LayoutProps<'/[locale]'>) => {
+const Layout = async ({ children }: LayoutProps<'/[locale]'>) => {
 	return <>{children}</>
 }
 
-export default layout
+export default Layout

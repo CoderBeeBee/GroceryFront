@@ -1,0 +1,23 @@
+.createAccountWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 100dvh;
+
+	.authBackground {
+		display: none;
+		width: 100%;
+		background-image: url('/images/hero/groceryWebp.webp');
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+@media (width >= 900px) {
+	.createAccountWrapper {
+		.authBackground {
+			display: flex;
+		}
+	}
+}

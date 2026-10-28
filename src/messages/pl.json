@@ -24,14 +24,13 @@
 	},
 	"AuthLink": {
 		"Log in": "Zaloguj się",
-		"Log out": "Wyloguj się",
-		"Create Account": "Utwórz konto"
+		"Create Account": "Utwórz konto",
+		"Sign Out": "Wyloguj się"
 	},
 	"UserAccount": {
 		"User Account": "Konto Użytkownika",
 		"Profile": "Profil",
-		"Settings": "Ustawienia",
-		"Log out": "Wyloguj się"
+		"Settings": "Ustawienia"
 	},
 	"Metadata": {
 		"Home": {
@@ -57,6 +56,55 @@
 	},
 	"NavCart": {
 		"ariaLabel": "Pokaż Koszyk",
-		"View All":"Pokaż wszystkie"
+		"View All": "Pokaż wszystkie"
+	},
+	"Search":{
+		"Search":"Wyszukaj produkt..."
+	},
+	"AuthForm": {
+		"Create an account":"Utwórz konto",
+		"Already have an account ?":"Masz już konto?",
+		"Sign In":"Zaloguj się",
+		"Sign Up":"Utwórz konto",
+		"First Name": "Imię",
+		"Last Name": "Nazwisko",
+		"Email": "Email",
+		"Password": "Hasło",
+		"Repeat Password": "Powtórz hasło",
+		"Enter your name": "Podaj Imię",
+		"Enter your last name": "Podaj Nazwisko",
+		"Enter your email": "Podaj adres email",
+		"Enter your password": "Podaj hasło",
+		"Repeat password": "Powtórz hasło",
+		"I have read and understood the":"Zapoznałem się z treścią i zrozumiałem",
+		"Terms":"Warunki",
+		"and":"i",
+		"Privacy Policy":"Polityka Prywatności",
+		"Creating":"Tworzenie",
+		"Create account":"Utwórz konto",
+		"Invalid email address":"Niepoprawny adres email",
+		"emailTooShort":"Adres email musi zawierać przynajmniej 6 znaków.",
+		"emailTooLong":"Adres email jest zbyt długi. Max 254 znaki.",
+		"passwordTooShort":"Hasło musi zawierać przynajmniej 8 znaków.",
+		"passwordTooLong":"Hasło jest za długie. Max 128 znaki.",
+		"repeatPassword":"Hasła nie są zgodne.",
+		"firstNameTooShort":"Imię musi zawierać przynajmniej 1 znak.",
+		"firstNameTooLong":"Imię jest zbyt długie. Max 100 znaków.",
+		"lastNameTooShort":"Nazwisko musi zawierać przynajmniej 1 znak.",
+		"lastNameTooLong":"Nazwisko jest zbyt długie. Max 100 znaków.",
+		"terms":"Musisz zaakceptować Politykę Prywatności i Warunki.",
+		"Don't have an account?":"Nie masz jeszcze konta?",
+		"Logging":"Logowanie",
+		"forgotPassword":"Nie pamiętasz hasła?",
+		"userExist":"Ten adres e-mail jest już zajęty!",
+		"registrationComplete":"Rejestracja zakończona, sprawdź swoją skrzynkę pocztową.",
+		"invalidCredentials":"Nieprawidłowy adres e-mail lub hasło.",
+		"userNotVerified":"Użytkownik nie został zweryfikowany. Sprawdź swoją skrzynkę pocztową.",
+		"accountInactive":"Konto jest nieaktywne.",
+		"An unexpected error has occured":"Wystąpił nieoczekiwany błąd.",
+		"registrationLimiter":"Zbyt wiele prób rejestracji. Spróbuj ponownie później."
+	},
+	"Social":{
+		"Follow":"Śledź nas"
 	}
 }

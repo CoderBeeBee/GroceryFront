@@ -2,6 +2,7 @@ import userAccountLinksData from './userAccountLinksData'
 import { useTranslations } from 'next-intl'
 import useWindowSize from '@/src/hooks/useWindowSize'
 import ActionLink from '../../../navigation/components/ActionLink/ActionLink'
+import SignOutButton from '@/src/components/ui/SignOutButton/SignOutButton'
 
 type UserAccountLinksProps = {
 	styles: Record<string, string>
@@ -21,6 +22,7 @@ const UserAccountLinks = ({ styles }: UserAccountLinksProps) => {
 						</ActionLink>
 					)
 				})}
+				<SignOutButton styles={styles} />
 			</div>
 		</div>
 	)

@@ -1,0 +1,81 @@
+.signInFormContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-height: 100dvh;
+	padding: var(--padding_12);
+	background-color: #fff9eb;
+
+	.signInFormWrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 600px;
+
+		.logoWrapper {
+			display: flex;
+			margin: 2rem 0;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+		.signInTextWrapper {
+			display: flex;
+			flex-direction: column;
+
+			.signInTittle {
+				font-size: var(--fontSize_28);
+				font-weight: 400;
+				color: var(--black);
+			}
+			.signInText {
+				font-size: var(--fontSize_14);
+				color: var(--color-text-light);
+
+				a {
+					font-weight: 600;
+					color: var(--primary);
+					transition: color 0.3s ease-in;
+
+					&:hover {
+						color: var(--hoverColor);
+					}
+				}
+			}
+		}
+		.formWrapper {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-top: 4rem;
+			// margin: 4rem auto 0;
+			// max-width: 600px;
+
+			.checkbox {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				margin-bottom: 2rem;
+			}
+
+			.forgotPassword {
+				display: flex;
+				align-self: flex-end;
+				margin-bottom: 1rem;
+				font-size: var(--fontSize_14);
+				color: var(--color-text-light);
+				transition: color 0.3s ease-in;
+				&:hover {
+					color: var(--primary);
+				}
+			}
+		}
+	}
+}
+
+@media (width >= 900px) {
+	.signInFormContainer {
+		max-width: 600px;
+	}
+}

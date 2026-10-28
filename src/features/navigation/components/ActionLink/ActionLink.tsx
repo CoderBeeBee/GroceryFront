@@ -15,7 +15,7 @@ interface LoginProps {
 }
 const refractorSVG: Record<string, (styles: Record<string, string>) => ReactNode> = {
 	'/': styles => <LogoutSVG className={`${styles.actionSVG}`} />,
-	'/login': styles => <LoginSVG className={`${styles.actionSVG}`} />,
+	'/sign-in': styles => <LoginSVG className={`${styles.actionSVG}`} />,
 	'/create-account': styles => <CreateAccountSVG className={`${styles.actionSVG}`} />,
 	'/settings': styles => <SettingsSVG className={`${styles.actionSVG}`} />,
 	'/profile': styles => <ProfileSVG className={`${styles.actionSVG}`} />,

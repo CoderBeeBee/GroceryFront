@@ -1,7 +1,4 @@
-
 import styles from './website.module.scss'
-
-
 
 
 const page = () => {

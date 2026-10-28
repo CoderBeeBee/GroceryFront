@@ -14,10 +14,7 @@ const userAccountLinksData  = [
         titleKey:"Settings",
         href:"/settings"
     },
-    {
-        titleKey:"Log out",
-        href:"/"
-    },
+    
 ] satisfies UserAccountTypes[]
 
 export default userAccountLinksData

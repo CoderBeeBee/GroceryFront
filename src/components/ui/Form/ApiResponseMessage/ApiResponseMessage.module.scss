@@ -1,0 +1,23 @@
+.responseMessage {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.6rem;
+	padding: 1rem;
+	font-size: var(--fontSize_14);
+	color: var(--black);
+	line-height: 2.2rem;
+	min-height: 5rem;
+	border-radius: var(--borderRadius_08);
+	.warnSVG {
+		margin-right: 0.5rem;
+		color: var(--errorColor);
+	}
+}
+.successMessage {
+	background-color: #f2fff0;
+	border: 1px solid var(--primary);
+}
+.errorMessage {
+	background-color: #ffeded;
+	border: 1px solid var(--errorColor);
+}

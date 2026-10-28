@@ -6,7 +6,7 @@ const AuthNav = () => {
 	const { isMobile } = useWindowSize()
 	return (
 		<div className={`${styles.authNavWrapper}`}>
-			<ActionLink href="/login" translation="AuthLink" styles={styles}>
+			<ActionLink href="/sign-in" translation="AuthLink" styles={styles}>
 				Log in
 			</ActionLink>
 			{!isMobile && (

@@ -32,5 +32,10 @@ export const toggleMenu = () => {
 }
 
 export const closeMobileMenu = () => {
-	useMobileStore.setState({ isOpen: false, isVisible: false })
+	const { isOpen } = useMobileStore.getState()
+	if (!isOpen) return
+	useMobileStore.setState({ isVisible: false })
+	setTimeout(() => {
+		useMobileStore.setState({ isOpen: false })
+	}, 500)
 }

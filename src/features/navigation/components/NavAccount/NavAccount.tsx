@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { UserSVG } from '@/src/assets/icons/AuthIcons'
 import UserAccountLinks from '@/src/features/userAccount/components/UserAccountLinks/UserAccountLinks'
 import styles from './NavAccount.module.scss'
@@ -9,12 +10,12 @@ import clsx from 'clsx'
 import { dataMenu } from '../../data/dataMenu'
 import { useMenuStore } from '@/src/store/useMenuStore'
 
-import Image from 'next/image'
+
 import UserAccountInfo from '@/src/features/userAccount/components/UserAccountInfo/UserAccountInfo'
 
 const NavAccount = () => {
-	const { isLogged } = useAuthStore()
-
+	const { isLogged,image } = useAuthStore()
+	
 	const { activeIndex } = useMenuStore()
 	const accountIndex = dataMenu.length * 20
 	const isActive = accountIndex === activeIndex
@@ -24,9 +25,9 @@ const NavAccount = () => {
 				{!isLogged ? (
 					<UserSVG className={styles.userSVG} />
 				) : (
-					<Image
+					<img
 						loading="eager"
-						src="/images/logo/coderBee.jpg"
+						src={image}
 						alt="User Avatar"
 						width={50}
 						height={50}

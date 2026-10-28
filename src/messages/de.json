@@ -24,14 +24,13 @@
 	},
 	"AuthLink": {
 		"Log in": "Anmelden",
-		"Log out": "Abmelden",
-		"Create Account": "Konto erstellen"
+		"Create Account": "Konto erstellen",
+		"Sign Out": "Abmelden"
 	},
 	"UserAccount": {
 		"User Account": "Benutzerkonto",
 		"Profile": "Profil",
-		"Settings": "Einstellungen",
-		"Log out": "Abmelden"
+		"Settings": "Einstellungen"
 	},
 	"About": {
 		"About": "Über uns"
@@ -47,6 +46,56 @@
 	},
 	"NavCart": {
 		"ariaLabel": "Warenkorb anzeigen",
-		"View All":"Alle anzeigen"
+		"View All": "Alle anzeigen"
+	},
+	"Search": {
+		"Search": "Produkte suchen..."
+	},
+	"AuthForm": {
+		"Create an account": "Konto erstellen",
+		"Already have an account ?": "Haben Sie bereits ein Konto?",
+		"Sign In": "Anmelden",
+		"Sign Up": "Konto erstellen",
+		"First Name": "Vorname",
+		"Last Name": "Nachname",
+		"Email": "Email",
+		"Password": "Passwort",
+		"Repeat Password": "Passwort wiederholen",
+		"Enter your name": "Geben Sie Ihren Vornamen ein",
+		"Enter your last name": "Geben Sie Ihren Nachnamen ein",
+		"Enter your email": "Geben Sie Ihre E-Mail-Adresse ein",
+		"Enter your password": "Geben Sie Ihr Passwort ein",
+		"Repeat password": "Passwort wiederholen",
+		"I have read and understood the": "Ich habe die folgenden Dokumente gelesen und verstanden",
+		"Terms": "Nutzungsbedingungen",
+		"and": "und",
+		"Privacy Policy": "Datenschutzerklärung",
+		"Creating": "Erstellen",
+		"Create account": "Konto erstellen",
+		"Invalid email address": "Ungültige E-Mail-Adresse",
+		"emailTooShort": "Die E-Mail-Adresse muss mindestens 6 Zeichen enthalten.",
+		"emailTooLong": "Die E-Mail-Adresse ist zu lang. Max. 254 Zeichen.",
+		"passwordTooShort": "Das Passwort muss mindestens 8 Zeichen enthalten.",
+		"passwordTooLong": "Das Passwort ist zu lang. Max. 128 Zeichen.",
+		"repeatPassword": "Die Passwörter stimmen nicht überein.",
+		"firstNameTooShort": "Der Vorname muss mindestens 1 Zeichen enthalten.",
+		"firstNameTooLong": "Der Vorname ist zu lang. Max. 100 Zeichen.",
+		"lastNameTooShort": "Der Nachname muss mindestens 1 Zeichen enthalten.",
+		"lastNameTooLong": "Der Nachname ist zu lang. Max. 100 Zeichen.",
+		"terms": "Sie müssen die Datenschutzerklärung und die Nutzungsbedingungen akzeptieren.",
+
+		"Don't have an account?":"Sie haben noch kein Konto?",
+		"Logging":"Anmeldung",
+		"forgotPassword":"Passwort vergessen?",
+		"userExist":"Diese E-Mail-Adresse ist bereits vergeben!",
+		"registrationComplete":"Die Registrierung ist abgeschlossen. Bitte überprüfen Sie Ihre E-Mails.",
+		"invalidCredentials":"Ungültige E-Mail-Adresse oder ungültiges Passwort.",
+		"userNotVerified":"Der Benutzer ist nicht verifiziert. Bitte überprüfen Sie Ihre E-Mails.",
+		"accountInactive":"Konto ist nicht aktiv.",
+		"An unexpected error has occured":"Es ist ein unerwarteter Fehler aufgetreten.",
+		"registrationLimiter":"Zu viele Registrierungsversuche. Bitte versuche es später erneut."
+	},
+	"Social":{
+		"Follow":"Folgen Sie uns"
 	}
 }

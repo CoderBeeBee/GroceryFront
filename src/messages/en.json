@@ -25,14 +25,13 @@
 	},
 	"AuthLink": {
 		"Log in": "Log in",
-		"Log out": "Log out",
-		"Create Account": "Create account"
+		"Create Account": "Create account",
+		"Sign Out": "Sign Out"
 	},
 	"UserAccount": {
 		"User Account": "User Account",
 		"Profile": "Profile",
-		"Settings": "Settings",
-		"Log out": "Log out"
+		"Settings": "Settings"
 	},
 	"Metadata": {
 		"home": {
@@ -59,5 +58,55 @@
 	"NavCart":{
 		"ariaLabel":"View Cart",
 		"View All":"View All"
+	},
+	"Search":{
+		"Search":"Search for products..."
+	},
+	"AuthForm": {
+		"Create an account":"Create an account",
+		"Already have an account ?":"Already have an account ?",
+		"Sign In":"Sign In",
+		"Sign Up":"Sign Up",
+		"First Name": "First Name",
+		"Last Name": "Last Name",
+		"Email": "Email",
+		"Password": "Password",
+		"Repeat Password": "Repeat Password",
+		"Enter your name": "Enter your name",
+		"Enter your last name": "Enter your last name",
+		"Enter your email": "Enter your email",
+		"Enter your password": "Enter your password",
+		"Repeat password": "Repeat password",
+		"I have read and understood the":"I have read and understood the",
+		"Terms":"Terms",
+		"and":"and",
+		"Privacy Policy":"Privacy Policy",
+		"Creating":"Creating",
+		"Create account":"Create account",
+		"Invalid email address":"Invalid email address.",
+		"emailTooShort":"Email must have at least 6 characters.",
+		"emailTooLong":"The email is too long. Max 254 characters.",
+		"passwordTooShort":"Password must have at least 8 characters.",
+		"passwordTooLong":"The password is too long. Max 128 characters.",
+		"repeatPassword":"Password do not match.",
+		"firstNameTooShort":"First name must have at least 1 character.",
+		"firstNameTooLong":"First name is too long. Max 100 characters.",
+		"lastNameTooShort":"Last name must have at least 1 character.",
+		"lastNameTooLong":"Last name is too long. Max 100 characters.",
+		"terms":"You must accept the Terms and Privacy Policy.",
+		"Don't have an account?":"Don't have an account?",
+		"Logging":"Logging",
+		"forgotPassword":"Forgot Password?",
+		"userExist":"This email address is already taken!",
+		"registrationComplete":"Registration complete, check your email.",
+		"invalidCredentials":"Invalid email or password.",
+		"userNotVerified":"User is not verified, check your email.",
+		"accountInactive":"Account not active.",
+		"An unexpected error has occured":"An unexpected error has occured.",
+		"registrationLimiter":"Too many registration attempts. Please try again later."
+		
+	},
+	"Social":{
+		"Follow":"Follow us"
 	}
 }

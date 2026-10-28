@@ -12,7 +12,6 @@
 		padding: 0 3rem;
 
 		.userAccountAvatar {
-			
 			width: 50px;
 			height: 50px;
 			border-radius: 50%;
@@ -24,7 +23,6 @@
 	}
 	.accountLinksWrapper {
 		margin: 2rem 0;
-		
 
 		.accountLinksTitle {
 			padding: 0 1rem;
@@ -37,16 +35,15 @@
 			display: flex;
 			flex-direction: column;
 
-			.actionLink {
+			.actionLink,
+			.signOutButton {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
 				width: 100%;
 				padding: 1rem 3rem;
-				
 				gap: 1rem;
 				color: var(--black);
-				
 				font-size: var(--fontSize_14);
 				font-weight: 600;
 				transition:
@@ -56,12 +53,14 @@
 				&:hover {
 					color: var(--white);
 					background-color: var(--primary);
-					.actionSVG {
+					.actionSVG,
+					.logOutSVG {
 						color: var(--white);
 					}
 				}
 
-				.actionSVG {
+				.actionSVG,
+				.logOutSVG {
 					color: var(--primary);
 				}
 			}

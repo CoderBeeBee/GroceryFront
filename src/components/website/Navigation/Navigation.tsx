@@ -4,7 +4,7 @@ import DesktopNav from './DesktopNav/DesktopNav'
 import MobileNav from './MobileNav/MobileNav'
 import styles from './Navigation.module.scss'
 import Hamburger from '../../../features/navigation/components/Hamburger/Hamburger'
-import useBrandName from '@/src/hooks/useBrandName'
+
 import useWindowSize from '@/src/hooks/useWindowSize'
 import LanguageSwitcher from '../../../features/localization/components/Language/LanguageSwitcher'
 
@@ -18,9 +18,11 @@ import { SearchSVG } from '@/src/assets/icons/GeneralIcons'
 import { toggleSearch } from '@/src/store/useSearchStore'
 import { Provider } from 'react-redux'
 import { store } from '@/src/lib/store'
+import { SITE_NAME } from '@/src/config/site'
+
 
 const Navigation = () => {
-	const { brandName } = useBrandName()
+	
 	const { isMobile, widthLess600 } = useWindowSize()
 	const actionRef = useRef<HTMLDivElement | null>(null)
 
@@ -44,7 +46,7 @@ const Navigation = () => {
 		<Provider store={store}>
 			<header className={` ${styles.navigationContainer}`}>
 				<div className={`row ${styles.navigationWrapper}`}>
-					<Logo text={brandName} />
+					<Logo text={SITE_NAME} />
 					<DesktopNav />
 					<MobileNav />
 					<div ref={actionRef} className={`${styles.navActions}`}>

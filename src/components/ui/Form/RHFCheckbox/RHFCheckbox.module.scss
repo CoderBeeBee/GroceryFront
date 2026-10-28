@@ -1,0 +1,43 @@
+.formCheckbox {
+	.checkboxLabel {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 20px;
+		margin-bottom: 1rem;
+		font-size: var(--fontSize_14);
+		font-weight: 500;
+		color: var(--black);
+		z-index: 100;
+		cursor: pointer;
+
+		span {
+			color: var(--black);
+			margin-left: 1rem;
+			font-size: var(--fontSize_14);
+
+			a {
+				color: var(--black);
+				font-weight: bold;
+
+				&:hover {
+					color: var(--primary);
+				}
+			}
+			&::after {
+				content: '*';
+				margin-left: 0.5rem;
+				color: var(--errorColor);
+				font-size: var(--fontSize_16);
+			}
+		}
+	}
+	input {
+		display: none;
+	}
+}
+.error {
+	color: var(--errorColor);
+	font-size: var(--fontSize_14);
+}

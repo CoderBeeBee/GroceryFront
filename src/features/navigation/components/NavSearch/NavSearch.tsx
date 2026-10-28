@@ -11,8 +11,10 @@ import useDebounce from '@/src/hooks/useDebounce'
 import { useLazySearchProductQuery } from '@/src/api/productApi'
 import { searchDataTypes } from '../../types/navigation'
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query'
+import { useTranslations } from 'next-intl'
 
 const NavSearch = () => {
+	const t = useTranslations("Search")
 	const url = 'wisnia'
 	const { widthLess600 } = useWindowSize()
 	const { isOpen, isVisible, activeList, activeHeight } = useSearchStore()
@@ -69,7 +71,7 @@ const NavSearch = () => {
 								name="search"
 								type="text"
 								autoComplete="off"
-								placeholder="Search for products..."
+								placeholder={t("Search")}
 								className={`${styles.formInput}`}
 								onChange={e => serachInput(e)}
 								onFocus={() => searchFocus()}

@@ -1,13 +1,14 @@
+
 export const userAccountPathnames = {
-	'/login': {
-		en: '/login',
+	'/sign-in': {
+		en: '/sign-in',
 		pl: '/zaloguj-się',
 		de: '/anmelden',
 	},
 	'/create-account': {
 		en: '/create-account',
 		pl: '/utwórz-konto',
-		de: '/Konto erstellen',
+		de: '/konto-erstellen',
 	},
 	'/profile': {
 		en: '/profile',
@@ -24,5 +25,10 @@ export const userAccountPathnames = {
 		pl: '/koszyk',
 		de: '/warenkorb',
 	},
+	'/reset-password':{
+		en:'/reset-password',
+		pl:'/zresetuj-hasło',
+		de:'/passwort-zurücksetzen'
+	}
 
 }

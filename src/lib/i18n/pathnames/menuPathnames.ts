@@ -153,7 +153,17 @@ export const menuPathnames = {
 		en: '/contact',
 		pl: '/kontakt',
 		de: '/kontakt',
-	}
+	},
+	'/privacy-policy': {
+		en: '/privacy-policy',
+		pl: '/polityka-prywatności',
+		de: '/datenschutzerklärung',
+	},
+	'/terms-and-conditions': {
+		en: '/terms-and-conditions',
+		pl: '/warunki-&-zasady',
+		de: '/allgemeine-geschäftsbedingungen',
+	},
 	
 	
 }
