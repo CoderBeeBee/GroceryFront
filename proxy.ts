@@ -21,48 +21,48 @@ function getLocale(pathname: string) {
 	return routing.locales.find(l => pathname.startsWith(`/${l}`)) || routing.defaultLocale
 }
 
-
 function matchesPathname(pathname: string, routeKey: keyof typeof guardPathnames, locale: GuardLocale) {
 	const translations = guardPathnames[routeKey][locale]
 
 	const cleanPath = locale === 'en' ? pathname : pathname.replace(/^\/[a-z]{2}/, '') || '/'
-	
+
 	const decodedPath = decodeURIComponent(cleanPath)
 
 	return decodedPath === translations
 }
 
-export default async function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
 	const token = request.cookies.get('jwt')?.value
 	const { pathname } = request.nextUrl
 	const locale = getLocale(pathname)
-	
+
 	const isProtectedRoute = pathname.includes('/dashboard')
 	const isAuthPage =
 		matchesPathname(pathname, '/sign-in', locale) || matchesPathname(pathname, '/create-account', locale)
-	
+
 	let userRole: string | null = null
 
 	if (token) {
 		try {
 			const secretKey = process.env.JWT_SECRET
+			if (!secretKey) {
+				console.log('👉 [MIDDLEWARE ERR] process.env.JWT_SECRET jest UNDEFINED! Sprawdź zmienne w Netlify.')
+				return intlMiddleware(request)
+			}
 
-			
 			const encodedSecret = new TextEncoder().encode(secretKey)
 
-			
 			const { payload } = await jwtVerify(token, encodedSecret)
 
 			userRole = typeof payload.role === 'string' ? payload.role : null
 		} catch (error) {
-			console.error('Token verification error in Middleware', error)
+			console.log('Token verification error in Middleware', error)
 		}
 	}
+	console.log(token)
 
-	
 	const localizedSignInPath = guardPathnames['/sign-in'][locale as keyof (typeof guardPathnames)['/sign-in']]
 
-	
 	if (!userRole && isProtectedRoute) {
 		return NextResponse.redirect(new URL(`/${locale}${localizedSignInPath}`, request.url))
 	}
@@ -75,10 +75,8 @@ export default async function middleware(request: NextRequest) {
 		return NextResponse.redirect(new URL(`/${locale}`, request.url))
 	}
 
-	
 	return intlMiddleware(request)
 }
-
 
 export const config = {
 	matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
