@@ -35,6 +35,7 @@ export default async function proxy(request: NextRequest) {
 	const token = request.cookies.get('jwt')?.value
 	const { pathname } = request.nextUrl
 	const locale = getLocale(pathname)
+	const secretKey = process.env.JWT_SECRET
 
 	const isProtectedRoute = pathname.includes('/dashboard')
 	const isAuthPage =
@@ -44,7 +45,6 @@ export default async function proxy(request: NextRequest) {
 
 	if (token) {
 		try {
-			const secretKey = process.env.JWT_SECRET
 			if (!secretKey) {
 				console.log('👉 [MIDDLEWARE ERR] process.env.JWT_SECRET jest UNDEFINED! Sprawdź zmienne w Netlify.')
 				return intlMiddleware(request)
@@ -60,6 +60,7 @@ export default async function proxy(request: NextRequest) {
 		}
 	}
 	console.log(token)
+	console.log(secretKey);
 
 	const localizedSignInPath = guardPathnames['/sign-in'][locale as keyof (typeof guardPathnames)['/sign-in']]
 
