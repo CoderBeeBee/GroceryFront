@@ -10,11 +10,12 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		// width: 100%;
+		height: var(--headerHeight);
 		padding: 0 1rem;
 		gap: 3rem;
-		width: 100%;
-		height: var(--headerHeight);
 		background-color: var(--white);
+		border-radius: var(--borderRadius_12);
 
 		.navActions {
 			display: flex;
@@ -43,10 +44,4 @@
 		}
 	}
 }
-@media (width > 1400px) {
-	.navigationContainer {
-		.navigationWrapper {
-			border-radius: var(--borderRadius_12);
-		}
-	}
-}
+

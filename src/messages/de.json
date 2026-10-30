@@ -97,5 +97,21 @@
 	},
 	"Social":{
 		"Follow":"Folgen Sie uns"
+	},
+
+	"Hero":{
+		"heroH1":"Frisch. Bio.",
+		"heroH2":"Direkt zu Ihnen nach Hause geliefert.",
+		"heroP":"Handverlesene Erzeugnisse vom Bauernhof, 100 % Bio-Lebensmittel und Wellness-Artikel – frisch direkt zu Ihnen nach Hause geliefert.",
+		"shopNow":"Jetzt einkaufen",
+		"exploreProd":"Produkte entdecken",
+		"ariaShop":"Jetzt einkaufen",
+		"ariaExplore":"Produkte entdecken",
+		"Organic":"100 % Bio",
+		"Farm":"Frisch vom Bauernhof",
+		"Fast":"Schnelle Lieferung",
+		"Direct":"Direkt vom Bauernhof",
+		"Pure":"Rein & natürlichl",
+		"OneTime":"Einmalig, jedes Mal"
 	}
 }

@@ -108,5 +108,21 @@
 	},
 	"Social":{
 		"Follow":"Follow us"
+	},
+
+	"Hero":{
+		"heroH1":"Fresh. Organic.",
+		"heroH2":"Delivered to Your Door.",
+		"heroP":"Handpicked farm produce, 100% organic groceries, and wellness essentials - delivered fresh to your doorstep.",
+		"shopNow":"Shop Now",
+		"exploreProd":"Explore products",
+		"ariaShop":"Shop now",
+		"ariaExplore":"Explore products",
+		"Organic":"100% Organic",
+		"Farm":"Farm Fresh",
+		"Fast":"Fast Delivery",
+		"Direct":"Direct from farms",
+		"Pure":"Pure & Natural",
+		"OneTime":"One-time, Every time"
 	}
 }

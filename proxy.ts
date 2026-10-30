@@ -46,7 +46,7 @@ export default async function proxy(request: NextRequest) {
 	if (token) {
 		try {
 			if (!secretKey) {
-				console.log('👉 [MIDDLEWARE ERR] process.env.JWT_SECRET jest UNDEFINED! Sprawdź zmienne w Netlify.')
+				console.log('👉 [MIDDLEWARE ERR] process.env.JWT_SECRET is UNDEFINED! Check env variables in Netlify.')
 				return intlMiddleware(request)
 			}
 
@@ -58,9 +58,9 @@ export default async function proxy(request: NextRequest) {
 		} catch (error) {
 			console.log('Token verification error in Middleware', error)
 		}
+	} else {
+		console.log('Token verification error in Middleware:', token)
 	}
-	console.log(token)
-	console.log(secretKey);
 
 	const localizedSignInPath = guardPathnames['/sign-in'][locale as keyof (typeof guardPathnames)['/sign-in']]
 

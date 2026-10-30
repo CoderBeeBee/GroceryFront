@@ -1,12 +1,14 @@
 :root {
 	// Colors
 	--primary: #27611e;
-	--secondary: #f2c020;
+	--primaryDark:#07270A;
+	--secondary: #FED629;
+	--secondaryDark: #f0ba17;
 	--hoverColor: #0b2c06;
 	--white: #ffffff;
 	--black: #000000;
 	--lightGreenColor: #ebf1e5;
-
+	--cardsIconColor:#47731F;
 	--errorColor: #8f0000;
 	--errorColorHover: #460101;
 	--successColor: #009062;
@@ -49,6 +51,7 @@
 	--padding_08: 0.8rem 1.6rem;
 	--padding_10: 1rem 2rem;
 	--padding_12: 1.2rem 2.4rem;
+	--padding_14: 1.4rem 2.8rem;
 	// Gap
 
 	// Font sizes
@@ -62,6 +65,20 @@
 	--fontSize_28: 2.8rem;
 	--fontSize_30: 3rem;
 	--fontSize_32: 3.2rem;
+	--fontSize_34: 3.4rem;
+	--fontSize_36: 3.6rem;
+	--fontSize_38: 3.8rem;
+	--fontSize_40: 4rem;
+	--fontSize_42: 4.2rem;
+	--fontSize_44: 4.4rem;
+	--fontSize_46: 4.6rem;
+	--fontSize_48: 4.8rem;
+	--fontSize_50: 5rem;
+	--fontSize_52: 5.2rem;
+	--fontSize_54: 5.4rem;
+	--fontSize_56: 5.6rem;
+	--fontSize_58: 5.8rem;
+	--fontSize_60: 6rem;
 
 	// Border radius
 	--borderRadius_08: 0.8rem;

@@ -1,12 +1,8 @@
-import styles from './website.module.scss'
+import Main from '@/src/components/website/Main/Main'
 
 
 const page = () => {
-	return (
-		<main className={`${styles.main}`}>
-			<div>page</div>
-		</main>
-	)
+	return <Main />
 }
 
 export default page

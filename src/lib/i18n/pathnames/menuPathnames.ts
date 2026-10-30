@@ -9,6 +9,11 @@ export const menuPathnames = {
 		pl: '/sklep',
 		de: '/shop',
 	},
+	'/shop/all-products': {
+		en: '/shop/all-products',
+		pl: '/sklep/wszystkie-produkty',
+		de: '/shop/alle-produkte',
+	},
 
 	// Categories
 	'/fruits': {

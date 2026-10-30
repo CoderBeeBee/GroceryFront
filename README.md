@@ -22,6 +22,31 @@ License: CC Attribution License (CC BY)
 Source: SVG Repo
 *The CC BY license allows the use, modification, and distribution of graphics, including in commercial projects, provided that appropriate credit is given, the source and license are cited, and any changes made are indicated.*
 
+**Environment And Ecology Icons**
+Author: Yogi Aprelliyanto
+License: CC Attribution License (CC BY)
+Source: SVG Repo
+*The CC BY license allows the use, modification, and distribution of graphics, including in commercial projects, provided that appropriate credit is given, the source and license are cited, and any changes made are indicated.*
+
+**Ecolocy Line Vectors**
+Author: shmai.com
+License: CC Attribution License (CC BY)
+Source: SVG Repo
+*The CC BY license allows the use, modification, and distribution of graphics, including in commercial projects, provided that appropriate credit is given, the source and license are cited, and any changes made are indicated.*
+
+**Business Commerce Line Vectors**
+Author: Rudez Studio
+License: CC Attribution License (CC BY)
+Source: SVG Repo
+*The CC BY license allows the use, modification, and distribution of graphics, including in commercial projects, provided that appropriate credit is given, the source and license are cited, and any changes made are indicated.*
+
+**Libre Variety Filled Icons**
+Author: Diemen Design
+License: MIT
+Repository: SVG Repo
+*The MIT license allows the use, modification, and distribution of icons, including in commercial projects, provided that the original copyright notice and license text are retained.*
+
+
 **UIW Icons**
 Author: uiwjs
 License: MIT

@@ -1,0 +1,52 @@
+.button {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	align-items: center;
+	border: none;
+	border-radius: var(--borderRadius_12);
+	padding: 1.2rem;
+	width: 100%;
+
+	.buttonTitle {
+		grid-column: 1/7;
+		font-size: var(--fontSize_14);
+		font-weight: bold;
+		text-align: center;
+	}
+	.arrowNextSVG {
+		grid-column: 7/7;
+		justify-self: flex-end;
+	}
+}
+
+.green {
+	color: var(--white);
+	background-color: var(--primary);
+	transition: background-color 0.3s ease-in;
+
+	&:hover {
+		background-color: var(--primaryDark);
+	}
+}
+
+.yellow {
+	color: var(--primaryDark);
+	background-color: var(--secondary);
+	transition: background-color 0.3s ease-in;
+
+	&:hover {
+		background-color: var(--secondaryDark);
+	}
+}
+
+@media (width > 480px) {
+	.button {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		align-items: center;
+		border: none;
+		border-radius: var(--borderRadius_12);
+
+		width: 100%;
+	}
+}

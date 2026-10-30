@@ -1,5 +1,5 @@
 import '../global.scss'
-import { Inter } from 'next/font/google'
+import { Inter, Lora } from 'next/font/google'
 import { ReactNode } from 'react'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { routing } from '@/src/lib/i18n/routing'
@@ -12,7 +12,11 @@ const inter = Inter({
 	weight: ['400', '500', '600', '700'],
 	subsets: ['latin'],
 })
-
+const lora = Lora({
+	variable: '--font-lora',
+	weight: ['400', '500', '600', '700'],
+	subsets: ['latin'],
+})
 export function generateStaticParams() {
 	return routing.locales.map(locale => ({ locale }))
 }
@@ -31,7 +35,7 @@ const RootLayout = async ({ children, params }: Props) => {
 
 	const messages = await getMessages()
 	return (
-		<html lang={locale} className={`${inter.variable}  antialiased`}>
+		<html lang={locale} className={`${inter.variable} ${lora.variable}  antialiased`}>
 			<body>
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					{children}
