@@ -1,4 +1,4 @@
-import { MenuTypes } from '../types/navigation'
+import { MenuTypes } from '../types/menu.types'
 
 const Home = {
 	titleKey: 'Home',
@@ -7,190 +7,118 @@ const Home = {
 const shop = {
 	titleKey: 'Shop',
 	href: '/shop',
-} satisfies MenuTypes
-const categories = {
-	titleKey: 'Categories',
-	href: '',
-	children: [
+	categories: [
 		{
-			titleKey: 'Fruits',
-			href: '/fruits',
+			titleKey: 'Fresh Produce',
+			slug: 'fresh-produce',
+			categories: [
+				{ titleKey: 'Fruits', slug: 'fruits' },
+				{ titleKey: 'Vegetables', slug: 'vegetables' },
+				{ titleKey: 'Mushrooms', slug: 'mushrooms' },
+				{ titleKey: 'Fresh Herbs', slug: 'fresh-herbs' },
+			],
 		},
 		{
-			titleKey: 'Juices',
-			href: '/juices',
+			titleKey: 'Dairy & Meat',
+			slug: 'dairy-and-meat',
+			categories: [
+				{ titleKey: 'Milk & Dairy', slug: 'milk-and-dairy' },
+				{ titleKey: 'Dairy & Eggs', slug: 'dairy-and-eggs' },
+				{ titleKey: 'Cheese', slug: 'cheese' },
+				{ titleKey: 'Meat & Poultry', slug: 'meat-and-poultry' },
+			],
 		},
 		{
-			titleKey: 'Vegetables',
-			href: '/vegetables',
+			titleKey: 'Pantry',
+			slug: 'pantry',
+			categories: [
+				{ titleKey: 'Grains & Flour', slug: 'grains-and-flour' },
+				{ titleKey: 'Nuts & Seeds', slug: 'nuts-and-seeds' },
+				{ titleKey: 'Legumes', slug: 'legumes' },
+				{ titleKey: 'Pasta & Noodles', slug: 'pasta-and-noodles' },
+				{ titleKey: 'Oils & Vinegars', slug: 'oils-and-vinegars' },
+			],
 		},
 		{
-			titleKey: 'Nuts & Seeds',
-			href: '/nuts-and-seeds',
+			titleKey: 'Preserves & Drinks',
+			slug: 'preserves-drinks',
+			categories: [
+				{ titleKey: 'Juices', slug: 'juices' },
+				{ titleKey: 'Honey & Sweeteners', slug: 'honey-and-sweeteners' },
+				{ titleKey: 'Jams & Preserves', slug: 'jams-and-preserves' },
+				{ titleKey: 'Fermented Foods', slug: 'fermented-foods' },
+				{ titleKey: 'Herbs & Teas', slug: 'herbs-and-teas' },
+			],
 		},
 		{
-			titleKey: 'Dairy & Eggs',
-			href: '/dairy-and-eggs',
+			titleKey: 'Bakery & Snacks',
+			slug: 'bakery-snacks',
+			categories: [
+				{ titleKey: 'Bread & Bakery', slug: 'bread-and-bakery' },
+				{ titleKey: 'Dried Fruits', slug: 'dried-fruits' },
+				{ titleKey: 'Natural Snacks', slug: 'natural-snacks' },
+				{ titleKey: 'Nut Butters', slug: 'nut-butters' },
+			],
 		},
 		{
-			titleKey: 'Jams',
-			href: '/jams',
-		},
-		{
-			titleKey: 'Honey & Sweeteners',
-			href: '',
-			children: [
-				{
-					titleKey: 'Fruits',
-					href: '/honey-and-sweeteners/fruits',
-				},
-				{
-					titleKey: 'Juices',
-					href: '/honey-and-sweeteners/juices',
-				},
-				{
-					titleKey: 'Vegetables',
-					href: '/honey-and-sweeteners/vegetables',
-				},
-				{
-					titleKey: 'Nuts & Seeds',
-					href: '/honey-and-sweeteners/nuts-and-seeds',
-				},
-				{
-					titleKey: 'Dairy & Eggs',
-					href: '/honey-and-sweeteners/dairy-and-eggs',
-				},
-				{
-					titleKey: 'Jams',
-					href: '/honey-and-sweeteners/jams',
-				},
+			titleKey: 'Special Collections',
+			slug: 'collections',
+			categories: [
+				{ titleKey: 'Organic Products', slug: 'organic' },
+				{ titleKey: 'Seasonal Products', slug: 'seasonal' },
+				{ titleKey: 'Farm Bundles', slug: 'farm-bundles' },
+				{ titleKey: 'Traditional Products', slug: 'traditional' },
 			],
 		},
 	],
 } satisfies MenuTypes
-// const categories2 = {
-// 	titleKey: 'Categories',
-// 	href: '',
-// 	children: [
-// 		{
-// 			titleKey: 'Fruits',
-// 			href: '/fruits',
-// 		},
-// 		{
-// 			titleKey: 'Juices',
-// 			href: '/juices',
-// 		},
-// 		{
-// 			titleKey: 'Vegetables',
-// 			href: '',
-// 			children: [
-// 				{
-// 					titleKey: 'Fruits',
-// 					href: '/vegetables/fruits',
-// 				},
-// 				{
-// 					titleKey: 'Juices',
-// 					href: '/vegetables/juices',
-// 				},
-// 				{
-// 					titleKey: 'Vegetables',
-// 					href: '/vegetables/vegetables',
-// 				},
-// 				{
-// 					titleKey: 'Nuts & Seeds',
-// 					href: '/vegetables/nuts-and-seeds',
-// 				},
-// 				{
-// 					titleKey: 'Dairy & Eggs',
-// 					href: '/vegetables/dairy-and-eggs',
-// 				},
-// 				{
-// 					titleKey: 'Jams',
-// 					href: '/vegetables/jams',
-// 				},
-// 			],
-// 		},
-// 		{
-// 			titleKey: 'Nuts & Seeds',
-// 			href: '/nuts-and-seeds',
-// 		},
-// 		{
-// 			titleKey: 'Dairy & Eggs',
-// 			href: '',
-// 			children: [
-// 				{
-// 					titleKey: 'Fruits',
-// 					href: '/dairy-and-eggs/fruits',
-// 				},
-// 				{
-// 					titleKey: 'Juices',
-// 					href: '/dairy-and-eggs/juices',
-// 				},
-// 				{
-// 					titleKey: 'Vegetables',
-// 					href: '/dairy-and-eggs/vegetables',
-// 				},
-// 				{
-// 					titleKey: 'Nuts & Seeds',
-// 					href: '/dairy-and-eggs/nuts-and-seeds',
-// 				},
-// 				{
-// 					titleKey: 'Dairy & Eggs',
-// 					href: '/dairy-and-eggs/dairy',
-// 				},
-// 				{
-// 					titleKey: 'Jams',
-// 					href: '/dairy-and-eggs/jams',
-// 				},
-// 			],
-// 		},
-// 		{
-// 			titleKey: 'Jams',
-// 			href: '/jams',
-// 		},
-// 		{
-// 			titleKey: 'Honey & Sweeteners',
-// 			href: '',
-// 			children: [
-// 				{
-// 					titleKey: 'Fruits',
-// 					href: '/honey-and-sweeteners/fruits',
-// 				},
-// 				{
-// 					titleKey: 'Juices',
-// 					href: '/honey-and-sweeteners/juices',
-// 				},
-// 				{
-// 					titleKey: 'Vegetables',
-// 					href: '/honey-and-sweeteners/vegetables',
-// 				},
-// 				{
-// 					titleKey: 'Nuts & Seeds',
-// 					href: '/honey-and-sweeteners/nuts-and-seeds',
-// 				},
-// 				{
-// 					titleKey: 'Dairy & Eggs',
-// 					href: '/honey-and-sweeteners/dairy-and-eggs',
-// 				},
-// 				{
-// 					titleKey: 'Jams',
-// 					href: '/honey-and-sweeteners/jams',
-// 				},
-// 			],
-// 		},
-// 	],
-// } satisfies MenuTypes
 
-const blog = {
-	titleKey: 'Blog',
-	href: '/blog',
+const discovery = {
+	titleKey: 'Discovery',
+	href: '/discovery',
+	// categories: [
+	// 	{
+	// 		titleKey: 'Food & Nutrition',
+	// 		slug: 'fresh-produce',
+			
+	// 	},
+	// ],
 } satisfies MenuTypes
-const about = {
-	titleKey: 'About',
-	href: '/about',
+
+// Food & Nutrition
+
+// Artykuły o zdrowym odżywianiu, składnikach i właściwościach produktów.
+
+// vegetable stew
+
+// Recipes
+
+// Przepisy wykorzystujące produkty dostępne w Twoim sklepie.
+
+// Japan provides approximately 2 million USD for Malawi to support peacebuilding, socio-economic empowerment and climate change adaptation. | United Nations Development Programme
+
+// Farm Stories
+
+// Historie rolników, gospodarstw i lokalnych producentów.
+
+// October Garden Jobs UK: Garden & Greenhouse Checklist
+
+// Seasonal Guides
+
+// Co jeść w danym sezonie, sezonowe produkty i inspiracje.
+
+// HeldenPilz – Deine Experten für Darmgesundheit & Fermentation
+
+// Food Guides
+
+// Poradniki dotyczące przechowywania, fermentowania i przygotowywania żywności.
+
+const ourStory = {
+	titleKey: 'Our Story',
+	href: '/our-story',
 } satisfies MenuTypes
 const contact = {
 	titleKey: 'Contact',
 	href: '/contact',
 } satisfies MenuTypes
-export const dataMenu = [Home, shop, categories, blog, about, contact]
+export const dataMenu = [Home, shop, discovery, ourStory, contact]

@@ -17,7 +17,6 @@
 		grid-template-rows: var(--lineHeight50) 0fr;
 		width: 100%;
 		min-height: 0;
-
 		transition: grid-template-rows 0.35s ease-in-out;
 		cursor: pointer;
 		overflow: hidden;
@@ -36,7 +35,8 @@
 			cursor: pointer;
 			transition:
 				transform 0.3s ease-in-out,
-				background-color 0.3s ease-in-out;
+				background-color 0.3s ease-in-out,
+				color 0.3s ease-in;
 
 			.activeRotateChevron {
 				transform: rotate(180deg);
@@ -51,15 +51,25 @@
 				font-weight: 300;
 				color: var(--black);
 				transform: translateY(-50%);
+				transition: color 0.3s ease-in;
 			}
 			&:hover {
+				color: var(--white);
 				background-color: var(--primary);
+
+				&::before {
+					color: var(--white);
+				}
 			}
 		}
 
 		.activeLink {
 			color: var(--white);
 			background-color: var(--primary);
+
+			&::before {
+				color: var(--white);
+			}
 		}
 
 		.dropDownWrapper {
@@ -80,15 +90,19 @@
 				.dropDownLink {
 					display: flex;
 					align-items: center;
+					padding: 0 3rem 0 4rem;
+					justify-content: space-between;
 					color: var(--black);
-					padding-left: 4rem;
 					font-size: var(--fontSize_14);
 					font-weight: 500;
 					line-height: var(--lineHeight40);
 					cursor: pointer;
-					transition: background-color 0.3s ease-in-out;
+					transition:
+						background-color 0.3s ease-in-out,
+						color 0.3s ease-in;
 
 					&:hover {
+						color: var(--white);
 						background-color: var(--primary);
 					}
 
@@ -115,21 +129,29 @@
 					transition: all 0.3s ease-in-out;
 
 					.subDropdownElement {
-						
+						transition: background-color 0.3s ease-in-out;
+
+						&:last-child {
+							border-bottom: 1px solid var(--primary);
+						}
+
 						.subDropdownLink {
-							display: flex;
+							display: list-item;
 							align-items: center;
 							color: var(--black);
-							padding-left: 6rem;
-							line-height: var(--lineHeight40);
-
+							margin-left: 6rem;
 							font-size: var(--fontSize_14);
 							font-weight: 500;
-							transition: background-color 0.3s ease-in-out;
-							text-decoration: none;
+							list-style: disc;
+							line-height: var(--lineHeight40);
 							cursor: pointer;
-							&:hover {
-								background-color: var(--primary);
+							transition: color 0.3s ease-in-out;
+						}
+						&:hover {
+							background-color: var(--primary);
+
+							.subDropdownLink {
+								color: var(--white);
 							}
 						}
 					}

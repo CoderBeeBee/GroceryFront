@@ -1,5 +1,5 @@
 @use '../src/assets/styles/variable' as *;
-@import "tailwindcss";
+@import 'tailwindcss';
 
 *,
 ::before,
@@ -22,10 +22,10 @@ body {
 	background-color: var(--background);
 }
 
-a{
+a {
 	text-decoration: none;
 }
-ul{
+ul {
 	list-style: none;
 }
 .row {
@@ -34,12 +34,12 @@ ul{
 	max-width: 1500px;
 	margin: 0 auto;
 }
-.column{
+.column {
 	height: 100dvh;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	width: 6px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
 	background-color: var(--primary);
 }

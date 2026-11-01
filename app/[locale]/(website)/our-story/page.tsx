@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 }
 
 const Page = () => {
-	const t = useTranslations('About')
+	const t = useTranslations('Our Story')
 	return (
 		<div className={`flex justify-center items-center w-full h-full text-red-900 text-[40px] font-bold underline`}>
-			{t('About')}
+			{t('Our Story')}
 		</div>
 	)
 }

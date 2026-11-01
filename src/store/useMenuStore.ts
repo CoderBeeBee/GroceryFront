@@ -97,7 +97,7 @@ export const closeSubMenu = () => {
 export const toggleDropDown = (index: number | null) => {
 	const { activeIndex } = useMenuStore.getState()
 
-	toggleSubDropDown(null)
+	 toggleSubDropDown(null)
 
 	if (activeIndex === index) {
 		useMenuStore.setState({ activeIndex: null })

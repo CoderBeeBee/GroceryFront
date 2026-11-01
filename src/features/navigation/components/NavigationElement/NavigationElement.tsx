@@ -7,7 +7,7 @@ import { toggleMenu } from '@/src/store/useMobileStore'
 import { useTranslations } from 'next-intl'
 import { ChevronDownSVG } from '@/src/assets/icons/ArrowsIcons'
 import { Link, usePathname } from '@/src/lib/i18n/navigation'
-import { MenuTypes } from '../../types/navigation'
+import { MenuTypes } from '../../types/menu.types'
 
 interface NavigationElementProps {
 	styles: Record<string, string>
@@ -21,34 +21,16 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 
 	const { isMobile } = useWindowSize()
 	const pathname = usePathname()
-	const isActive = activeIndex === index
-
+	const isActive = activeIndex === index 
+	const activeRotate = activeIndex === index
 	const isActive2 = pathname === item.href && !activeIndex
 
 	return (
 		<li className={clsx(styles.navigationElementWrapper, { [styles.activeDropdown]: isActive })}>
-			{item.href ? (
-				<Link
-					href={item.href}
-					className={clsx(styles.link, { [styles.activeLink]: isActive2 })}
-					onMouseEnter={() => {
-						if (isMobile) return
-						expandMenu(null)
-					}}
-					onClick={() => {
-						if (isMobile) {
-							if (isActive2) return
-							toggleMenu()
-						}
-					}}
-					onKeyDown={e => {
-						if (isMobile) return
-						onKeyDown(e, index)
-					}}>
-					<span className={styles.title}>{t(item.titleKey)}</span>
-				</Link>
-			) : (
+			{item.categories ? (
 				<button
+					
+					type="button"
 					aria-expanded={isActive}
 					aria-controls={`menu-${index}`}
 					className={clsx(styles.link, { [styles.activeLink]: isActive })}
@@ -70,11 +52,31 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 						onKeyDown(e, index)
 					}}>
 					<span className={styles.title}>{t(item.titleKey)}</span>
-					<ChevronDownSVG className={clsx({ [styles.activeRotateChevron]: isActive })} />
+					<ChevronDownSVG className={clsx({ [styles.activeRotateChevron]: activeRotate })} />
 				</button>
+			) : (
+				<Link
+					href={item.href}
+					className={clsx(styles.link, { [styles.activeLink]: isActive2 })}
+					onMouseEnter={() => {
+						if (isMobile) return
+						expandMenu(null)
+					}}
+					onClick={() => {
+						if (isMobile) {
+							if (isActive2) return
+							toggleMenu()
+						}
+					}}
+					onKeyDown={e => {
+						if (isMobile) return
+						onKeyDown(e, index)
+					}}>
+					<span className={styles.title}>{t(item.titleKey)}</span>
+				</Link>
 			)}
 
-			{item.children?.length && <DropDown data={item} styles={styles} index={index} />}
+			{item.categories?.length && <DropDown data={item} styles={styles} index={index} />}
 		</li>
 	)
 }

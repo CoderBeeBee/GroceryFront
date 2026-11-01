@@ -7,12 +7,13 @@ import {
 	useMenuStore,
 } from '@/src/store/useMenuStore'
 import clsx from 'clsx'
-import Link from 'next/link'
+
 import SubDropDown from '../SubDropDown/SubDropDown'
 import useWindowSize from '@/src/hooks/useWindowSize'
 import { useTranslations } from 'next-intl'
 import { ChevronDownSVG } from '@/src/assets/icons/ArrowsIcons'
-import { MenuTypes } from '../../types/navigation'
+import { MenuTypes } from '../../types/menu.types'
+
 
 interface DropDownTypes {
 	data: MenuTypes
@@ -24,7 +25,8 @@ const DropDown = ({ data, styles, index }: DropDownTypes) => {
 	const t = useTranslations('Menu')
 	const { activeIndex, activeSubIndex } = useMenuStore(state => state)
 	const { isMobile } = useWindowSize()
-	const isActive = activeIndex === index
+	
+	const isActive = activeIndex === index 
 
 	return (
 		<ul
@@ -39,7 +41,7 @@ const DropDown = ({ data, styles, index }: DropDownTypes) => {
 				closeMenu()
 			}}>
 			{data &&
-				data.children?.map((item, i: number) => {
+				data.categories?.map((item, i: number) => {
 					const isActive = activeSubIndex === i
 
 					return (
@@ -48,27 +50,40 @@ const DropDown = ({ data, styles, index }: DropDownTypes) => {
 							className={clsx(styles.dropDownElement, { [styles.activeSubDropdown]: isActive })}
 							onMouseEnter={() => {
 								if (isMobile) return
-								if (item.children) expandSubMenu(i)
+								if (item.categories) expandSubMenu(i)
 								else closeSubMenu()
 							}}
-							onClick={() => {
-								if (item.children) toggleSubDropDown(i)
-							}}>
-							{item.children && item.children?.length ? (
-								<button
-									type="button"
-									className={clsx(styles.dropDownLink, { [styles.activeLinkDropdown]: isActive })}
-									aria-expanded={isActive}
-									aria-controls={`submenu-${index}`}>
-									<span>{t(item.titleKey)}</span>
-									<ChevronDownSVG className={clsx(styles.chevron, { [styles.activeRotateChevron]: isActive })} />
-								</button>
-							) : (
-								<Link href={item.href} className={`${styles.dropDownLink}`}>
-									{t(item.titleKey)}
-								</Link>
+							// onClick={() => {
+							// 				if (item.categories) toggleSubDropDown(i)
+							// 			}}
+						>
+							{
+								item.categories && item.categories?.length && (
+									<button
+										// href={{
+										// 	pathname:`${data.href}`,
+										// 	query:`category=${item.slug}`
+										// }}
+										onClick={() => {
+											if (item.categories) toggleSubDropDown(i)
+										}}
+										type="button"
+										className={clsx(styles.dropDownLink, { [styles.activeLinkDropdown]: isActive })}
+										aria-expanded={isActive}
+										aria-controls={`submenu-${index}`}>
+										<span>{t(item.titleKey)}</span>
+										<ChevronDownSVG className={clsx(styles.chevron, { [styles.activeRotateChevron]: isActive })} />
+									</button>
+								)
+								// : (
+								// 	<Link href={data.href} className={`${styles.dropDownLink}`}>
+								// 		{t(item.titleKey)}
+								// 	</Link>
+								// )
+							}
+							{item.categories && (
+								<SubDropDown href={data.href} data={item.categories} index={i} parentIndex={index} styles={styles} />
 							)}
-							{item.children && <SubDropDown data={item.children} index={i} parentIndex={index} styles={styles} />}
 						</li>
 					)
 				})}

@@ -8,18 +8,40 @@
 	"Menu": {
 		"Home": "Startseite",
 		"Shop": "Shop",
-		"Categories": "Kategorien",
-		"Fruits": "Obst",
-		"Juices": "Säfte",
-		"Vegetables": "Gemüse",
-		"Nuts & Seeds": "Nüsse & Samen",
-		"Dairy & Eggs": "Milchprodukte & Eier",
-		"Jams": "Konfitüren",
-		"Honey & Sweeteners": "Honig & Süßungsmittel",
-		"Honey": "Honig",
-		"Sweeteners": "Süßungsmittel",
-		"Blog": "Blog",
-		"About": "Über uns",
+		"Fresh Produce":"Frische Produkte",
+		"Fruits":"Obst",
+		"Vegetables":"Gemüse",
+		"Mushrooms":"Pilze",
+		"Fresh Herbs":"Frische Kräuter",
+		"Dairy & Meat":"Milchprodukte & Fleisch",
+		"Milk & Dairy":"Milch & Milchprodukte",
+		"Dairy & Eggs":"Milchprodukte & Eier",
+		"Cheese":"Käse",
+		"Meat & Poultry":"Fleisch & Geflügel",
+		"Pantry":"Vorratskammer",
+		"Grains & Flour":"Getreide & Mehl",
+		"Nuts & Seeds":"Nüsse & Samen",
+		"Legumes":"Hülsenfrüchte",
+		"Pasta & Noodles":"Teigwaren & Nudeln",
+		"Oils & Vinegars":"Öle & Essige",
+		"Preserves & Drinks":"Konserven & Getränke",
+		"Juices":"Säfte",
+		"Honey & Sweeteners":"Honig & Süßungsmittel",
+		"Jams & Preserves":"Konfitüren & Marmeladen",
+		"Fermented Foods":"Fermentierte Lebensmittel",
+		"Herbs & Teas":"Kräuter & Tees",
+		"Bakery & Snacks":"Backwaren & Snacks",
+		"Bread & Bakery":"Brot & Backwaren",
+		"Dried Fruits":"Trockenfrüchte",
+		"Natural Snacks":"Natürliche Snacks",
+		"Nut Butters":"Nussbutter",
+		"Special Collections":"Sonderkollektionen",
+		"Organic Products":"Bio-Produkte",
+		"Seasonal Products":"Saisonale Produkte",
+		"Farm Bundles":"Bauernhof-Pakete",
+		"Traditional Products":"Traditionelle Produkte",
+		"Discovery": "Entdeckung",
+		"Our Story": "Unsere Geschichte",
 		"Contact": "Kontakt"
 	},
 	"AuthLink": {
@@ -32,8 +54,8 @@
 		"Profile": "Profil",
 		"Settings": "Einstellungen"
 	},
-	"About": {
-		"About": "Über uns"
+	"Our Story": {
+		"Our Story": "Unsere Geschichte"
 	},
 	"Contact": {
 		"Contact": "Kontakt"

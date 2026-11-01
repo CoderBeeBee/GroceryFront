@@ -8,18 +8,40 @@
 	"Menu": {
 		"Home": "Strona główna",
 		"Shop": "Sklep",
-		"Categories": "Kategorie",
-		"Fruits": "Owoce",
-		"Juices": "Soki",
-		"Vegetables": "Warzywa",
-		"Nuts & Seeds": "Orzechy i nasiona",
-		"Dairy & Eggs": "Nabiał i jajka",
-		"Jams": "Dżemy",
-		"Honey & Sweeteners": "Miody i słodziki",
-		"Honey": "Miody",
-		"Sweeteners": "Słodziki",
-		"Blog": "Blog",
-		"About": "O nas",
+		"Fresh Produce":"Świeże produkty",
+		"Fruits":"Owoce",
+		"Vegetables":"Warzywa",
+		"Mushrooms":"Grzyby",
+		"Fresh Herbs":"Świeże zioła",
+		"Dairy & Meat":"Nabiał & Mięso",
+		"Milk & Dairy":"Mleko & Nabiał",
+		"Dairy & Eggs":"Nabiał & Jaja",
+		"Cheese":"Ser",
+		"Meat & Poultry":"Mięso & Drób",
+		"Pantry":"Produkty Spożywcze",
+		"Grains & Flour":"Zboża & Mąka",
+		"Nuts & Seeds":"Orzechy & Nasiona",
+		"Legumes":"Rośliny strączkowe",
+		"Pasta & Noodles":"Makaron & Kluski",
+		"Oils & Vinegars":"Oleje & Octy",
+		"Preserves & Drinks":"Przetwory & Napoje",
+		"Juices":"Soki",
+		"Honey & Sweeteners":"Miód & Słodziki",
+		"Jams & Preserves":"Dżemy & Konfitury",
+		"Fermented Foods":"Produkty Fermentowane",
+		"Herbs & Teas":"Zioła & Herbaty",
+		"Bakery & Snacks":"Pieczywo & Przekąski",
+		"Bread & Bakery":"Chleb & Wypieki",
+		"Dried Fruits":"Suszone Owoce",
+		"Natural Snacks":"Naturalne Przekąski",
+		"Nut Butters":"Masło Orzechowe",
+		"Special Collections":"Kolekcje Specjalne",
+		"Organic Products":"Produkty Eko",
+		"Seasonal Products":"Produkty Sezonowe",
+		"Farm Bundles":"Zestawy",
+		"Traditional Products":"Produkty tradycyjne",
+		"Discovery": "Odkryj",
+		"Our Story": "Nasza Historia",
 		"Contact": "Kontakt"
 	},
 	"AuthLink": {
@@ -42,8 +64,8 @@
 			"description": "Dowiedz się więcej o naszej historii i misji."
 		}
 	},
-	"About": {
-		"About": "O nas"
+	"Our Story": {
+		"Our Story": "Nasza Historia"
 	},
 	"Contact": {
 		"Contact": "Kontakt"

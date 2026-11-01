@@ -1,0 +1,92 @@
+.heroTopDelivery {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		background-color: #f4f9e8;
+		border-radius: var(--borderRadius_12);
+
+		.icons {
+			color: var(--cardsIconColor);
+			width: 35px;
+			height: 35px;
+		}
+		.deliveryBox {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-grow: 1;
+
+			padding: var(--padding_12);
+			border-bottom: 1px solid var(--lightGrayColor);
+			&:last-child {
+				border-bottom: none;
+			}
+			.deliveryBoxContent {
+				display: flex;
+				align-items: center;
+
+				gap: 2rem;
+				width: 100%;
+				max-width: 250px;
+
+				.deliveryInfo {
+					display: flex;
+					flex-direction: column;
+
+					.deliveryTitle {
+						font-size: var(--fontSize_14);
+						font-weight: 600;
+					}
+					.deliverySubtitle {
+						font-size: var(--fontSize_12);
+					}
+				}
+			}
+		}
+	}
+
+    @media (width > 480px) {
+	
+
+		.heroTopDelivery {
+			.deliveryBox {
+				width: auto;
+			}
+		}
+	
+}
+@media (width > 520px) {
+	
+		.heroTopDelivery {
+			padding: 1rem 0;
+			.deliveryBox {
+				padding: 0 1rem;
+				border-right: 1px solid var(--lightGrayColor);
+				border-bottom: none;
+				&:last-child {
+					margin-top: 0.5rem;
+					border-right: none;
+				}
+
+				.deliveryBoxContent {
+					justify-content: center;
+				}
+			}
+		}
+	
+}
+@media (width > 768px) {
+	
+		
+		.heroTopDelivery {
+			.deliveryBox {
+				// padding: 0 1.2rem;
+				&:last-child {
+					margin-top: 0rem;
+				}
+			}
+		}
+	
+}
