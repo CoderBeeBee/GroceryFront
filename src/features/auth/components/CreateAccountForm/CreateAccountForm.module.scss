@@ -26,11 +26,11 @@
 			.createAccountTitle {
 				font-size: var(--fontSize_28);
 				font-weight: 400;
-				color: var(--black);
+				color: var(--color-text);
 			}
 			.createAccountText {
 				font-size: var(--fontSize_14);
-				color: var(--color-text-light);
+				color: var(--color-iron-400);
 
 				a {
 					font-weight: 600;
@@ -38,7 +38,7 @@
 					transition: color 0.3s ease-in;
 
 					&:hover {
-						color: var(--hoverColor);
+						color: var(--color-green-950);
 					}
 				}
 			}

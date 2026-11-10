@@ -1,30 +1,136 @@
 :root {
-	// Colors
-	--primary: #27611e;
-	--primaryDark:#07270A;
-	--secondary: #FED629;
-	--secondaryDark: #f0ba17;
-	--hoverColor: #0b2c06;
-	--white: #ffffff;
-	--black: #000000;
-	--lightGreenColor: #ebf1e5;
-	--cardsIconColor:#47731F;
-	--errorColor: #8f0000;
-	--errorColorHover: #460101;
-	--successColor: #009062;
-	--color-text-light: #929393;
-	--color-border: #eeeeee;
-	--blueColor: #338afb;
-	--orangeColor: #ffb08f;
-	--lightGrayColor: #d3d3d3d3;
-	--darkerGrayColor: #adadba;
-	--popupBgcOpacity: #0090621f;
+	// IMPORTANT!!!
+	--carouselPadding: 2rem;
 
+	// Colors
+	--white: #fff;
+	--black: #000;
+	--primary: #27611e;
+	--secondary: #fed629;
+	--color-text: #0c2a09;
+	--color-green-50: #f3fcf1;
+	--color-green-100: #e3f9df;
+	--color-green-200: #c8f2c0;
+	--color-green-300: #9ce68f;
+	--color-green-400: #69d157;
+	--color-green-500: #44b631;
+	--color-green-600: #349623;
+	--color-green-700: #2b761f;
+	--color-green-800: #27611e;
+	--color-green-900: #204d1a;
+	--color-green-950: #0c2a09;
+
+	--color-gold-50: #fefce8;
+	--color-gold-100: #fffbc2;
+	--color-gold-200: #fff288;
+	--color-gold-300: #ffe444;
+	--color-gold-400: #fed629;
+	--color-gold-500: #eeb804;
+	--color-gold-600: #cd8e01;
+	--color-gold-700: #a46504;
+	--color-gold-800: #874f0c;
+	--color-gold-900: #734010;
+	--color-gold-950: #432105;
+
+	--color-green-white-50: #f7f9f4;
+	--color-green-white-100: #ebf1e5;
+	--color-green-white-200: #d9e4ce;
+	--color-green-white-300: #bacda8;
+	--color-green-white-400: #93ae7a;
+	--color-green-white-500: #729156;
+	--color-green-white-600: #5b7643;
+	--color-green-white-700: #495e37;
+	--color-green-white-800: #3c4c2f;
+	--color-green-white-900: #323f28;
+	--color-green-white-950: #182112;
+
+	--color-red-50: #fff0f0;
+	--color-red-100: #ffdede;
+	--color-red-200: #ffc2c2;
+	--color-red-300: #ff9898;
+	--color-red-400: #ff5d5d;
+	--color-red-500: #ff2a2a;
+	--color-red-600: #f70b0b;
+	--color-red-700: #d10404;
+	--color-red-800: #ac0808;
+	--color-red-900: #8e0e0e;
+	--color-red-950: #460101;
+
+	--color-iron-50: #fafafa;
+	--color-iron-100: #f5f5f5;
+	--color-iron-200: #e6e6e6;
+	--color-iron-300: #d3d3d3d4;
+	--color-iron-400: #a3a3a3;
+	--color-iron-500: #727272;
+	--color-iron-600: #535353;
+	--color-iron-700: #404040;
+	--color-iron-800: #272727;
+	--color-iron-900: #1a1a1a;
+	--color-iron-950: #0b0b0b;
+
+	--color-eucalyptus-50: #ebfef5;
+	--color-eucalyptus-100: #d0fbe5;
+	--color-eucalyptus-200: #a4f6cf;
+	--color-eucalyptus-300: #6aebb7;
+	--color-eucalyptus-400: #2fd899;
+	--color-eucalyptus-500: #0abf81;
+	--color-eucalyptus-600: #009062;
+	--color-eucalyptus-700: #007c58;
+	--color-eucalyptus-800: #036246;
+	--color-eucalyptus-900: #04503b;
+	--color-eucalyptus-950: #012d22;
+
+	--color-dodger-blue-50: #eff7ff;
+	--color-dodger-blue-100: #daecff;
+	--color-dodger-blue-200: #bddeff;
+	--color-dodger-blue-300: #90caff;
+	--color-dodger-blue-400: #5caefe;
+	--color-dodger-blue-500: #338afb;
+	--color-dodger-blue-600: #206df0;
+	--color-dodger-blue-700: #1857dd;
+	--color-dodger-blue-800: #1a46b3;
+	--color-dodger-blue-900: #1b3f8d;
+	--color-dodger-blue-950: #152856;
+
+	--color-sazerac-50: #fff8ed;
+	--color-sazerac-100: #fff3e0;
+	--color-sazerac-200: #fedaaa;
+	--color-sazerac-300: #fdc074;
+	--color-sazerac-400: #fb9a3c;
+	--color-sazerac-500: #f97c16;
+	--color-sazerac-600: #ea610c;
+	--color-sazerac-700: #c2490c;
+	--color-sazerac-800: #9a3a12;
+	--color-sazerac-900: #7c3112;
+	--color-sazerac-950: #431607;
+
+	--color-flush-orange-50: #fffaec;
+	--color-flush-orange-100: #fff4d3;
+	--color-flush-orange-200: #ffe5a5;
+	--color-flush-orange-300: #ffd16d;
+	--color-flush-orange-400: #ffb132;
+	--color-flush-orange-500: #ff980a;
+	--color-flush-orange-600: #ff8300;
+	--color-flush-orange-700: #cc5f02;
+	--color-flush-orange-800: #a14a0b;
+	--color-flush-orange-900: #823e0c;
+	--color-flush-orange-950: #461e04;
+
+	--color-island-spice-50: #faf6ea;
+	--color-island-spice-100: #f3ebd2;
+	--color-island-spice-200: #e7d5a0;
+	--color-island-spice-300: #dabc6f;
+	--color-island-spice-400: #d2a64d;
+	--color-island-spice-500: #c88b38;
+	--color-island-spice-600: #b06e2f;
+	--color-island-spice-700: #93522a;
+	--color-island-spice-800: #794227;
+	--color-island-spice-900: #643723;
+	--color-island-spice-950: #381c10;
 	--viewsColor: #4a72fe;
 	--viewsBgc: #ecf1fd;
 	--userColor: #0aa8c0;
 	--userBgc: #e7f6fa;
-	--postColor: #ff8300;
 	--postBgc: #fff4e8;
 	--commentColor: #009062;
 	--commentBgc: #eafde8;
@@ -34,9 +140,6 @@
 	--categoryBgc: #ffcece;
 	--tagColor: #bda000;
 	--tagBgc: #feed8d;
-
-	// Background color
-	--background: #f5f5f5;
 
 	// Heights
 	--headerHeight: 60px;
@@ -52,6 +155,7 @@
 	--padding_10: 1rem 2rem;
 	--padding_12: 1.2rem 2.4rem;
 	--padding_14: 1.4rem 2.8rem;
+	--padding_16: 1.6rem 3.2rem;
 	// Gap
 
 	// Font sizes

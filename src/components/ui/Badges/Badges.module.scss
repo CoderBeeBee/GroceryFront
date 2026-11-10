@@ -1,92 +1,85 @@
-.heroTopDelivery {
-		display: inline-flex;
+.heroBadgesWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// align-self: flex-start;
+	flex-wrap: wrap;
+	background-color: var(--color-green-50);
+	min-height: 100px;
+	border-radius: var(--borderRadius_12);
+
+	.icons {
+		color: var(--color-green-white-500);
+		width: 35px;
+		height: 35px;
+	}
+	.badgesBox {
+		display: flex;
+		flex-direction: row;
 		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-
-		background-color: #f4f9e8;
-		border-radius: var(--borderRadius_12);
-
-		.icons {
-			color: var(--cardsIconColor);
-			width: 35px;
-			height: 35px;
+		flex-grow: 1;
+		padding: var(--padding_12);
+		border-bottom: 1px solid var(--color-iron-300);
+		&:last-child {
+			border-bottom: none;
 		}
-		.deliveryBox {
+		.badgesBoxContent {
 			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			flex-grow: 1;
+			align-items: center;
 
-			padding: var(--padding_12);
-			border-bottom: 1px solid var(--lightGrayColor);
-			&:last-child {
-				border-bottom: none;
-			}
-			.deliveryBoxContent {
+			gap: 2rem;
+			width: 100%;
+			max-width: 250px;
+
+			.badgesInfo {
 				display: flex;
-				align-items: center;
+				flex-direction: column;
+				color: var(--color-text);
+				font-weight: 600;
 
-				gap: 2rem;
-				width: 100%;
-				max-width: 250px;
-
-				.deliveryInfo {
-					display: flex;
-					flex-direction: column;
-
-					.deliveryTitle {
-						font-size: var(--fontSize_14);
-						font-weight: 600;
-					}
-					.deliverySubtitle {
-						font-size: var(--fontSize_12);
-					}
+				.badgesTitle {
+					font-size: var(--fontSize_14);
+				}
+				.badgesSubtitle {
+					font-size: var(--fontSize_12);
 				}
 			}
 		}
 	}
+}
 
-    @media (width > 480px) {
-	
-
-		.heroTopDelivery {
-			.deliveryBox {
-				width: auto;
-			}
+@media (width > 480px) {
+	.heroBadgesWrapper {
+		.badgesBox {
+			width: auto;
 		}
-	
+	}
 }
 @media (width > 520px) {
-	
-		.heroTopDelivery {
-			padding: 1rem 0;
-			.deliveryBox {
-				padding: 0 1rem;
-				border-right: 1px solid var(--lightGrayColor);
-				border-bottom: none;
-				&:last-child {
-					margin-top: 0.5rem;
-					border-right: none;
-				}
+	.heroBadgesWrapper {
+		padding: 1rem 0;
+		.badgesBox {
+			padding: 0 1rem;
+			border-right: 1px solid var(--color-iron-300);
+			border-bottom: none;
+			&:last-child {
+				margin-top: 0.5rem;
+				border-right: none;
+			}
 
-				.deliveryBoxContent {
-					justify-content: center;
-				}
+			.badgesBoxContent {
+				justify-content: center;
 			}
 		}
-	
+	}
 }
 @media (width > 768px) {
-	
-		
-		.heroTopDelivery {
-			.deliveryBox {
-				// padding: 0 1.2rem;
-				&:last-child {
-					margin-top: 0rem;
-				}
+	.heroBadgesWrapper {
+		.badgesBox {
+			// padding: 0 1.2rem;
+			&:last-child {
+				margin-top: 0rem;
 			}
 		}
-	
+	}
 }

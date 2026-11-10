@@ -14,10 +14,19 @@ const HeroTop = () => {
 			</div>
 
 			<div className={clsx(styles.heroTopLinks)}>
-				<Button variant="green" href={`/shop`} ariaLabel={t('ariaShop')}>
+				<Button 
+				variant="primary" 
+				
+				href={`/shop`} 
+				ariaLabel={t('ariaShop')}>
 					{t('shopNow')}
 				</Button>
-				<Button variant="yellow" href={`/shop/all-products`} ariaLabel={t('ariaExplore')}>
+				<Button
+					variant="secondary"
+					
+					href={`/shop/[category]`}
+					params="all-products"
+					ariaLabel={t('ariaExplore')}>
 					{t('exploreProd')}
 				</Button>
 			</div>

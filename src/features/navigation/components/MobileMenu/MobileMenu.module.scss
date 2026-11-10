@@ -80,86 +80,105 @@
 			z-index: 1000;
 			transition: all 0.3s ease-in-out;
 
-			.dropDownElement {
-				display: grid;
-				grid-template-rows: var(--lineHeight40) 0fr;
-				transition:
-					grid-template-rows 0.3s ease-in-out,
-					opacity 0.2s ease-in-out;
-
-				.dropDownLink {
-					display: flex;
-					align-items: center;
-					padding: 0 3rem 0 4rem;
-					justify-content: space-between;
-					color: var(--black);
-					font-size: var(--fontSize_14);
-					font-weight: 500;
-					line-height: var(--lineHeight40);
-					cursor: pointer;
+			.dropDownList {
+				.dropDownElement {
+					display: grid;
+					grid-template-rows: var(--lineHeight40) 0fr;
 					transition:
-						background-color 0.3s ease-in-out,
-						color 0.3s ease-in;
+						grid-template-rows 0.3s ease-in-out,
+						opacity 0.2s ease-in-out;
 
-					&:hover {
+					.dropDownLink {
+						display: flex;
+						align-items: center;
+						padding: 0 3rem 0 4rem;
+						justify-content: space-between;
+						color: var(--black);
+						font-size: var(--fontSize_14);
+						font-weight: 500;
+						line-height: var(--lineHeight40);
+						cursor: pointer;
+						transition:
+							background-color 0.3s ease-in-out,
+							color 0.3s ease-in;
+
+						&:hover {
+							color: var(--white);
+							background-color: var(--primary);
+						}
+
+						.chevron {
+							min-width: 20px;
+							transform: rotate(-90deg);
+						}
+
+						.activeRotateChevron {
+							transform: rotate(0deg);
+						}
+					}
+					.activeLinkDropdown {
 						color: var(--white);
 						background-color: var(--primary);
 					}
 
-					.chevron {
-						min-width: 20px;
-						transform: rotate(-90deg);
-					}
+					.subDropdown {
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						min-height: 0;
+						overflow: hidden;
+						transition: all 0.3s ease-in-out;
 
-					.activeRotateChevron {
-						transform: rotate(0deg);
-					}
-				}
-				.activeLinkDropdown {
-					color: var(--white);
-					background-color: var(--primary);
-				}
-
-				.subDropdown {
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-					min-height: 0;
-					overflow: hidden;
-					transition: all 0.3s ease-in-out;
-
-					.subDropdownElement {
-						transition: background-color 0.3s ease-in-out;
-
-						&:last-child {
-							border-bottom: 1px solid var(--primary);
-						}
-
-						.subDropdownLink {
-							display: list-item;
-							align-items: center;
-							color: var(--black);
-							margin-left: 6rem;
-							font-size: var(--fontSize_14);
-							font-weight: 500;
-							list-style: disc;
-							line-height: var(--lineHeight40);
-							cursor: pointer;
-							transition: color 0.3s ease-in-out;
-						}
-						&:hover {
-							background-color: var(--primary);
+						.subDropdownElement {
+							&:last-child {
+								border-bottom: 1px solid var(--primary);
+							}
 
 							.subDropdownLink {
-								color: var(--white);
+								display: flex;
+								flex-direction: row;
+								align-items: center;
+								gap: 1rem;
+								color: var(--black);
+								padding-left: 6rem;
+								font-size: var(--fontSize_14);
+								font-weight: 500;
+
+								line-height: var(--lineHeight40);
+
+								transition:
+									color 0.3s ease-in-out,
+									background-color 0.3s ease-in-out;
+
+								.dot {
+									display: flex;
+									width: 5px;
+									height: 5px;
+									background-color: var(--black);
+									border-radius: 50%;
+									transition: background-color 0.3s ease-in-out;
+								}
+								&:hover {
+									color: var(--white);
+									background-color: var(--primary);
+									.dot {
+										background-color: var(--white);
+									}
+								}
 							}
 						}
 					}
 				}
+
+				.activeSubDropdown {
+					grid-template-rows: var(--lineHeight40) 1fr;
+				}
 			}
-			.activeSubDropdown {
-				grid-template-rows: var(--lineHeight40) 1fr;
+			.mobileFotterButton {
+				margin: 2rem auto;
+				width: 90%;
 			}
+			
 		}
 	}
 	.activeDropdown {

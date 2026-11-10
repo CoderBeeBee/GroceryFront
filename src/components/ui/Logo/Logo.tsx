@@ -3,14 +3,24 @@ import styles from './Logo.module.scss'
 import Link from 'next/link'
 
 type LogoProps = {
-  text?: string
+	text?: string
 }
 
 const Logo = ({ text }: LogoProps) => {
 	return (
 		<div className={styles.logoContainer}>
 			<Link href="/" aria-label="CoderBee" title="CoderBee" className={`${styles.logoLink}`}>
-				<Image loading="eager" src="/images/logo/logoSVG.svg" alt="Logo" width={100} height={50} />
+				<Image
+					loading="eager"
+					src="/images/logo/logoSVG.svg"
+					alt="Logo"
+					width={200}
+					height={100}
+					style={{
+						width: '100%',
+						height: '100%',
+					}}
+				/>
 			</Link>
 			{text && <h2 className={styles.logoText}>{text}</h2>}
 		</div>

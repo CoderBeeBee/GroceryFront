@@ -5,7 +5,7 @@
 	width: 100%;
 	padding: 1rem 0;
 	background: transparent;
-
+	z-index: 1000;
 	.navigationWrapper {
 		display: flex;
 		flex-direction: row;
@@ -44,4 +44,3 @@
 		}
 	}
 }
-

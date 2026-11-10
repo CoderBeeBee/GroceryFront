@@ -3,36 +3,62 @@ import { Link, NavigationHref } from '@/src/lib/i18n/navigation'
 import clsx from 'clsx'
 import { type ReactNode } from 'react'
 import styles from './Button.module.scss'
+import { AppPathnames } from '@/src/features/navigation/types/menu.types'
+import { TrashSVG } from '@/src/assets/icons/DashboardIcons'
+
+type ButtonVariant = 'primary' | 'secondary' | 'remove'
+type ButtonSize = 'es' | 'xs' | 'sm' | 'md' | 'lg'
 type ButtonProps = {
 	children: ReactNode
 	ariaLabel: string
-	variant: 'green' | 'yellow'
+	variant?: ButtonVariant
+	size?: ButtonSize
 	type?: 'submit' | 'reset' | 'button' | undefined
-	href?: NavigationHref
+	icon?: 'arrow' | 'trash' | null
+	href?: AppPathnames
 	className?: string
 	onClick?: () => void
+	params?: string | undefined
 }
 // & Omit<ComponentProps<'button'>, 'children' | 'className'>
 const Button = ({
 	ariaLabel,
 	type = 'submit',
-	variant = 'green',
+	variant = 'primary',
+	size = 'md',
+	icon = 'arrow',
 	href,
 	children,
 	className,
+	params,
+
 	onClick,
 	...props
 }: ButtonProps) => {
-	const buttonStyles = clsx(styles.button, styles[variant], className)
+	const buttonStyles = clsx(styles.button, styles[variant], styles[size], className)
 	const content = (
 		<>
 			<span className={styles.buttonTitle}>{children}</span>
-			<ArrowNext className={styles.arrowNextSVG} />
+
+			{icon && icon === 'arrow' ? (
+				<ArrowNext className={styles.arrowNextSVG} />
+			) : (
+				<TrashSVG className={styles.trashSVG} />
+			)}
 		</>
 	)
 	if (href) {
+		let finalHref = ''
+
+		if (href.includes('[category]') && params) {
+			finalHref = href.replace('[category]', params)
+		} else if (href.includes('[slug]') && params) {
+			finalHref = href.replace('[slug]', params)
+		} else {
+			finalHref = href
+		}
 		return (
-			<Link href={href} aria-label={ariaLabel} className={buttonStyles} onClick={onClick}>
+			<Link href={finalHref as NavigationHref} aria-label={ariaLabel} className={buttonStyles} onClick={onClick}>
 				{content}
 			</Link>
 		)

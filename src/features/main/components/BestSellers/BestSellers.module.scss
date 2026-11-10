@@ -1,0 +1,48 @@
+.bestSellersWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	height: 100%;
+	gap: 1rem;
+	padding: var(--padding_10);
+
+	.bestSellersHeader {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+
+		.bestSellersText {
+			display: flex;
+			flex-direction: column;
+			color: var(--color-text);
+			font-weight: 600;
+
+			.bestSellersH3 {
+				font-size: var(--fontSize_34);
+				font-family: var(--font-lora);
+			}
+			.bestSellersLabel {
+				font-size: var(--fontSize_14);
+			}
+		}
+
+		.bestSellersButton {
+			width: auto;
+			color: var(--color-text);
+			background-color: transparent;
+			transition: color 0.3s ease-in-out;
+
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+
+	.bestSellersList {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		gap: 2rem;
+	}
+}

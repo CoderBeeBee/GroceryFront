@@ -9,18 +9,42 @@ export const menuPathnames = {
 		pl: '/sklep',
 		de: '/shop',
 	},
-	'/shop/all-products': {
-		en: '/shop/all-products',
-		pl: '/sklep/wszystkie-produkty',
-		de: '/shop/alle-produkte',
+	'/shop/[category]': {
+		en: '/shop/[category]',
+		pl: '/sklep/[category]',
+		de: '/shop/[category]',
+	},
+	'/shop/[category]/[subcategory]/[slug]': {
+		en: '/shop/[category]/[subcategory]/[slug]',
+		pl: '/sklep/[category]/[subcategory]/[slug]',
+		de: '/shop/[category]/[subcategory]/[slug]',
+	},
+	'/shop/fresh-produce/fruits/[slug]': {
+		en: '/shop/fresh-produce/fruits/[slug]',
+		pl: '/sklep/świeże-produkty/owoce/[slug]',
+		de: '/shop/frische-produkte/obst/[slug]',
 	},
 
-	
 	// Other pages
-	'/discovery': {
-		en: '/discovery',
-		pl: '/discovery',
-		de: '/discovery',
+	'/discover': {
+		en: '/discover',
+		pl: '/discover',
+		de: '/discover',
+	},
+	'/discover/[category]': {
+		en: '/discover/[category]',
+		pl: '/discover/[category]',
+		de: '/discover/[category]',
+	},
+	'/discover/[category]/[subCategory]': {
+		en: '/discover/[category]/[subCategory]',
+		pl: '/discover/[category]/[subCategory]',
+		de: '/discover/[category]/[subCategory]',
+	},
+	'/discover/journal/[slug]': {
+		en: '/discover/journal/[slug]',
+		pl: '/discover/journal/[slug]',
+		de: '/discover/journal/[slug]',
 	},
 	'/our-story': {
 		en: '/our-story',
@@ -42,6 +66,4 @@ export const menuPathnames = {
 		pl: '/warunki-&-zasady',
 		de: '/allgemeine-geschäftsbedingungen',
 	},
-	
-	
 }

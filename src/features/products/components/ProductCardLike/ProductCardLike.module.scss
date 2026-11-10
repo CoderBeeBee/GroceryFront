@@ -1,0 +1,22 @@
+.productCardLikeButton {
+			cursor: pointer;
+			.heartSVG {
+				position: absolute;
+				top: 3%;
+				right: 3%;
+				color: transparent;
+				stroke: var(--color-green-600);
+
+				width: 25px;
+				height: 25px;
+
+				&:hover {
+					stroke: var(--color-green-800);
+				}
+			}
+
+			.favorites {
+				color: var(--color-green-600);
+				
+			}
+		}

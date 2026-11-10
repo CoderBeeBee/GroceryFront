@@ -1,10 +1,15 @@
 .heroTopWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+	// margin-top: 10rem;
 	max-width: 700px;
 	padding: var(--padding_12);
 	.heroTopContent {
 		.heroH1,
 		.heroH2 {
-			color: var(--primaryDark);
+			color: var(--color-green-950);
 			font-weight: bold;
 			line-height: 40px;
 			font-family: var(--font-lora);
@@ -19,7 +24,7 @@
 			margin-top: 2rem;
 			// max-width: 450px;
 			// text-wrap: balance;
-			color: var(--primaryDark);
+			color: var(--color-text);
 			font-size: var(--fontSize_14);
 		}
 	}
@@ -30,7 +35,6 @@
 		margin: 2rem 0;
 		max-width: 400px;
 	}
-	
 }
 
 @media (width > 480px) {
@@ -55,13 +59,12 @@
 		.heroTopLinks {
 			flex-direction: row;
 		}
-
-		
 	}
 }
 
 @media (width > 768px) {
 	.heroTopWrapper {
+		margin-top: 0;
 		.heroTopContent {
 			.heroH1,
 			.heroH2 {
@@ -78,7 +81,6 @@
 				font-size: var(--fontSize_14);
 			}
 		}
-		
 	}
 }
 @media (width > 1024px) {
