@@ -8,17 +8,16 @@
 		margin-bottom: 1rem;
 		font-size: var(--fontSize_14);
 		font-weight: 500;
-		color: var(--black);
+		color: var(--color-text);
 		z-index: 100;
 		cursor: pointer;
 
 		span {
-			color: var(--black);
+			
 			margin-left: 1rem;
 			font-size: var(--fontSize_14);
 
 			a {
-				color: var(--black);
 				font-weight: bold;
 
 				&:hover {
@@ -28,7 +27,7 @@
 			&::after {
 				content: '*';
 				margin-left: 0.5rem;
-				color: var(--errorColor);
+				color: var(--color-red-800);
 				font-size: var(--fontSize_16);
 			}
 		}
@@ -38,6 +37,6 @@
 	}
 }
 .error {
-	color: var(--errorColor);
+	color: var(--color-red-800);
 	font-size: var(--fontSize_14);
 }

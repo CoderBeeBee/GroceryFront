@@ -4,7 +4,7 @@ import { SearchSVG } from '@/src/assets/icons/GeneralIcons'
 import CloseButton from '@/src/components/ui/CloseButton/CloseButton'
 import { closeList, toggleList, toggleSearch, useSearchStore } from '@/src/store/useSearchStore'
 import useWindowSize from '@/src/hooks/useWindowSize'
-import { Link } from '@/src/lib/i18n/navigation'
+import { Link, NavigationHref } from '@/src/lib/i18n/navigation'
 import { toggleNavActions } from '@/src/store/useMenuStore'
 import { ChangeEvent, useEffect, useState } from 'react'
 import useDebounce from '@/src/hooks/useDebounce'
@@ -15,7 +15,7 @@ import { useTranslations } from 'next-intl'
 
 const NavSearch = () => {
 	const t = useTranslations('Search')
-	const url = 'wisnia'
+	const slug = 'wisnia'
 	const { widthLess600 } = useWindowSize()
 	const { isOpen, isVisible, activeList, activeHeight } = useSearchStore()
 	const [value, setValue] = useState<string>('')
@@ -88,13 +88,15 @@ const NavSearch = () => {
 							[styles.height]: activeHeight,
 						})}>
 						{Array.from({ length: 10 }, (_, index) => {
+							const linkHref = `shop/fresh-produce/fruits/${slug}`
 							return (
 								<Link
 									key={index}
-									href={{
-										pathname: '/product/[slug]',
-										params: { slug: url },
-									}}
+									href={linkHref as NavigationHref}
+									// href={{
+									// 	pathname: 'shop/fresh-produce/fruits/[slug]',
+									// 	params: {  slug },
+									// }}
 									className={`${styles.elementSearchListLink}`}>
 									Produkt {index + 1}
 								</Link>
@@ -102,14 +104,9 @@ const NavSearch = () => {
 						})}
 						{data &&
 							data.map((item: searchDataTypes) => {
+								const linkHref = `shop/fresh-produce/fruits/${slug}`
 								return (
-									<Link
-										key={item._id}
-										href={{
-											pathname: '/product/[slug]',
-											params: { slug: item.slug },
-										}}
-										className={`${styles.elementSearchListLink}`}>
+									<Link key={item._id} href={linkHref as NavigationHref} className={`${styles.elementSearchListLink}`}>
 										{item.name}
 									</Link>
 								)

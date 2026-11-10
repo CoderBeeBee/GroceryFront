@@ -70,9 +70,9 @@
 					align-items: center;
 					width: 100%;
 					padding: 1rem 3rem;
-					
+
 					gap: 1rem;
-					color: var(--black);
+					color: var(--color-text);
 					border-radius: var(--borderRadius_30);
 					font-size: var(--fontSize_14);
 					font-weight: 600;
@@ -95,35 +95,6 @@
 						color: var(--primary);
 					}
 				}
-				// .signOutButton {
-				// 	display: flex;
-				// 	flex-direction: row;
-				// 	align-items: center;
-				// 	width: 100%;
-				// 	padding: 1rem 3rem;
-				// 	// line-height: var(--lineHeight40);
-				// 	gap: 1rem;
-				// 	color: var(--black);
-				// 	border-radius: var(--borderRadius_30);
-				// 	font-size: var(--fontSize_14);
-				// 	font-weight: 600;
-				// 	cursor: pointer;
-				// 	transition:
-				// 		color 0.3s ease-in-out,
-				// 		background-color 0.3s ease;
-
-				// 	&:hover {
-				// 		color: var(--white);
-				// 		background-color: var(--primary);
-				// 		.logOutSVG {
-				// 			color: var(--white);
-				// 		}
-				// 	}
-
-				// 	.logOutSVG {
-				// 		color: var(--primary);
-				// 	}
-				// }
 			}
 		}
 	}

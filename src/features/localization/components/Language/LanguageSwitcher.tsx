@@ -8,7 +8,7 @@ import { ChevronDownSVG } from '@/src/assets/icons/ArrowsIcons'
 import NavButton from '@/src/components/ui/NavButton/NavButton'
 import { toggleNavActions, useMenuStore } from '@/src/store/useMenuStore'
 import { dataMenu } from '@/src/features/navigation/data/dataMenu'
-import { useParams } from 'next/navigation'
+import { useParams, useSearchParams } from 'next/navigation'
 
 const LanguageSwitcher = () => {
 	const t = useTranslations('Language')
@@ -18,6 +18,7 @@ const LanguageSwitcher = () => {
 	const locale = useLocale()
 	const pathname = usePathname()
 	const params = useParams()
+	const searchParams = useSearchParams()
 	const router = useRouter()
 	const isActive = languageIndex === activeIndex
 	const changeLanguage = (el: string) => {
@@ -26,6 +27,7 @@ const LanguageSwitcher = () => {
 			{
 				pathname,
 				params,
+				query: Object.fromEntries(searchParams.entries()),
 			} as never,
 			{
 				locale: el,

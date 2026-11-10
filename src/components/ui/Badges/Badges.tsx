@@ -6,16 +6,16 @@ import { BadgesProps, BaseBadge } from './types/Badges.types'
 const Badges = <T extends BaseBadge>({ data, badgesIcons }: BadgesProps<T>) => {
 	const t = useTranslations('Hero')
 	return (
-		<div className={clsx(styles.heroTopDelivery)}>
+		<div className={clsx(styles.heroBadgesWrapper)}>
 			{data.map((item, index) => {
 				const Icon = badgesIcons[item.type](styles)
 				return (
-					<div key={index} className={clsx(styles.deliveryBox)}>
-						<div className={clsx(styles.deliveryBoxContent)}>
+					<div key={index} className={clsx(styles.badgesBox)}>
+						<div className={clsx(styles.badgesBoxContent)}>
 							{Icon}
-							<div className={clsx(styles.deliveryInfo)}>
-								<p className={clsx(styles.deliveryTitle)}>{t(item.title)}</p>
-								<span className={clsx(styles.deliverySubtitle)}>{t(item.subtitle)}</span>
+							<div className={clsx(styles.badgesInfo)}>
+								<p className={clsx(styles.badgesTitle)}>{t(item.title)}</p>
+								<span className={clsx(styles.badgesSubtitle)}>{t(item.subtitle)}</span>
 							</div>
 						</div>
 					</div>

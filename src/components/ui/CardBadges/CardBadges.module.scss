@@ -1,0 +1,39 @@
+.cardBadgesWrapper {
+	position: absolute;
+	// top: 3%;
+	left: 3%;
+	padding: var(--padding_06);
+	border-radius: var(--borderRadius_20);
+
+	.cardBadgesName {
+		color: var(--white);
+		font-size: var(--fontSize_12);
+	}
+}
+
+// Possition
+
+.top{
+	top: 3%;
+}
+
+.bottom{
+	bottom: 3%;
+}
+
+.organic {
+	background-color: var(--primary);
+}
+
+.fresh {
+	background-color: var(--color-green-500);
+}
+
+.saleOrange {
+	color: var(--primary);
+	background-color: var(--color-gold-500);
+}
+
+.saleRed {
+	background-color: var(--color-red-700);
+}

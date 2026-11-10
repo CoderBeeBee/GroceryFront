@@ -1,4 +1,4 @@
-import DropDown from '../DropDown/DropDown'
+import CategoriesDropDown from '../CategoriesDropDown/CategoriesDropDown'
 import { closeMenu, expandMenu, onKeyDown, toggleDropDown, useMenuStore } from '@/src/store/useMenuStore'
 import clsx from 'clsx'
 
@@ -21,7 +21,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 
 	const { isMobile } = useWindowSize()
 	const pathname = usePathname()
-	const isActive = activeIndex === index 
+	const isActive = activeIndex === index
 	const activeRotate = activeIndex === index
 	const isActive2 = pathname === item.href && !activeIndex
 
@@ -29,7 +29,6 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 		<li className={clsx(styles.navigationElementWrapper, { [styles.activeDropdown]: isActive })}>
 			{item.categories ? (
 				<button
-					
 					type="button"
 					aria-expanded={isActive}
 					aria-controls={`menu-${index}`}
@@ -76,7 +75,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 				</Link>
 			)}
 
-			{item.categories?.length && <DropDown data={item} styles={styles} index={index} />}
+			{item.categories?.length && <CategoriesDropDown data={item} styles={styles} index={index} />}
 		</li>
 	)
 }
