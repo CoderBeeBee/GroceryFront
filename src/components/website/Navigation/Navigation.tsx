@@ -9,7 +9,7 @@ import useWindowSize from '@/src/hooks/useWindowSize'
 import LanguageSwitcher from '../../../features/localization/components/Language/LanguageSwitcher'
 
 import { toggleNavActions } from '@/src/store/useMenuStore'
-import { useEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import NavCart from '../../../features/navigation/components/NavCart/NavCart'
 import NavAccount from '@/src/features/navigation/components/NavAccount/NavAccount'
 import NavSearch from '@/src/features/navigation/components/NavSearch/NavSearch'
@@ -20,9 +20,7 @@ import { Provider } from 'react-redux'
 import { store } from '@/src/lib/store'
 import { SITE_NAME } from '@/src/config/site'
 
-
 const Navigation = () => {
-	
 	const { isMobile, widthLess600 } = useWindowSize()
 	const actionRef = useRef<HTMLDivElement | null>(null)
 
@@ -63,7 +61,9 @@ const Navigation = () => {
 						) : (
 							<>
 								<NavAccount />
-								<LanguageSwitcher />
+								<Suspense fallback={null}>
+									<LanguageSwitcher />
+								</Suspense>
 							</>
 						)}
 					</div>
