@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import LanguageSwitcher from '../../../localization/components/Language/LanguageSwitcher'
 import styles from './MobileSettings.module.scss'
+import { Suspense } from 'react'
 
 const MobileSettings = () => {
 	const t = useTranslations('Mobile')
@@ -10,7 +11,10 @@ const MobileSettings = () => {
 			<ul className={`${styles.siteSettingsList}`}>
 				<li className={`${styles.siteSettingsLi}`}>
 					<p className={`${styles.siteLiTitle}`}>{t('Language')}</p>
-					<LanguageSwitcher />
+
+					<Suspense fallback={null}>
+						<LanguageSwitcher />
+					</Suspense>
 				</li>
 			</ul>
 		</div>
