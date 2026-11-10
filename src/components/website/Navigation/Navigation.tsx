@@ -9,7 +9,7 @@ import useWindowSize from '@/src/hooks/useWindowSize'
 import LanguageSwitcher from '../../../features/localization/components/Language/LanguageSwitcher'
 
 import { toggleNavActions } from '@/src/store/useMenuStore'
-import { Suspense, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import NavCart from '../../../features/navigation/components/NavCart/NavCart'
 import NavAccount from '@/src/features/navigation/components/NavAccount/NavAccount'
 import NavSearch from '@/src/features/navigation/components/NavSearch/NavSearch'
@@ -61,9 +61,8 @@ const Navigation = () => {
 						) : (
 							<>
 								<NavAccount />
-								<Suspense fallback={null}>
-									<LanguageSwitcher />
-								</Suspense>
+
+								<LanguageSwitcher />
 							</>
 						)}
 					</div>
