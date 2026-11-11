@@ -16,7 +16,7 @@ interface NavigationElementProps {
 }
 
 const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
-	const t = useTranslations('Menu')
+	const t = useTranslations('Common')
 	const { activeIndex } = useMenuStore(state => state)
 
 	const { isMobile } = useWindowSize()
@@ -24,7 +24,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 	const isActive = activeIndex === index
 	const activeRotate = activeIndex === index
 	const isActive2 = pathname === item.href && !activeIndex
-
+	
 	return (
 		<li className={clsx(styles.navigationElementWrapper, { [styles.activeDropdown]: isActive })}>
 			{item.categories ? (
@@ -74,7 +74,7 @@ const NavigationElement = ({ styles, item, index }: NavigationElementProps) => {
 					<span className={styles.title}>{t(item.titleKey)}</span>
 				</Link>
 			)}
-
+			
 			{item.categories?.length && <CategoriesDropDown data={item} styles={styles} index={index} />}
 		</li>
 	)

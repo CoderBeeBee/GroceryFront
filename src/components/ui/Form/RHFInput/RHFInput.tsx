@@ -16,6 +16,7 @@ type RHFInputType<T extends FieldValues> = {
 	isSubmitting: boolean
 	tipMessage?: string
 	required?: boolean
+	translation:string
 }
 
 type InputType = RHFInputType<FieldValues>['type']
@@ -28,9 +29,9 @@ const RHFInput = <T extends FieldValues>({
 	placeholder,
 	isSubmitting,
 	tipMessage,
-	required = true,
+	required = true,translation
 }: RHFInputType<T>) => {
-	const t = useTranslations('AuthForm')
+	const t = useTranslations(translation)
 	const { dateToDateTimeLocal } = useDateTimeLocal()
 	const [visible, setVisible] = useState<boolean>(false)
 	const { control } = useFormContext()

@@ -12,9 +12,10 @@ export default getRequestConfig(async () => {
 	if (!hasLocale(routing.locales, locale)) {
 		notFound()
 	}
-
+	const messages = (await import(`../../messages/${locale}/translation.ts`)).default
+	
 	return {
 		locale: locale,
-		messages: (await import(`../../messages/${locale}.json`)).default,
+		messages
 	}
 })

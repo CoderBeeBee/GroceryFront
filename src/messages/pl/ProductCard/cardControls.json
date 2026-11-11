@@ -1,0 +1,9 @@
+{
+	"ProductCardControls": {
+		"Add": "Dodaj do koszyka",
+		"Out": "Brak na stanie",
+		"Increase": "Zwiększ ilość",
+		"Reduce": "Zmniejsz ilość",
+		"Enter": "Wprowadź ilość"
+	}
+}

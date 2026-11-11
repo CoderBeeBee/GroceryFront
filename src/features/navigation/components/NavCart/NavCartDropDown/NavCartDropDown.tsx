@@ -6,51 +6,84 @@ import Button from '@/src/components/ui/Button/Button'
 import { ShoppingCartSVG } from '@/src/assets/icons/ShopIcons'
 import useFormatPrice from '@/src/hooks/useFormatPrice'
 import useProductCart from '@/src/hooks/useProductCart'
+import { Link, NavigationHref } from '@/src/lib/i18n/navigation'
+import { toggleNavActions } from '@/src/store/useMenuStore'
+import { useTranslations } from 'next-intl'
+import RemoveButton from '@/src/features/cart/components/RemoveButton/RemoveButton'
+import CartControllers from '@/src/features/cart/components/CartContollers/CartControllers'
 
 type NavCartDropDownType = {
 	isActive: boolean
 }
 
 const NavCartDropDown = ({ isActive }: NavCartDropDownType) => {
+	const t = useTranslations('NavCart')
+
 	const { count, isShoppingCart, shoppingCart, formattedTotalPrice } = useProductCart()
-	const { formatProductPrice } = useFormatPrice()
+	const { formatProductPrice, formatCartPrice } = useFormatPrice()
 
 	return (
 		<div className={clsx(styles.navCartDropdown, { [styles.activeDropdown]: isActive })}>
-			<h3 className={styles.navCartTitle}>Your Cart ({count})</h3>
+			<h3 className={styles.navCartTitle}>
+				{t('YourCart')} ({count})
+			</h3>
 
 			{isShoppingCart ? (
 				shoppingCart.slice(0, 3).map((item, index) => {
-					const totalProductPrice = item.price * item.quantity
-					const { formattedDiscountPrice, formattedProductPrice, discountedPrice } = formatProductPrice(
-						item.discount,
-						totalProductPrice,
-					)
+					const linkHref = `/shop/${item.categories}/${item.slug}`
 
+					const { formattedProductPrice, formattedDiscountPrice } = formatProductPrice(item.discount, item.price)
+					const { formattedTotalDiscountPrice, formattedTotalProductPrice } = formatCartPrice(
+						item.discount,
+						item.price,
+						item.quantity,
+					)
 					return (
 						<div key={index} className={clsx(styles.navCartProductWrapper)}>
-							<Image src={item.image} alt={item.name} width={100} height={80} className={styles.navCartProductImage} />
+							<Link
+								href={linkHref as NavigationHref}
+								aria-label={`${t('Go to')} ${item.name}`}
+								onClick={() => toggleNavActions(null)}>
+								<Image
+									src={item.image}
+									alt={item.name}
+									width={800}
+									height={800}
+									className={styles.navCartProductImage}
+								/>
+							</Link>
 							<div className={styles.navCartProductContent}>
-								<h4 className={styles.navCartProductH4}>{item.name}</h4>
+								<Link
+									href={linkHref as NavigationHref}
+									aria-label={`${t('Go to')} ${item.name}`}
+									className={styles.navCartProductLink}
+									onClick={() => toggleNavActions(null)}>
+									{item.name}
+								</Link>
 								<p className={styles.navCartProductQuantity}>
-									Quantity: {item.quantity} x {item.productQuantity}
+									{t('Quantity')}: {item.quantity} x {item.productQuantity}
 									{item.salesUnit}
 								</p>
-								<p className={styles.navCartProductPrice}>
-									Total Price: {discountedPrice > 0 ? formattedDiscountPrice : formattedProductPrice}{' '}
-									<span className={styles.navCartProductOldPrice}>{discountedPrice > 0 && formattedProductPrice}</span>
+								<p className={styles.navCartProductUnitPrice}>
+									{t('ProductPrice')}: {item.discount ? formattedDiscountPrice : formattedProductPrice} /{' '}
+									{item.productQuantity}
+									{item.salesUnit}
 								</p>
+								<div className={styles.navCartProductPrice}>
+									{t('Total Price')}: {item.discount ? formattedTotalDiscountPrice : formattedTotalProductPrice}{' '}
+									{item.discount && (
+										<span className={styles.navCartProductOldPrice}> {formattedTotalProductPrice}</span>
+									)}
+								</div>
 
-								<Button
-									type="button"
-									variant="remove"
-									size="es"
-									icon="trash"
-									ariaLabel="Remove Product"
-									className={styles.navCartProductButton}
-									onClick={() => removeFromCart(item.id)}>
-									Remove
-								</Button>
+								<div className={styles.cartControllers}>
+									<CartControllers productId={item.id} inStock={item.inStock} />
+									<RemoveButton
+										size="es"
+										ariaLabel={t('Remove Product')}
+										className={styles.navCartProductButton}
+										onClick={() => removeFromCart(item.id)}></RemoveButton>
+								</div>
 							</div>
 						</div>
 					)
@@ -62,19 +95,28 @@ const NavCartDropDown = ({ isActive }: NavCartDropDownType) => {
 					</div>
 
 					<div className={styles.emptyCartContent}>
-						<h4 className={styles.emptyCartH4}>Your cart is empty</h4>
-						<p className={styles.emptyCartP}>{`Looks like you haven't added anything to your cart yet.`}</p>
+						<h4 className={styles.emptyCartH4}>{t('Your cart is empty')}</h4>
+						<p className={styles.emptyCartP}>{t('EmptyCart')}</p>
 					</div>
 				</div>
 			)}
+
 			{isShoppingCart && (
 				<div className={styles.navCartTotalWrapper}>
-					<p className={styles.navCartTotalQuantity}>Total Quantity: {count}</p>
-					<p className={styles.navCartTotalPrice}>Total Price: {formattedTotalPrice}</p>
+					<p className={styles.navCartTotalQuantity}>
+						{t('Total Quantity')}: {count}
+					</p>
+					<p className={styles.navCartTotalPrice}>
+						{t('Total Price')}: {formattedTotalPrice}
+					</p>
 				</div>
 			)}
-			<Button href={isShoppingCart ? '/shopping-cart' : '/shop'} size="xs" ariaLabel="View all">
-				{isShoppingCart ? 'View All' : 'Continue Shopping'}
+			<Button
+				href={isShoppingCart ? '/shopping-cart' : '/shop'}
+				size="xs"
+				ariaLabel="View all"
+				onClick={() => toggleNavActions(null)}>
+				{isShoppingCart ? t('View All') : t('Continue Shopping')}
 			</Button>
 		</div>
 	)

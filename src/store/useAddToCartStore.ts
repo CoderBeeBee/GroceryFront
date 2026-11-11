@@ -26,7 +26,14 @@ let timeoutRef: ReturnType<typeof setTimeout> | null = null
 
 export const addToCart = ({ productId, quantity }: ProductType) => {
 	const { products } = useAddToCartStore.getState()
-	const productExists = products.some(pro => pro.productId === productId)
+	const productExists = products.find(pro => pro.productId === productId)
+
+	const maxQuantityReached = products.length >= 100
+
+	if (maxQuantityReached) {
+		setIsEqual()
+		return
+	}
 
 	if (productExists) {
 		useAddToCartStore.setState({
@@ -38,29 +45,61 @@ export const addToCart = ({ productId, quantity }: ProductType) => {
 		return
 	}
 
-	if (products.length >= 100) {
-		useAddToCartStore.setState({ isEqual: true })
-
-		if (timeoutRef !== null) {
-			clearTimeout(timeoutRef)
-		}
-
-		timeoutRef = setTimeout(() => {
-			useAddToCartStore.setState({ isEqual: false })
-			timeoutRef = null
-		}, 5000)
-
-		return
-	}
 	useAddToCartStore.setState({
 		products: [...products, { productId, quantity }],
 	})
 }
 
-export const removeFromCart = ( productId: string ) => {
+const setIsEqual = () => {
+	useAddToCartStore.setState({ isEqual: true })
+
+	if (timeoutRef !== null) {
+		clearTimeout(timeoutRef)
+	}
+
+	timeoutRef = setTimeout(() => {
+		useAddToCartStore.setState({ isEqual: false })
+		timeoutRef = null
+	}, 5000)
+
+	return
+}
+
+export const removeFromCart = (productId: string) => {
 	const { products } = useAddToCartStore.getState()
 
 	useAddToCartStore.setState({
 		products: products.filter(f => f.productId !== productId),
+	})
+}
+
+export const changeQuantity = (productId: string, type?: '+' | '-', value?: number) => {
+	const { products } = useAddToCartStore.getState()
+
+	
+
+	useAddToCartStore.setState({
+		products: products.map(product => {
+			if (product.productId !== productId) return product
+
+			let nextQuantity = product.quantity
+
+			if (typeof value === 'number' && !Number.isNaN(value)) {
+				nextQuantity = value
+			} else if (type === '+') {
+				nextQuantity = product.quantity + 1
+			} else if (type === '-') {
+				nextQuantity = product.quantity - 1
+			}
+
+			// Zabezpieczenie przed zejściem poniżej 1 oraz przekroczeniem stanu magazynowego
+
+			const clampedQuantity = Math.max(1, Math.floor(nextQuantity))
+
+			return {
+				...product,
+				quantity: clampedQuantity,
+			}
+		}),
 	})
 }

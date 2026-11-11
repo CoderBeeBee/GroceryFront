@@ -10,6 +10,7 @@ type RHFCheckboxTypes<T extends FieldValues> = {
 	label?: string
 	placeholder?: string
 	isSubmitting?: boolean
+	translation: string
 }
 
 const RHFCheckbox = <T extends FieldValues>({
@@ -19,8 +20,9 @@ const RHFCheckbox = <T extends FieldValues>({
 	label,
 	placeholder,
 	isSubmitting,
+	translation,
 }: RHFCheckboxTypes<T>) => {
-	const t = useTranslations("AuthForm")
+	const t = useTranslations(translation)
 	const { control } = useFormContext()
 	return (
 		<Controller

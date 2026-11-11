@@ -18,10 +18,11 @@ interface DropDownTypes {
 }
 
 const CategoriesDropDown = ({ data, styles, index }: DropDownTypes) => {
-	const t = useTranslations('Menu')
+	const translation = data.titleKey === 'Shop' ? 'ShopMenu' : 'Discover'
+	const t = useTranslations(translation)
 	const { activeIndex, activeSubIndex } = useMenuStore(state => state)
 	const { isMobile } = useWindowSize()
-
+	
 	const isActive = activeIndex === index
 
 	return (
@@ -74,6 +75,7 @@ const CategoriesDropDown = ({ data, styles, index }: DropDownTypes) => {
 										index={i}
 										parentIndex={index}
 										styles={styles}
+										translation={translation}
 									/>
 								)}
 							</li>

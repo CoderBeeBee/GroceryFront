@@ -10,9 +10,8 @@ type ProductCardLikeType = {
 }
 
 const ProductCardLike = ({ productId }: ProductCardLikeType) => {
-	
 	// temporary solution
-    const {productIds} = useProductLikeStore()
+	const { productIds } = useProductLikeStore()
 	const likeHandler = (e: MouseEvent<HTMLButtonElement>, id: string) => {
 		e.stopPropagation()
 		toggleFavorites(id)

@@ -13,6 +13,7 @@ export const topPicksData = [
 		productQuantity: 250,
 		salesUnit: 'g',
 		totalProductReviews: 214,
+		inStock: 35,
 	},
 	{
 		id: '32343323329',
@@ -28,6 +29,7 @@ export const topPicksData = [
 		productQuantity: 2,
 		salesUnit: 'pc',
 		totalProductReviews: 214,
+		inStock: 34,
 	},
 	{
 		id: '32348',
@@ -43,6 +45,7 @@ export const topPicksData = [
 		productQuantity: 1,
 		salesUnit: 'kg',
 		totalProductReviews: 214,
+		inStock: 78,
 	},
 	{
 		id: '32343',
@@ -58,5 +61,6 @@ export const topPicksData = [
 		productQuantity: 330,
 		salesUnit: 'ml',
 		totalProductReviews: 214,
+		inStock: 24,
 	},
 ]

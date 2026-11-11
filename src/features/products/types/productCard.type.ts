@@ -12,4 +12,5 @@ export type ProductType = {
 	productType: string[]
 	salesUnit: string
 	totalProductReviews: number
+	inStock:number
 }

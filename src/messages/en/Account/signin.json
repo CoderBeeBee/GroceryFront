@@ -1,0 +1,22 @@
+{
+	"SignIn": {
+		"Sign In": "Sign In",
+		"Don't have an account?": "Don't have an account?",
+		"Sign Up": "Sign Up",
+		"Email": "Email",
+		"Password": "Password",
+		"Enter your email": "Enter your email",
+		"Enter your password": "Enter your password",
+		"forgotPassword": "Forgot Password?",
+		"Invalid email address": "Invalid email address.",
+		"emailTooShort": "Email must have at least 6 characters.",
+		"emailTooLong": "The email is too long. Max 254 characters.",
+		"passwordTooShort": "Password must have at least 8 characters.",
+		"passwordTooLong": "The password is too long. Max 128 characters.",
+		"Logging": "Logging",
+		"invalidCredentials": "Invalid email or password.",
+		"userNotVerified": "User is not verified, check your email.",
+		"accountInactive": "Account not active.",
+		"An unexpected error has occured": "An unexpected error has occured."
+	}
+}

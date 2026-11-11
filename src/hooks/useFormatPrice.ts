@@ -6,12 +6,13 @@ const useFormatPrice = () => {
 	const currency = locale === 'en' || locale === 'de' ? 'EUR' : 'PLN'
 
 	const formatProductPrice = (discount: number | null, price: number) => {
-		const discountedPrice = discount ? Number((price - (discount * price) / 100).toFixed(2)) : 0
+		const discountPrice = discount ? Number((price - (discount * price) / 100).toFixed(2)) : 0
 
+		
 		const formattedDiscountPrice = new Intl.NumberFormat(countryFormat, {
 			style: 'currency',
 			currency: currency,
-		}).format(discountedPrice)
+		}).format(discountPrice)
 
 		const formattedProductPrice = new Intl.NumberFormat(countryFormat, {
 			style: 'currency',
@@ -21,7 +22,6 @@ const useFormatPrice = () => {
 		return {
 			formattedDiscountPrice,
 			formattedProductPrice,
-			discountedPrice,
 		}
 	}
 
@@ -34,9 +34,30 @@ const useFormatPrice = () => {
 		return { formattedTotalPrice }
 	}
 
+	const formatCartPrice = (discount: number | null, price: number, quantity: number) => {
+		const discountPrice = discount ? Number((price - (discount * price) / 100).toFixed(2)) : 0
+
+		const totalProductPrice = price * quantity
+		const totalDiscountPrice = discountPrice * quantity
+		const formattedTotalProductPrice = new Intl.NumberFormat(countryFormat, {
+			style: 'currency',
+			currency: currency,
+		}).format(totalProductPrice)
+		const formattedTotalDiscountPrice = new Intl.NumberFormat(countryFormat, {
+			style: 'currency',
+			currency: currency,
+		}).format(totalDiscountPrice)
+
+		return {
+			formattedTotalProductPrice,
+			formattedTotalDiscountPrice,
+		}
+	}
+
 	return {
 		formatProductPrice,
 		formatTotalPrice,
+		formatCartPrice,
 	}
 }
 

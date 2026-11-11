@@ -18,7 +18,8 @@ import { useEffect } from 'react'
 import { setSignIn } from '@/src/store/useAuthStore'
 
 const SignInForm = () => {
-	const t = useTranslations('AuthForm')
+	const translation = 'SignIn'
+	const t = useTranslations(translation)
 	const [signIn, { isSuccess }] = useSignInMutation()
 	const router = useRouter()
 	const { methods, successMessage, onSubmitHandler } = useRHF<signInType>({
@@ -83,6 +84,7 @@ const SignInForm = () => {
 							label="Email"
 							placeholder="Enter your email"
 							isSubmitting={isSubmitting}
+							translation={translation}
 						/>
 						<RHFInput<signInType>
 							type="password"
@@ -91,6 +93,7 @@ const SignInForm = () => {
 							label="Password"
 							placeholder="Enter your password"
 							isSubmitting={isSubmitting}
+							translation={translation}
 						/>
 						<Link
 							className={`${styles.forgotPassword}`}

@@ -1,0 +1,24 @@
+{
+	"NavCart": {
+		"ariaLabel": "View Cart",
+		"View All": "View All",
+		"Continue Shopping": "Continue Shopping",
+
+		"MaxAmount": "Maximum quantity reached",
+		"WarnDescription": "You cannot add any more products. The maximum quantity in the cart is 100.",
+
+		"YourCart": "Your Cart",
+		"Go to": "Go to",
+		"Quantity": "Quantity",
+		"ProductPrice": "Price",
+		"Total Price": "Total Price",
+		"Remove Product": "Remove Product",
+		"Total Quantity": "Total Quantity",
+		"Increase": "Increase the quantity",
+		"Reduce": "Reduce the quantity",
+		
+
+		"Your cart is empty": "Your cart is empty",
+		"EmptyCart": "Looks like you haven't added anything to your cart yet."
+	}
+}

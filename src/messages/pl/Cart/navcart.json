@@ -1,0 +1,23 @@
+{
+	"NavCart": {
+		"ariaLabel": "Pokaż Koszyk",
+		"View All": "Pokaż wszystkie",
+		"Continue Shopping": "Kontynuuj zakupy",
+
+		"MaxAmount": "Osiągnięto maksymalną ilość",
+		"WarnDescription": "Nie można dodać więcej produktów. Maksymalna ilość w koszyku to 100.",
+		"YourCart": "Twój koszyk",
+		"Go to": "Przejdź do",
+		"Quantity": "Ilość",
+		"ProductPrice": "Cena",
+		"Total Price": "Cena Całkowita",
+		"Remove Product": "Usuń Produkt",
+		"Total Quantity": "Łączna Ilość",
+		"Increase": "Zwiększ ilość",
+		"Reduce": "Zmniejsz ilość",
+		
+
+		"Your cart is empty": "Twój koszyk jest pusty",
+		"EmptyCart": "Wygląda na to, że nie dodałeś jeszcze nic do koszyka."
+	}
+}

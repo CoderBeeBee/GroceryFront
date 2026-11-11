@@ -5,15 +5,16 @@ import { useTranslations } from 'next-intl'
 import { FeaturedType } from '../../types/menu.types'
 
 const Featured = ({ ...data }: FeaturedType) => {
-	const t = useTranslations('Menu')
+
+	const t = useTranslations('Discover')
 	return (
 		<div className={styles.featuredWrapper}>
 			<Image
 				loading="eager"
 				src="/images/hero/groceryWebp.webp"
 				alt="Featured"
-				width={120}
-				height={60}
+				width={800}
+				height={800}
 				className={styles.featuredImage}
 			/>
 			<div className={styles.featuredText}>
@@ -23,7 +24,7 @@ const Featured = ({ ...data }: FeaturedType) => {
 				<Button
 					href={data.href}
 					params={data.titleKey}
-					size='sm'
+					size="sm"
 					variant="primary"
 					ariaLabel={t('Read')}
 					className={styles.featuredLink}>

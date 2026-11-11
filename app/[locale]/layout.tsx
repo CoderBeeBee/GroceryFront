@@ -35,7 +35,7 @@ const RootLayout = async ({ children, params }: Props) => {
 
 	const messages = await getMessages()
 	return (
-		<html lang={locale} className={`${inter.variable} ${lora.variable}  antialiased`}>
+		<html lang={locale} data-scroll-behavior="smooth" className={`${inter.variable} ${lora.variable}  antialiased`}>
 			<body>
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					{children}

@@ -3,7 +3,7 @@ import { Link, NavigationHref } from '@/src/lib/i18n/navigation'
 import clsx from 'clsx'
 import Image from 'next/image'
 import styles from './ProductCard.module.scss'
-import ProductCardControls from '@/src/features/products/components/ProductCardControls/ProductCardControls'
+import ProductCardControllers from '@/src/features/products/components/ProductCardControllers/ProductCardControllers'
 import useFormatPrice from '@/src/hooks/useFormatPrice'
 import StarRating from '@/src/components/ui/StarRating/StarRating'
 
@@ -14,10 +14,11 @@ import ProductCardLike from '@/src/features/products/components/ProductCardLike/
 
 type ProductCardType = {
 	data: ProductType
+	index: number
 }
 
-const ProductCard = ({ data }: ProductCardType) => {
-	const t = useTranslations('ProductCart')
+const ProductCard = ({ data, index }: ProductCardType) => {
+	const t = useTranslations('ProductBadges')
 	const { formatProductPrice } = useFormatPrice()
 	const { formattedDiscountPrice, formattedProductPrice } = formatProductPrice(data.discount, data.price)
 
@@ -25,24 +26,26 @@ const ProductCard = ({ data }: ProductCardType) => {
 	const sale = data.discount && data.discount >= 25 ? 'saleRed' : 'saleOrange'
 
 	return (
-		<div className={clsx(styles.productCardWrapper)}>
-			<Link href={linkHref as NavigationHref} className={clsx(styles.productCardLink)}>
-				<Image src={data.image} alt={data.name} width={800} height={800} className={styles.productCardImage} />
+		<div className={clsx(styles.productCardWrapper, styles[`gridArea${index}`])}>
+			<div className={styles.productCard}>
+				<Link href={linkHref as NavigationHref} className={clsx(styles.productCardLink)}>
+					<Image src={data.image} alt={data.name} width={800} height={800} className={styles.productCardImage} />
+
+					{data.productType.map((item, i) => {
+						const index = data.productType.indexOf(item) === 0
+
+						const position = data.productType.length >= 2 && !index ? 'bottom' : 'top'
+						const variant = data.discount && index ? sale : item.toLowerCase() === 'organic' ? 'organic' : 'fresh'
+
+						return (
+							<CardBadges key={item + i} variant={variant} position={position}>
+								{data.discount && index ? t('Sale') : t(item)}
+							</CardBadges>
+						)
+					})}
+				</Link>
 				<ProductCardLike productId={data.id} />
-
-				{data.productType.map((item, i) => {
-					const index = data.productType.indexOf(item) === 0
-
-					const position = data.productType.length >= 2 && !index ? 'bottom' : 'top'
-					const variant = data.discount && index ? sale : item.toLowerCase() === 'organic' ? 'organic' : 'fresh'
-
-					return (
-						<CardBadges key={item + i} variant={variant} position={position}>
-							{data.discount && index ? t('Sale') : t(item)}
-						</CardBadges>
-					)
-				})}
-			</Link>
+			</div>
 			<div className={clsx(styles.productCardInfo)}>
 				<h3 className={clsx(styles.productCardName)}>{data.name}</h3>
 				<span className={clsx(styles.productCardQuantity)}>
@@ -66,7 +69,7 @@ const ProductCard = ({ data }: ProductCardType) => {
 				</div>
 			</div>
 
-			<ProductCardControls productId={data.id} />
+			<ProductCardControllers productId={data.id} inStock={data.inStock} />
 		</div>
 	)
 }

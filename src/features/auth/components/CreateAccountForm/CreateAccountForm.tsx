@@ -18,7 +18,8 @@ import { useRouter } from 'next/navigation'
 import useRHF from '@/src/hooks/useRHF'
 
 const CreateAccountForm = () => {
-	const t = useTranslations('AuthForm')
+	const translation = 'CreateAccount'
+	const t = useTranslations(translation)
 	const { methods, onSubmit, successMessage } = useRHF<createAccountType>({
 		schema: createAccountSchema,
 		defaultValues: defaultAccountValues,
@@ -82,6 +83,7 @@ const CreateAccountForm = () => {
 							label="First Name"
 							placeholder="Enter your name"
 							isSubmitting={isSubmitting}
+							translation={translation}
 						/>
 						<RHFInput<createAccountType>
 							type="text"
@@ -90,6 +92,7 @@ const CreateAccountForm = () => {
 							label="Last Name"
 							placeholder="Enter your last name"
 							isSubmitting={isSubmitting}
+							translation={translation}
 						/>
 						<RHFInput<createAccountType>
 							type="email"
@@ -98,6 +101,7 @@ const CreateAccountForm = () => {
 							label="Email"
 							placeholder="Enter your email"
 							isSubmitting={isSubmitting}
+							translation={translation}
 						/>
 						<RHFInput<createAccountType>
 							type="password"
@@ -106,6 +110,7 @@ const CreateAccountForm = () => {
 							label="Password"
 							placeholder="Enter your password"
 							isSubmitting={isSubmitting}
+							translation={translation}
 						/>
 						<RHFInput<createAccountType>
 							type="password"
@@ -114,9 +119,10 @@ const CreateAccountForm = () => {
 							label="Repeat Password"
 							placeholder="Repeat password"
 							isSubmitting={isSubmitting}
+							translation={translation}
 						/>
 						<div className={styles.checkbox}>
-							<RHFCheckbox name="consents" id="consents" isSubmitting={isSubmitting}>
+							<RHFCheckbox name="consents" id="consents" isSubmitting={isSubmitting} translation={translation}>
 								<>
 									<CheckMark isChecked={consents} className={styles.checkMark} />
 									<span>
@@ -134,7 +140,7 @@ const CreateAccountForm = () => {
 						<AuthButton
 							isSubmitting={isSubmitting}
 							type="submit"
-							ariaLabel={isSubmitting ? 'Creating' : 'Create account'}>
+							ariaLabel={isSubmitting ? t('Creating') : t('Create account')}>
 							{isSubmitting ? t('Creating') : t('Create account')}
 						</AuthButton>
 					</form>

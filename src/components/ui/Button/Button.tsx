@@ -9,7 +9,7 @@ import { TrashSVG } from '@/src/assets/icons/DashboardIcons'
 type ButtonVariant = 'primary' | 'secondary' | 'remove'
 type ButtonSize = 'es' | 'xs' | 'sm' | 'md' | 'lg'
 type ButtonProps = {
-	children: ReactNode
+	children?: ReactNode
 	ariaLabel: string
 	variant?: ButtonVariant
 	size?: ButtonSize
@@ -19,6 +19,7 @@ type ButtonProps = {
 	className?: string
 	onClick?: () => void
 	params?: string | undefined
+	disabled?:boolean
 }
 // & Omit<ComponentProps<'button'>, 'children' | 'className'>
 const Button = ({
@@ -31,7 +32,7 @@ const Button = ({
 	children,
 	className,
 	params,
-
+	disabled,
 	onClick,
 	...props
 }: ButtonProps) => {
@@ -40,10 +41,14 @@ const Button = ({
 		<>
 			<span className={styles.buttonTitle}>{children}</span>
 
-			{icon && icon === 'arrow' ? (
-				<ArrowNext className={styles.arrowNextSVG} />
+			{icon ? (
+				icon === 'arrow' ? (
+					<ArrowNext className={styles.arrowNextSVG} />
+				) : (
+					<TrashSVG className={styles.trashSVG} />
+				)
 			) : (
-				<TrashSVG className={styles.trashSVG} />
+				''
 			)}
 		</>
 	)
@@ -65,7 +70,7 @@ const Button = ({
 	}
 
 	return (
-		<button type={type} aria-label={ariaLabel} className={buttonStyles} onClick={onClick} {...props}>
+		<button disabled={disabled} type={type} aria-label={ariaLabel} className={buttonStyles} onClick={onClick} {...props}>
 			{content}
 		</button>
 	)

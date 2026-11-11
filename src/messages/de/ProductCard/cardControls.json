@@ -1,0 +1,9 @@
+{
+	"ProductCardControls": {
+		"Add": "In den Warenkorb",
+		"Out": "Nicht vorrätig",
+		"Increase": "Menge erhöhen",
+		"Reduce": "Menge verringern",
+		"Enter": "Menge eingeben"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"SignIn": {
+		"Sign In": "Anmelden",
+		"Don't have an account?": "Sie haben noch kein Konto?",
+		"Sign Up": "Konto erstellen",
+		"Email": "Email",
+		"Password": "Passwort",
+		"Enter your email": "Geben Sie Ihre E-Mail-Adresse ein",
+		"Enter your password": "Geben Sie Ihr Passwort ein",
+		"forgotPassword": "Passwort vergessen?",
+		"Invalid email address": "Ungültige E-Mail-Adresse",
+		"emailTooShort": "Die E-Mail-Adresse muss mindestens 6 Zeichen enthalten.",
+		"emailTooLong": "Die E-Mail-Adresse ist zu lang. Max. 254 Zeichen.",
+		"passwordTooShort": "Das Passwort muss mindestens 8 Zeichen enthalten.",
+		"passwordTooLong": "Das Passwort ist zu lang. Max. 128 Zeichen.",
+		"Logging": "Anmeldung",
+		"invalidCredentials": "Ungültige E-Mail-Adresse oder ungültiges Passwort.",
+		"userNotVerified": "Der Benutzer ist nicht verifiziert. Bitte überprüfen Sie Ihre E-Mails.",
+		"accountInactive": "Konto ist nicht aktiv.",
+		"An unexpected error has occured": "Es ist ein unerwarteter Fehler aufgetreten."
+	}
+}

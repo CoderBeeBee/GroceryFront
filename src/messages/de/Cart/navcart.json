@@ -1,0 +1,23 @@
+{
+	"NavCart": {
+		"ariaLabel": "Warenkorb anzeigen",
+		"View All": "Alle anzeigen",
+		"Continue Shopping": "Weiter einkaufen",
+
+		"MaxAmount": "Maximale Menge erreicht",
+		"WarnDescription": "Sie können keine weiteren Produkte hinzufügen. Die maximale Menge im Warenkorb beträgt 100.",
+		"YourCart": "Ihr Warenkorb",
+		"Go to": "Weiter zu",
+		"Quantity": "Anzahl",
+		"ProductPrice": "Preis",
+		"Total Price": "Gesamtpreis",
+		"Remove Product": "Produkt entfernen",
+		"Total Quantity": "Gesamtmenge",
+		"Increase": "Menge erhöhen",
+		"Reduce": "Menge verringern",
+		
+
+		"Your cart is empty": "Ihr Warenkorb ist leer",
+		"EmptyCart": "Es sieht so aus, als hätten Sie noch nichts in Ihren Warenkorb gelegt."
+	}
+}

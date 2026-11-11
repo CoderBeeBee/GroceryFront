@@ -14,10 +14,11 @@ interface SubDropDownTypes {
 	index: number
 	parentIndex: number
 	params: string
+	translation: string
 }
 
-const SubDropDown = ({ data, params, href, index, styles, parentIndex }: SubDropDownTypes) => {
-	const t = useTranslations('Menu')
+const SubDropDown = ({ data, params, href, index, styles, parentIndex, translation }: SubDropDownTypes) => {
+	const t = useTranslations(translation)
 	const { isMobile } = useWindowSize()
 	const { activeIndex, activeSubIndex } = useMenuStore()
 
@@ -30,8 +31,6 @@ const SubDropDown = ({ data, params, href, index, styles, parentIndex }: SubDrop
 				[styles.activeSubDropdown]: isActive,
 			})}>
 			{data.map((item, i: number) => {
-				
-
 				let finalHref = ''
 
 				// Pobieramy href z elementu lub jako fallback bierzemy przekazany z góry

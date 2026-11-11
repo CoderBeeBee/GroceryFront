@@ -1,7 +1,7 @@
 .navCartDropdown {
 	position: absolute;
 	top: calc(50% + var(--headerHeight) / 2);
-	right: 0;
+	right: -130%;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -10,7 +10,7 @@
 	padding: 1rem;
 	opacity: 0;
 	visibility: hidden;
-	transform: scale(0);
+	transform:  scale(0);
 	transform-origin: top right;
 	background-color: var(--white);
 	border-radius: var(--borderRadius_12);
@@ -34,11 +34,14 @@
 		gap: 1.5rem;
 
 		.navCartProductImage {
-			min-height: 100%;
-			// max-height: 80px;
+			width: 100px;
 			height: 100%;
 			object-fit: cover;
 			border-radius: var(--borderRadius_12);
+			transition: transform 0.3s ease-in-out;
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 
 		.navCartProductContent {
@@ -49,14 +52,19 @@
 			gap: 0.2rem;
 			color: var(--color-text);
 
-			.navCartProductH4 {
-				// display: inline;
+			.navCartProductLink {
 				text-wrap: nowrap;
 				font-size: var(--fontSize_14);
 				font-weight: 500;
+				transition: color 0.3s ease-in-out;
+
+				&:hover {
+					color: var(--color-green-500);
+				}
 			}
 
-			.navCartProductQuantity {
+			.navCartProductQuantity,
+			.navCartProductUnitPrice {
 				font-size: var(--fontSize_12);
 			}
 			.navCartProductPrice {
@@ -68,10 +76,18 @@
 					text-decoration: line-through;
 				}
 			}
-			.navCartProductButton {
-				width: fit-content;
-				align-self: flex-end;
+
+			.cartControllers {
+				display: flex;
+				flex-direction: row;
+				gap: 2rem;
 				margin-top: 1rem;
+				width: 100%;
+				max-width: 200px;
+				.navCartProductButton {
+					width: fit-content;
+					align-self: flex-end;
+				}
 			}
 		}
 	}
@@ -130,7 +146,37 @@
 	}
 }
 .activeDropdown {
-	transform: scale(1);
+	transform:scale(1);
 	opacity: 1;
 	visibility: visible;
+}
+
+@media (width > 480) {
+	.navCartDropdown {
+		
+		right: 0;
+		
+
+
+		.navCartProductWrapper {
+			
+
+			.navCartProductContent {
+				
+
+				.navCartProductLink {
+					
+					font-size: var(--fontSize_16);
+					
+				}
+
+
+				
+			}
+		}
+
+		
+
+	}
+	
 }
