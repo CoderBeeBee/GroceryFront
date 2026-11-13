@@ -4,6 +4,8 @@ import Button from '@/src/components/ui/Button/Button'
 import ProductCard from '@/src/features/products/components/ProductCard/ProductCard'
 import { useTranslations } from 'next-intl'
 import { topPicksData } from '../../data/topPicksData'
+import HotDeals from '@/src/components/ui/HotDeals/HotDeals'
+import { dealsData } from '../../data/dealsData'
 
 const BestSellers = () => {
 	const t = useTranslations('Best')
@@ -30,7 +32,7 @@ const BestSellers = () => {
 							return <ProductCard key={index} data={item} index={index} />
 						})}
 
-					<div className={styles.dealOfTheDay}>deal</div>
+					<HotDeals data={dealsData} styles={styles}/>
 				</div>
 			</div>
 		</section>

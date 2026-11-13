@@ -107,7 +107,7 @@ const CarouselCards = () => {
 		setCurrentIndex(i => i - 1)
 	}
 	return (
-		<div className={styles.categoryCardWrapper}>
+		<div className={styles.carouseleCardWrapper}>
 			<div className={clsx(styles.categoryCardsSlider)}>
 				<div
 					ref={trackRef}

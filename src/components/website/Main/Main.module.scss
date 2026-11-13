@@ -3,10 +3,22 @@
 	flex-direction: column;
 	width: 100%;
 
-	.mainWrapper {
+	.section {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		background-image: url('/images/background/sectionBackground.webp');
+		background-size: contain;
+		// background-position: center;
+	}
+}
 
-		
+@media (width > 768px) {
+	.main {
+		.section {
+			background-size: 100% 100%;
+			
+		}
 	}
 }

@@ -1,4 +1,4 @@
-import { closeMenu, expandMenu, toggleSubDropDown, useMenuStore } from '@/src/store/useMenuStore'
+import { closeMenu, expandMenu, toggleNavActions, toggleSubDropDown, useMenuStore } from '@/src/store/useMenuStore'
 import clsx from 'clsx'
 
 import SubDropDown from '../SubDropDown/SubDropDown'
@@ -22,7 +22,7 @@ const CategoriesDropDown = ({ data, styles, index }: DropDownTypes) => {
 	const t = useTranslations(translation)
 	const { activeIndex, activeSubIndex } = useMenuStore(state => state)
 	const { isMobile } = useWindowSize()
-	
+
 	const isActive = activeIndex === index
 
 	return (
@@ -89,7 +89,10 @@ const CategoriesDropDown = ({ data, styles, index }: DropDownTypes) => {
 					params={data.footer.slug}
 					variant="primary"
 					ariaLabel={t(data.footer.titleKey)}
-					onClick={closeMobileMenu}
+					onClick={() => {
+						closeMobileMenu()
+						toggleNavActions(null)
+					}}
 					className={styles.mobileFotterButton}>
 					{t(data.footer.titleKey)}
 				</Button>

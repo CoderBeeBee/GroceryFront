@@ -2,11 +2,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	// align-self: flex-start;
 	flex-wrap: wrap;
-	background-color: var(--color-green-50);
+	background-image: url('/images/background/badges.webp');
+	background-size: cover;
+	background-position: center;
 	min-height: 100px;
+	border: none;
 	border-radius: var(--borderRadius_12);
+	box-shadow: inset 0px 0px 0px 2px var(--white);
 
 	.icons {
 		color: var(--color-green-white-500);

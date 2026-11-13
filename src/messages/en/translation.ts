@@ -18,7 +18,8 @@ import bestsellers from './HomePage/bestsellers.json'
 import carouselCard from './CarouselCard/carousel.json'
 import cardControls from './ProductCard/cardControls.json'
 import cardBadges from './ProductCard/productBadges.json'
-
+import contact from './Contact/contact.json'
+import categories from './HomePage/categories.json'
 const messages = {
 	...mobile,
 	...common,
@@ -40,6 +41,8 @@ const messages = {
 	...carouselCard,
 	...cardControls,
 	...cardBadges,
+	...contact,
+	...categories,
 }
 
 export default messages

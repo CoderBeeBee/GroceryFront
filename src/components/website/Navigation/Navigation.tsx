@@ -9,7 +9,7 @@ import useWindowSize from '@/src/hooks/useWindowSize'
 import LanguageSwitcher from '../../../features/localization/components/Language/LanguageSwitcher'
 
 import { toggleNavActions } from '@/src/store/useMenuStore'
-import { Suspense, useEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 import NavCart from '../../../features/navigation/components/NavCart/NavCart'
 import NavAccount from '@/src/features/navigation/components/NavAccount/NavAccount'
 import NavSearch from '@/src/features/navigation/components/NavSearch/NavSearch'
@@ -19,10 +19,13 @@ import { toggleSearch } from '@/src/store/useSearchStore'
 import { Provider } from 'react-redux'
 import { store } from '@/src/lib/store'
 import { SITE_NAME } from '@/src/config/site'
+import clsx from 'clsx'
 
 const Navigation = () => {
 	const { isMobile, widthLess600 } = useWindowSize()
 	const actionRef = useRef<HTMLDivElement | null>(null)
+	const [isScrollActive, setIsScrollActive] = useState<boolean>(false)
+	const [isTransform, setIsTransform] = useState<boolean>(false)
 
 	useEffect(() => {
 		if (isMobile) return
@@ -40,14 +43,46 @@ const Navigation = () => {
 		return () => window.removeEventListener('mousedown', handleClickOutside)
 	}, [isMobile])
 
+	useEffect(() => {
+		let lastScrollY = window.scrollY
+
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY
+
+			if (currentScrollY < 100) {
+				setIsScrollActive(false)
+			} else if (currentScrollY > lastScrollY) {
+				// Scroll w dół
+				setIsScrollActive(true)
+				setIsTransform(true)
+			} else if (currentScrollY < lastScrollY) {
+				// Scroll w górę
+				// setIsScrollActive(false)
+				setIsTransform(false)
+			}
+
+			lastScrollY = currentScrollY
+		}
+
+		window.addEventListener('scroll', handleScroll, {
+			passive: true,
+		})
+
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
+
 	return (
 		<Provider store={store}>
-			<header className={` ${styles.navigationContainer}`}>
-				<div className={`row ${styles.navigationWrapper}`}>
+			<header
+				className={clsx(styles.navigationContainer, {
+					[styles.pinNavigation]: isScrollActive,
+					[styles.transformNavigation]: isTransform,
+				})}>
+				<div ref={actionRef} className={`row ${styles.navigationWrapper}`}>
 					<Logo text={SITE_NAME} />
 					<DesktopNav />
 					<MobileNav />
-					<div ref={actionRef} className={`${styles.navActions}`}>
+					<div className={`${styles.navActions}`}>
 						<NavSearch />
 						{widthLess600 && (
 							<NavButton ariaLabel="Open search" fn={toggleSearch}>

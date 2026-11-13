@@ -1,4 +1,4 @@
-import { toggleDropDown, useMenuStore } from '@/src/store/useMenuStore'
+import { toggleDropDown, toggleNavActions, useMenuStore } from '@/src/store/useMenuStore'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
@@ -62,9 +62,12 @@ const SubDropDown = ({ data, params, href, index, styles, parentIndex, translati
 						key={i}
 						className={`${styles.subDropdownElement}`}
 						onClick={() => {
-							if (!isMobile) return
-							closeMobileMenu()
-							toggleDropDown(parentIndex)
+							if (isMobile) {
+								closeMobileMenu()
+								toggleDropDown(parentIndex)
+							}
+
+							toggleNavActions(null)
 						}}>
 						<Link
 							href={finalHref as NavigationHref}

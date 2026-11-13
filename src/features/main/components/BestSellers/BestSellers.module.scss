@@ -1,7 +1,8 @@
 .bestellersSection {
-	display: flex;
 	flex-direction: column;
-	width: 100%;
+	margin-bottom: 4rem;
+	// background-color: var(--color-green-white-100);
+	border-radius: var(--borderRadius_14);
 	.bestSellersWrapper {
 		display: flex;
 		flex-direction: column;
@@ -24,15 +25,16 @@
 			.bestSellersText {
 				display: flex;
 				flex-direction: column;
+				text-align: center;
 				color: var(--color-text);
 				font-weight: 600;
 
 				.bestSellersH3 {
-					font-size: var(--fontSize_34);
+					font-size: var(--fontSize_30);
 					font-family: var(--font-lora);
 				}
 				.bestSellersLabel {
-					font-size: var(--fontSize_14);
+					font-size: var(--fontSize_12);
 				}
 			}
 
@@ -60,24 +62,57 @@
 			width: 100%;
 			gap: 2rem;
 
-			.dealOfTheDay {
+			.hotDealWrapper {
+				position: relative;
 				grid-area: e;
+				display: grid;
 				width: 100%;
-				height: 100%;
-				background-color: var(--color-island-spice-50);
-			}
-		}
-	}
-}
 
-// Tablet
-@media (width > 480px) {
-	.bestellersSection {
-		.bestSellersWrapper {
-			.bestSellersHeader {
-				flex-direction: row;
-				justify-content: space-between;
-				padding-left: 2rem;
+				border-radius: var(--borderRadius_14);
+				overflow: hidden;
+				.hotDealImage {
+					grid-area: 1/1;
+					width: 100%;
+					height: 100%;
+
+					object-fit: cover;
+				}
+
+				.hotDealContent {
+					grid-area: 1/1;
+					display: flex;
+					flex-direction: column;
+					
+					width: 100%;
+					padding: 2rem;
+					margin: auto 0;
+
+					.hotDealName {
+						margin-bottom: 1rem;
+						color: var(--color-green-700);
+						font-size: var(--fontSize_14);
+						font-weight: 600;
+					}
+
+					.hotDealTitle {
+						margin-top: 2rem;
+						color: var(--color-text);
+						font-size: var(--fontSize_20);
+						font-weight: 700;
+					}
+
+					.hotDealDescription {
+						margin-bottom: 2rem;
+						font-size: var(--fontSize_12);
+						font-weight: 500;
+					}
+					.hotDealButton {
+						display: inline-flex;
+						align-self: flex-start;
+						width: fit-content;
+						gap: 2rem;
+					}
+				}
 			}
 		}
 	}
@@ -87,11 +122,44 @@
 @media (width > 768px) {
 	.bestellersSection {
 		.bestSellersWrapper {
+			.bestSellersHeader {
+				flex-direction: row;
+				justify-content: space-between;
+
+				.bestSellersText {
+					text-align: start;
+
+					.bestSellersH3 {
+						font-size: var(--fontSize_34);
+					}
+					.bestSellersLabel {
+						font-size: var(--fontSize_14);
+					}
+				}
+			}
 			.bestSellersList {
 				grid-template-areas:
 					'a b'
 					'c d'
 					'e e';
+
+				.hotDealWrapper {
+					.hotDealContent {
+						margin: 2rem 0;
+
+						.hotDealName {
+							margin-bottom: 2rem;
+							font-size: var(--fontSize_16);
+						}
+
+						.hotDealTitle {
+							font-size: var(--fontSize_24);
+						}
+						.hotDealDescription {
+							font-size: var(--fontSize_14);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -129,11 +197,7 @@
 	.bestellersSection {
 		.bestSellersWrapper {
 			.bestSellersList {
-				grid-template-areas: 'a b c d e e';
-
-				.dealOfTheDay {
-					min-width: 500px;
-				}
+				grid-template-areas: 'a b c d e ';
 			}
 		}
 	}

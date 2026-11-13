@@ -1,0 +1,28 @@
+.hotDealCounterWrapper {
+	display: flex;
+	gap: 1rem;
+	.hotDealCounterCard {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: center;
+
+		.hotDealCounterTime {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem;
+			width: 45px;
+			height: 45px;
+			font-size: var(--fontSize_18);
+			font-weight: 500;
+			background-color: var(--color-green-white-300);
+			border-radius: var(--borderRadius_10);
+		}
+		.hotDealCounterTimeName {
+			font-size: var(--fontSize_10);
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+}

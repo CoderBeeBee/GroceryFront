@@ -3,9 +3,8 @@
 	flex-direction: column;
 	justify-content: center;
 	flex-grow: 1;
-	// margin-top: 10rem;
 	max-width: 700px;
-	padding: var(--padding_12);
+	padding: var(--padding_04);
 	.heroTopContent {
 		.heroH1,
 		.heroH2 {
@@ -15,7 +14,7 @@
 			font-family: var(--font-lora);
 		}
 		.heroH1 {
-			font-size: var(--fontSize_40);
+			font-size: var(--fontSize_42);
 		}
 		.heroH2 {
 			font-size: var(--fontSize_30);
@@ -39,6 +38,7 @@
 
 @media (width > 480px) {
 	.heroTopWrapper {
+		padding: var(--padding_10);
 		.heroTopContent {
 			.heroH1,
 			.heroH2 {
@@ -48,7 +48,7 @@
 				font-size: var(--fontSize_44);
 			}
 			.heroH2 {
-				font-size: var(--fontSize_34);
+				font-size: var(--fontSize_32);
 			}
 			.heroP {
 				max-width: 450px;
@@ -71,7 +71,7 @@
 				line-height: 55px;
 			}
 			.heroH1 {
-				font-size: var(--fontSize_50);
+				font-size: var(--fontSize_54);
 			}
 			.heroH2 {
 				font-size: var(--fontSize_40);
@@ -91,10 +91,10 @@
 				line-height: 50px;
 			}
 			.heroH1 {
-				font-size: var(--fontSize_56);
+				font-size: var(--fontSize_60);
 			}
 			.heroH2 {
-				font-size: var(--fontSize_46);
+				font-size: var(--fontSize_42);
 			}
 			.heroP {
 				max-width: 600px;

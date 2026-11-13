@@ -3,9 +3,9 @@ import styles from './Featured.module.scss'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { FeaturedType } from '../../types/menu.types'
+import { toggleNavActions } from '@/src/store/useMenuStore'
 
 const Featured = ({ ...data }: FeaturedType) => {
-
 	const t = useTranslations('Discover')
 	return (
 		<div className={styles.featuredWrapper}>
@@ -27,6 +27,7 @@ const Featured = ({ ...data }: FeaturedType) => {
 					size="sm"
 					variant="primary"
 					ariaLabel={t('Read')}
+					onClick={() => toggleNavActions(null)}
 					className={styles.featuredLink}>
 					{t('Read')}
 				</Button>

@@ -9,14 +9,14 @@ import { getMessages } from 'next-intl/server'
 const inter = Inter({
 	variable: '--font-inter',
 	weight: ['400', '500', '600', '700'],
-	subsets: ['latin', 'latin-ext'],
-	display: 'swap',
+	subsets: ['latin'],
+	
 })
 const lora = Lora({
 	variable: '--font-lora',
 	weight: ['400', '500', '600', '700'],
-	subsets: ['latin', 'latin-ext'],
-	display: 'swap',
+	subsets: ['latin'],
+	
 })
 export function generateStaticParams() {
 	return routing.locales.map(locale => ({ locale }))
