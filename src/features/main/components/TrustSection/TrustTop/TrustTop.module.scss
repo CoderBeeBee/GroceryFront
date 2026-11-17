@@ -1,0 +1,121 @@
+.trustTop {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	min-height: 400px;
+	background-image: url('/images/background/reviewsBackground.webp');
+	background-size: cover;
+	background-position: 60%;
+	.trustWrapper {
+		flex-direction: column;
+		padding: 2rem;
+		margin: 3rem auto;
+		width: 100%;
+		.trustText {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			// padding: 2rem;
+			color: var(--color-green-950);
+			align-items: flex-start;
+
+			.miniBadges {
+				position: relative;
+				display: flex;
+				align-items: center;
+
+				width: fit-content;
+				background-color: var(--color-green-white-100);
+				padding: var(--padding_06);
+				border-radius: var(--borderRadius_14);
+				margin-bottom: 1rem;
+				.miniBadgesIcon {
+					position: absolute;
+					left: 0;
+					top: 0;
+					background-color: var(--color-green-white-200);
+					padding: 0.5rem;
+					border-radius: var(--borderRadius_50);
+
+					.leaveSVG {
+						color: var(--color-green-600);
+					}
+				}
+				.miniBadgesText {
+					padding-left: 2rem;
+					font-size: var(--fontSize_12);
+					font-weight: 500;
+				}
+			}
+
+			.trustName {
+				font-size: var(--fontSize_42);
+				text-wrap: pretty;
+				line-height: 40px;
+				font-weight: bold;
+				font-family: var(--font-lora);
+			}
+			.trustDescription {
+				margin-top: 2rem;
+				margin-bottom: 4rem;
+				// max-width: 450px;
+				text-wrap: balance;
+				color: var(--color-text);
+				font-size: var(--fontSize_14);
+				font-weight: 500;
+			}
+		}
+	}
+}
+@media (width > 480px) {
+	.trustTop {
+		.trustWrapper {
+			.trustText {
+				.trustName {
+					line-height: 50px;
+					font-size: var(--fontSize_44);
+				}
+				.trustDescription {
+					font-size: var(--fontSize_14);
+				}
+			}
+		}
+	}
+}
+
+@media (width > 768px) {
+	.trustTop {
+		background-size: 100% 100%;
+		.trustWrapper {
+			.trustText {
+				max-width: 700px;
+				.trustName {
+					line-height: 55px;
+					font-size: var(--fontSize_54);
+					// text-wrap: pretty;
+				}
+				.trustDescription {
+					font-size: var(--fontSize_14);
+				}
+			}
+		}
+	}
+}
+@media (width > 1024px) {
+	.trustTop {
+		.trustWrapper {
+			// padding: var(--padding_10);
+			.trustText {
+				.trustName {
+					line-height: 60px;
+					font-size: var(--fontSize_60);
+				}
+				.trustDescription {
+					font-size: var(--fontSize_16);
+				}
+			}
+		}
+	}
+}

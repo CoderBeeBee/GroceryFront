@@ -1,8 +1,6 @@
 .logoContainer {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	// width: 100%;
 	height: 100%;
 	.logoLink {
 		display: flex;
@@ -18,18 +16,11 @@
 		}
 	}
 	.logoText {
-		display: none;
+		display: flex;
 		color: var(--primary);
 		font-size: var(--fontSize_20);
 		font-weight: bold;
 	}
 }
 
-@media (min-width: 768px) {
-	.logoContainer {
-		.logoText {
-			display: flex;
-			font-size: var(--fontSize_24);
-		}
-	}
-}
+

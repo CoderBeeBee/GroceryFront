@@ -4,6 +4,7 @@ import styles from './Main.module.scss'
 import BestSellers from '@/src/features/main/components/BestSellers/BestSellers'
 import Categories from '@/src/features/main/components/Categories/Categories'
 import Hero from '@/src/features/main/components/Hero/Hero'
+import TrustSection from '@/src/features/main/components/TrustSection/TrustSection'
 
 const Main = () => {
 	return (
@@ -14,6 +15,7 @@ const Main = () => {
 
 				<BestSellers />
 			</section>
+			<TrustSection/>
 		</main>
 	)
 }

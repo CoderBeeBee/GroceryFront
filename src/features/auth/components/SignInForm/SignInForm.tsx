@@ -1,9 +1,7 @@
 'use client'
 import { FormProvider, useWatch } from 'react-hook-form'
 import styles from './SignInForm.module.scss'
-
 import { useTranslations } from 'next-intl'
-import { SITE_NAME } from '@/src/config/site'
 import Logo from '@/src/components/ui/Logo/Logo'
 import { Link, useRouter } from '@/src/lib/i18n/navigation'
 import clsx from 'clsx'
@@ -64,7 +62,7 @@ const SignInForm = () => {
 			<div className={styles.signInFormContainer}>
 				<div className={styles.signInFormWrapper}>
 					<div className={styles.logoWrapper}>
-						<Logo text={SITE_NAME} />
+						<Logo  />
 					</div>
 					<div className={styles.signInTextWrapper}>
 						<h1 className={styles.signInTittle}>{t('Sign In')}</h1>

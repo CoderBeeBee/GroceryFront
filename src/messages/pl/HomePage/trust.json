@@ -1,0 +1,36 @@
+{
+	"TrustTop": {
+		"BadgesText": "Cieszymy się zaufaniem tysięcy dbających o zdrowie rodzin",
+		"TrustName": "Prawdziwa żywność. Prawdziwi ludzie. Prawdziwe zaufanie.",
+		"TrustDesc": "W Organic Food dokładamy wszelkich starań, aby dostarczać Państwu najświeższe produkty ekologiczne prosto z gospodarstw, którym można zaufać. Ponieważ Państwa zdrowie zasługuje na to, co najlepsze."
+	},
+	"Reviews": {
+		"Title": "Uwielbiane przez naszych klientów"
+	},
+	"Metrics": {
+		"Customers": "Klienci",
+		"Happy": "Zadowolone i zdrowe rodziny",
+		"Orders Delivered": "Zrealizowane zamówienia",
+		"Across": "W całej Europie z troską i miłością",
+		"Satisfaction Rate": "Wskaźnik satysfakcji",
+		"Because": "Ponieważ Twoje zdrowie jest najważniejsze",
+
+		"Certified": "Certyfikowane.",
+		"Trusted": "Sprawdzone.",
+		"Pure": "Czyste.",
+		"Organic Certified": "Certyfikowane jako ekologiczne",
+		"Eco-friendly Packing": "Ekologiczne opakowanie",
+		"Quality Checked": "Sprawdzona jakość",
+
+		"Our Farm": "Nasza obietnica »z gospodarstwa prosto do domu«",
+		"Work": "Współpracujemy ramię w ramię z zaufanymi gospodarstwami ekologicznymi, aby dostarczać Państwu żywność czystą, bezpieczną i pełną wartości odżywczych. Od gleby aż po Państwa kuchnię – nigdy nie idziemy na kompromisy w kwestii jakości.",
+		"Learn": "Dowiedz się więcej o naszej historii"
+	},
+	"CTA": {
+		"Start": "Rozpocznij swoją",
+		"Healthy": "Zdrową",
+		"Journey": "Podróż juz dziś",
+		"Choose": "Postaw na czystość. Postaw na świeżość. Postaw na Zdrową żywność.",
+		"Shop Now": "Kup teraz"
+	}
+}

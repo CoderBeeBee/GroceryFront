@@ -18,7 +18,6 @@ import { SearchSVG } from '@/src/assets/icons/GeneralIcons'
 import { toggleSearch } from '@/src/store/useSearchStore'
 import { Provider } from 'react-redux'
 import { store } from '@/src/lib/store'
-import { SITE_NAME } from '@/src/config/site'
 import clsx from 'clsx'
 
 const Navigation = () => {
@@ -79,7 +78,7 @@ const Navigation = () => {
 					[styles.transformNavigation]: isTransform,
 				})}>
 				<div ref={actionRef} className={`row ${styles.navigationWrapper}`}>
-					<Logo text={SITE_NAME} />
+					<Logo  />
 					<DesktopNav />
 					<MobileNav />
 					<div className={`${styles.navActions}`}>

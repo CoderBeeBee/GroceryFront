@@ -1,7 +1,6 @@
 .categoriesSection {
 	flex-direction: column;
 	margin: 6rem auto;
-	// background-color: var(--color-green-white-100);
 	border-radius: var(--borderRadius_14);
 	.categoriesHeader {
 		color: var(--color-text);
@@ -18,6 +17,9 @@
 	}
 
 	.categoriesBadges {
+		display: flex;
+		flex-direction: column;
+		
 		padding: 2rem;
 	}
 }

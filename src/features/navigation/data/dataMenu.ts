@@ -5,7 +5,7 @@ const Home = {
 	description: 'Home',
 	href: '/',
 } satisfies MenuTypes
-const shopMenu = {
+export const shopMenu = {
 	titleKey: 'Shop',
 	description: 'Browse',
 	href: '/shop',

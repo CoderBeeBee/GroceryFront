@@ -1,13 +1,4 @@
-'use client'
-import clsx from 'clsx'
-import styles from './CarouselCards.module.scss'
-import { carouselCardsData } from '../../data/carouselCardsData'
-
-import { ChevronNextSVG, ChevronPrevSVG } from '@/src/assets/icons/ArrowsIcons'
-import { useEffect, useRef, useState } from 'react'
-
-import CategoryCard from '@/src/components/ui/CategoryCard/CategoryCard'
-
+import { MouseEvent, TouchEvent, useEffect, useRef, useState } from 'react'
 const getVisibleCards = () => {
 	if (window.innerWidth < 650) return 1
 	if (window.innerWidth < 1000) return 2
@@ -15,19 +6,20 @@ const getVisibleCards = () => {
 	return 4
 }
 
-const CarouselCards = () => {
+interface CarouselSlideProps<T> {
+	data: T[]
+}
+
+const useCarouselSlide = <T, R extends HTMLElement = HTMLAnchorElement>({ data }: CarouselSlideProps<T>) => {
 	const [visible, setVisible] = useState(4)
 	const [isTransitioning, setIsTransitioning] = useState<boolean>(true)
 	const [currentIndex, setCurrentIndex] = useState(4)
 	const [currentWidth, setCurrentWidth] = useState<number>(0)
-	const slideRef = useRef<HTMLAnchorElement | null>(null)
+	const [swipeStartX, setSwipeStartX] = useState<number>(0)
+	const slideRef = useRef<R>(null)
 	const trackRef = useRef<HTMLDivElement | null>(null)
-	const total = carouselCardsData.length
-	const extendedCards = [
-		...carouselCardsData.slice(-visible),
-		...carouselCardsData,
-		...carouselCardsData.slice(0, visible),
-	]
+	const total = data.length
+	const extendedCards = [...data.slice(-visible), ...data, ...data.slice(0, visible)]
 
 	useEffect(() => {
 		const abort = new AbortController()
@@ -97,6 +89,37 @@ const CarouselCards = () => {
 
 	const translateX = currentWidth * currentIndex
 
+	const getClientX = (e: MouseEvent | TouchEvent): number => {
+		if ('touches' in e && e.touches.length > 0) {
+			return e.touches[0].clientX
+		}
+		if ('changedTouches' in e && e.changedTouches.length > 0) {
+			return e.changedTouches[0].clientX
+		}
+		if ('clientX' in e) {
+			return e.clientX
+		}
+		return 0
+	}
+
+	const handleSwipeStart = (e: MouseEvent | TouchEvent) => {
+		setSwipeStartX(getClientX(e))
+	}
+
+	const handleSwipeEnd = (e: MouseEvent | TouchEvent) => {
+		const swipeEndX = getClientX(e)
+
+		const diff = +swipeEndX.toFixed(0) - +swipeStartX.toFixed(0)
+
+		if (diff > 60) {
+			prevSlide()
+		} else if (diff < -60) {
+			nextSlide()
+		}
+
+		setSwipeStartX(0)
+	}
+
 	const nextSlide = () => {
 		if (!isTransitioning) return
 		setCurrentIndex(i => i + 1)
@@ -106,40 +129,18 @@ const CarouselCards = () => {
 		if (!isTransitioning) return
 		setCurrentIndex(i => i - 1)
 	}
-	return (
-		<div className={styles.carouseleCardWrapper}>
-			<div className={clsx(styles.categoryCardsSlider)}>
-				<div
-					ref={trackRef}
-					className={styles.categoryCardTrack}
-					style={{
-						transform: `translateX(-${translateX}px)`,
-						transition: isTransitioning ? 'transform 0.5s' : 'none',
-					}}>
-					{extendedCards &&
-						extendedCards.map((item, index) => {
-							return (
-								<CategoryCard key={index} data={item} index={index} slideRef={slideRef} translation="CarouselCard" />
-							)
-						})}
-				</div>
-			</div>
-			<button
-				type="button"
-				aria-label="Prev Slide"
-				className={clsx(styles.controlButton, styles.controlButtonPrev)}
-				onClick={prevSlide}>
-				<ChevronPrevSVG />
-			</button>
-			<button
-				type="button"
-				aria-label="Next Slide"
-				className={clsx(styles.controlButton, styles.controlButtonNext)}
-				onClick={nextSlide}>
-				<ChevronNextSVG className={styles.rotateArrow} />
-			</button>
-		</div>
-	)
+
+	return {
+		slideRef,
+		trackRef,
+		isTransitioning,
+		translateX,
+		prevSlide,
+		nextSlide,
+		extendedCards,
+		handleSwipeEnd,
+		handleSwipeStart,
+	}
 }
 
-export default CarouselCards
+export default useCarouselSlide

@@ -11,4 +11,5 @@ export type BadgeIcons<T extends string> = Record<T, (styles: Record<string, str
 export type BadgesProps<T extends BaseBadge> = {
 	data: T[]
 	badgesIcons: BadgeIcons<string>
+	position?: 'start' | 'end' | 'stretch'
 }

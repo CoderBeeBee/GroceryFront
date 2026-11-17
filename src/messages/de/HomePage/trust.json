@@ -1,0 +1,36 @@
+{
+	"TrustTop": {
+		"BadgesText": "Tausende gesunde Familien vertrauen uns",
+		"TrustName": "Echte Lebensmittel. Echte Menschen. Echtes Vertrauen.",
+		"TrustDesc": "Wir bei Organic Food haben es uns zur Aufgabe gemacht, Ihnen die frischesten Bio-Produkte direkt von Bauernhöfen zu liefern, denen Sie vertrauen können. Denn Ihre Gesundheit verdient nur das Beste."
+	},
+	"Reviews": {
+		"Title": "Von unseren Kunden geliebt"
+	},
+	"Metrics": {
+		"Customers": "Kunden",
+		"Happy": "Zufriedene und gesunde Familien",
+		"Orders Delivered": "Gelieferte Bestellungen",
+		"Across": "In ganz Europa – mit Sorgfalt und Liebe",
+		"Satisfaction Rate": "Zufriedenheitsrate",
+		"Because": "Weil Ihre Gesundheit am wichtigsten ist",
+
+		"Certified": "Zertifiziert.",
+		"Trusted": "Vertrauenswürdig.",
+		"Pure": "Rein.",
+		"Organic Certified": "Bio-zertifiziert",
+		"Eco-friendly Packing": "Umweltfreundliche Verpackung",
+		"Quality Checked": "Qualitätsgeprüft",
+
+		"Our Farm": "Unser Versprechen: direkt vom Bauernhof zu Ihnen nach Hause",
+		"Work": "Wir arbeiten Hand in Hand mit vertrauenswürdigen Bio-Betrieben, um Ihnen reine, sichere und nährstoffreiche Lebensmittel zu liefern. Vom Boden bis in Ihre Küche machen wir keine Kompromisse bei der Qualität.",
+		"Learn": "Unser Weg"
+	},
+	"CTA": {
+		"Start": "Beginnen Sie noch heute Ihre",
+		"Healthy": "Gesunde",
+		"Journey": "Reise",
+		"Choose": "Entscheiden Sie sich für Reinheit. Entscheiden Sie sich für Frische. Entscheiden Sie sich für Natura Market.",
+		"Shop Now": "Jetzt einkaufen"
+	}
+}

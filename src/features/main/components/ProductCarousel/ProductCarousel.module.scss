@@ -1,0 +1,51 @@
+.carouseleCardWrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 2rem 0 4rem;
+
+	.cardsSlider {
+		display: flex;
+		width: 100%;
+		max-width: 1600px;
+		height: 100%;
+		padding: 2rem;
+		overflow: hidden;
+
+		.cardTrack {
+			display: flex;
+			flex-direction: row;
+			gap: var(--carouselPadding);
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.productButtonPrev {
+		transform: translate(100%, 100%);
+	}
+	.productButtonNext {
+		transform: translate(-100%, 100%);
+	}
+}
+@media (width > 768px) {
+	.carouseleCardWrapper {
+		.productButtonPrev {
+			bottom: 50%;
+			transform: translate(-50%, 50%);
+		}
+		.productButtonNext {
+			bottom: 50%;
+			transform: translate(50%, 50%);
+		}
+	}
+}
+@media (width > 1200px) {
+	.carouseleCardWrapper {
+		.productButtonPrev {
+			transform: translate(-90%, 50%);
+		}
+		.productButtonNext {
+			transform: translate(90%, 50%);
+		}
+	}
+}

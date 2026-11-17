@@ -7,7 +7,6 @@ import { Link } from '@/src/lib/i18n/navigation'
 import RHFCheckbox from '@/src/components/ui/Form/RHFCheckbox/RHFCheckbox'
 import CheckMark from '@/src/components/ui/Form/CheckMark/CheckMark'
 import Logo from '@/src/components/ui/Logo/Logo'
-import { SITE_NAME } from '@/src/config/site'
 import { useTranslations } from 'next-intl'
 import AuthButton from '@/src/components/ui/Form/AuthButton/AuthButton'
 import SocialLinks from '@/src/components/ui/SocialLinks/SocialLinks'
@@ -63,7 +62,7 @@ const CreateAccountForm = () => {
 			<div className={styles.createAccountFormContainer}>
 				<div className={styles.createAccountFormWrapper}>
 					<div className={styles.logoWrapper}>
-						<Logo text={SITE_NAME} />
+						<Logo/>
 					</div>
 					<div className={styles.createAccountTextWrapper}>
 						<h1 className={styles.createAccountTitle}>{t('Create an account')}</h1>

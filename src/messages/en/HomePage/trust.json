@@ -1,0 +1,37 @@
+{
+	"TrustTop": {
+		"BadgesText": "Trusted by Thousands of Healthy Families",
+		"TrustName": "Real Food. Real People. Real Trust.",
+		"TrustDesc": "At Organic Food, we are committed to bringing you the freshest organic produce straight from farms you can trust. Because your health deserves the best."
+	},
+	"Reviews": {
+		"Title": "Loved by Our Customers"
+	},
+	"Metrics": {
+		"Customers": "Customers",
+		"Happy": "Happy & Healthy Families",
+		"Orders Delivered": "Orders Delivered",
+		"Across": "Across Europe with Care & Love",
+		"Satisfaction Rate": "Satisfaction Rate",
+		"Because": "Because Your Health Matters Most",
+
+		"Certified": "Certified.",
+		"Trusted": "Trusted.",
+		"Pure": "Pure.",
+		"Organic Certified": "Organic Certified",
+		"Eco-friendly Packing": "Eco-friendly Packing",
+		"Quality Checked": "Quality Checked",
+
+		"Our Farm": "Our Farm-to-Home Promise",
+		"Work": "We work hand-in-hand with trusted organic farms to bring you food that's pure, safe, and full of goodness. From soil to your kitchen, we never compromise on quality.",
+		"Learn": "Learn about Our History"
+	},
+
+	"CTA": {
+		"Start": "Start Your",
+		"Healthy": "Healthy",
+		"Journey": "Journey Today",
+		"Choose": "Choose purity. Choose freshness. Choose Natura Market.",
+		"Shop Now": "Shop Now"
+	}
+}

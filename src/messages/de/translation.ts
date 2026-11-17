@@ -20,7 +20,8 @@ import cardControls from './ProductCard/cardControls.json'
 import cardBadges from './ProductCard/productBadges.json'
 import contact from './Contact/contact.json'
 import categories from './HomePage/categories.json'
-
+import footer from './Footer/footer.json'
+import trustSection from './HomePage/trust.json'
 const messages = {
 	...mobile,
 	...common,
@@ -44,6 +45,8 @@ const messages = {
 	...cardBadges,
 	...contact,
 	...categories,
+	...footer,
+	...trustSection,
 }
 
 export default messages

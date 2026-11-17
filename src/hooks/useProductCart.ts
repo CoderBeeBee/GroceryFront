@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import { topPicksData } from '../features/main/data/topPicksData'
 import { useAddToCartStore } from '../store/useAddToCartStore'
 import useFormatPrice from './useFormatPrice'
@@ -7,21 +6,17 @@ const useProductCart = () => {
 	const { products } = useAddToCartStore()
 	const { formatTotalPrice } = useFormatPrice()
 	const count = Math.min(products.length, 100)
-	const productsMap = useMemo(() => new Map(topPicksData.map(item => [item.id, item])), [])
+	const productsMap = new Map(topPicksData.map(item => [item.id, item]))
 
-	const shoppingCart = useMemo(
-		() =>
-			products.flatMap(item => {
-				const product = productsMap.get(item.productId)
+	const shoppingCart = products.flatMap(item => {
+		const product = productsMap.get(item.productId)
 
-				return product ? [{ ...product, quantity: item.quantity }] : []
-			}),
-		[products, productsMap],
-	)
+		return product ? [{ ...product, quantity: item.quantity }] : []
+	})
 
 	const isShoppingCart = shoppingCart.length > 0
 
-	const { totalPrice, totalDiscountPrice, totalSavings } = useMemo(() => {
+	const { totalPrice, totalDiscountPrice, totalSavings } = (() => {
 		return shoppingCart.reduce(
 			(acc, item) => {
 				const price = Number(item.price) || 0
@@ -43,7 +38,7 @@ const useProductCart = () => {
 				totalSavings: 0,
 			},
 		)
-	}, [shoppingCart])
+	})()
 
 	const { formattedTotalPrice } = formatTotalPrice(totalDiscountPrice)
 

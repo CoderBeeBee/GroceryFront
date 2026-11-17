@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import styles from './Logo.module.scss'
 import Link from 'next/link'
+import clsx from 'clsx'
+import { SITE_NAME } from '@/src/config/site'
 
 type LogoProps = {
-	text?: string
+	showName?: boolean
+	className?: string
 }
 
-const Logo = ({ text }: LogoProps) => {
+const Logo = ({ showName = true, className }: LogoProps) => {
 	return (
 		<div className={styles.logoContainer}>
 			<Link href="/" aria-label="CoderBee" title="CoderBee" className={`${styles.logoLink}`}>
@@ -22,7 +25,7 @@ const Logo = ({ text }: LogoProps) => {
 					}}
 				/>
 			</Link>
-			{text && <h2 className={styles.logoText}>{text}</h2>}
+			{showName && <h2 className={clsx(styles.logoText, className)}>{SITE_NAME}</h2>}
 		</div>
 	)
 }
