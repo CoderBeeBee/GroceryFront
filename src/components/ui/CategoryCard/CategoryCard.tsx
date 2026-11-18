@@ -4,12 +4,11 @@ import { ArrowNext } from '@/src/assets/icons/ArrowsIcons'
 import { Link, NavigationHref } from '@/src/lib/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { carouselCardType } from '@/src/features/main/types/carouselCards.type'
-import { RefObject } from 'react'
 
 type CategoryCardType = {
 	data: carouselCardType
 	index: number
-	slideRef: RefObject<HTMLAnchorElement | null>
+	slideRef: ((node: HTMLAnchorElement | null) => void) | null
 	translation: string
 }
 
