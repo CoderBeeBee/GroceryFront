@@ -11,9 +11,10 @@ import APIResponseMessage from '@/src/components/ui/Form/ApiResponseMessage/ApiR
 import SocialLinks from '@/src/components/ui/SocialLinks/SocialLinks'
 import { defaultSignInValues, signInSchema, signInType } from '../../schemas/signInSchema'
 import useRHF from '@/src/hooks/useRHF'
-import { useSignInMutation } from '@/src/api/userApi'
+
 import { useEffect } from 'react'
 import { setSignIn } from '@/src/store/useAuthStore'
+import { useSignInMutation } from '@/src/api/RTKQuery/userApi'
 
 const SignInForm = () => {
 	const translation = 'SignIn'
@@ -62,7 +63,7 @@ const SignInForm = () => {
 			<div className={styles.signInFormContainer}>
 				<div className={styles.signInFormWrapper}>
 					<div className={styles.logoWrapper}>
-						<Logo  />
+						<Logo />
 					</div>
 					<div className={styles.signInTextWrapper}>
 						<h1 className={styles.signInTittle}>{t('Sign In')}</h1>

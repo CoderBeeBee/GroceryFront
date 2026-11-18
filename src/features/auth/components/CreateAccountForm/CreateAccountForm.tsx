@@ -12,9 +12,10 @@ import AuthButton from '@/src/components/ui/Form/AuthButton/AuthButton'
 import SocialLinks from '@/src/components/ui/SocialLinks/SocialLinks'
 import { useEffect } from 'react'
 import APIResponseMessage from '@/src/components/ui/Form/ApiResponseMessage/ApiResponseMessage'
-import { useCreateAccountMutation } from '@/src/api/userApi'
+
 import { useRouter } from 'next/navigation'
 import useRHF from '@/src/hooks/useRHF'
+import { useCreateAccountMutation } from '@/src/api/RTKQuery/userApi'
 
 const CreateAccountForm = () => {
 	const translation = 'CreateAccount'
@@ -62,7 +63,7 @@ const CreateAccountForm = () => {
 			<div className={styles.createAccountFormContainer}>
 				<div className={styles.createAccountFormWrapper}>
 					<div className={styles.logoWrapper}>
-						<Logo/>
+						<Logo />
 					</div>
 					<div className={styles.createAccountTextWrapper}>
 						<h1 className={styles.createAccountTitle}>{t('Create an account')}</h1>
