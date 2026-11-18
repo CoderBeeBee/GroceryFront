@@ -13,9 +13,8 @@ const useCarouselSlide = <T, R extends HTMLElement = HTMLAnchorElement>({ data }
 
 	const observerRef = useRef<ResizeObserver | null>(null)
 	const trackRef = useRef<HTMLDivElement | null>(null)
-	const total = data.length
-	const extendedCards = [...data.slice(-visible), ...data, ...data.slice(0, visible)]
-
+	const total = data && data.length
+	const extendedCards = data && [...data.slice(-visible), ...data, ...data.slice(0, visible)]
 
 	useEffect(() => {
 		const mq650 = window.matchMedia('(max-width: 649px)')

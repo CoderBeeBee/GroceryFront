@@ -1,5 +1,6 @@
+import { reviewsType } from '@/src/features/main/types/reviews.type'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { reviewsType } from '../features/main/components/TrustSection/ReviewsCarousel/ReviewsCarousel'
+
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL
 const REVIEWS_URL = process.env.NEXT_PUBLIC_REVIEWS_URL

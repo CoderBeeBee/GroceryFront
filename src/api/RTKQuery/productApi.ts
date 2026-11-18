@@ -1,5 +1,6 @@
+import { searchDataTypes } from '@/src/features/navigation/types/menu.types'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { searchDataTypes } from '../features/navigation/types/menu.types'
+
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL
 const PRODUCT_URL = process.env.NEXT_PUBLIC_PRODUCT_URL
