@@ -31,6 +31,13 @@
 	}
 }
 
+
+.loadingWrapper{
+	width: 100%;
+	min-height: 100%;
+	background-color: var(--color-iron-300);
+}
+
 @media (width > 1650px) {
 	.reviewsCarouselWrapper {
 		margin: 0;

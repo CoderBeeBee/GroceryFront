@@ -1,10 +1,4 @@
-import { MouseEvent, TouchEvent, useEffect, useRef, useState } from 'react'
-const getVisibleCards = () => {
-	if (window.innerWidth < 650) return 1
-	if (window.innerWidth < 1000) return 2
-	if (window.innerWidth < 1500) return 3
-	return 4
-}
+import { MouseEvent, TouchEvent, useCallback, useEffect, useRef, useState } from 'react'
 
 interface CarouselSlideProps<T> {
 	data: T[]
@@ -16,47 +10,64 @@ const useCarouselSlide = <T, R extends HTMLElement = HTMLAnchorElement>({ data }
 	const [currentIndex, setCurrentIndex] = useState(4)
 	const [currentWidth, setCurrentWidth] = useState<number>(0)
 	const [swipeStartX, setSwipeStartX] = useState<number>(0)
-	const slideRef = useRef<R>(null)
+
+	const observerRef = useRef<ResizeObserver | null>(null)
 	const trackRef = useRef<HTMLDivElement | null>(null)
 	const total = data.length
 	const extendedCards = [...data.slice(-visible), ...data, ...data.slice(0, visible)]
 
-	useEffect(() => {
-		const abort = new AbortController()
-		const handleResize = () => {
-			const newVisible = getVisibleCards()
 
-			setVisible(newVisible)
-			setCurrentIndex(newVisible)
+	useEffect(() => {
+		const mq650 = window.matchMedia('(max-width: 649px)')
+		const mq1000 = window.matchMedia('(max-width: 999px)')
+		const mq1500 = window.matchMedia('(max-width: 1499px)')
+
+		const handleBreakpointChange = () => {
+			if (mq650.matches) setVisible(1)
+			else if (mq1000.matches) setVisible(2)
+			else if (mq1500.matches) setVisible(3)
+			else setVisible(4)
 		}
-		handleResize()
-		window.addEventListener('resize', handleResize, {
-			signal: abort.signal,
-		})
-		return () => abort.abort()
+
+		// Wywołaj raz przy montowaniu na kliencie
+		handleBreakpointChange()
+
+		// Nasłuchuj TYLKO przekroczenia progów, a nie każdego piksela
+		mq650.addEventListener('change', handleBreakpointChange)
+		mq1000.addEventListener('change', handleBreakpointChange)
+		mq1500.addEventListener('change', handleBreakpointChange)
+
+		return () => {
+			mq650.removeEventListener('change', handleBreakpointChange)
+			mq1000.removeEventListener('change', handleBreakpointChange)
+			mq1500.removeEventListener('change', handleBreakpointChange)
+		}
 	}, [])
 
-	useEffect(() => {
-		const element = slideRef.current
+	// Zamiast slideRef + useEffect + handleObserve:
+	const slideRef = useCallback((node: R | null) => {
+		// Zawsze sprzątaj poprzedni obserwator
+		if (observerRef.current) {
+			observerRef.current.disconnect()
+			observerRef.current = null
+		}
 
-		if (!element) return
+		if (!node) return
 
 		const observer = new ResizeObserver(entries => {
-			const width = entries[0]?.borderBoxSize[0].inlineSize ?? 0
-
-			const track = trackRef.current as HTMLDivElement
+			const width = entries[0]?.borderBoxSize[0]?.inlineSize ?? 0
+			const track = trackRef.current
 			if (!track) return
-			const styles = getComputedStyle(track)
 
+			const styles = getComputedStyle(track)
 			const gap = parseFloat(styles.columnGap) || 0
 
 			setCurrentWidth(width + gap)
 		})
 
-		observer.observe(element)
-
-		return () => observer.disconnect()
-	}, [visible])
+		observer.observe(node)
+		observerRef.current = observer
+	}, [])
 
 	useEffect(() => {
 		if (!isTransitioning) return
@@ -140,6 +151,7 @@ const useCarouselSlide = <T, R extends HTMLElement = HTMLAnchorElement>({ data }
 		extendedCards,
 		handleSwipeEnd,
 		handleSwipeStart,
+		// handleObserve,
 	}
 }
 

@@ -8,10 +8,11 @@ import { Link, NavigationHref } from '@/src/lib/i18n/navigation'
 import { toggleNavActions } from '@/src/store/useMenuStore'
 import { ChangeEvent, useEffect, useState } from 'react'
 import useDebounce from '@/src/hooks/useDebounce'
-import { useLazySearchProductQuery } from '@/src/api/productApi'
+
 import { searchDataTypes } from '../../types/menu.types'
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query'
 import { useTranslations } from 'next-intl'
+import { useLazySearchProductQuery } from '@/src/api/RTKQuery/productApi'
 
 const NavSearch = () => {
 	const t = useTranslations('Search')

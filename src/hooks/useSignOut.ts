@@ -1,4 +1,5 @@
-import { useSignOutMutation } from '../api/userApi'
+
+import { useSignOutMutation } from '../api/RTKQuery/userApi'
 import { usePathname, useRouter } from '../lib/i18n/navigation'
 import { setSignOut } from '../store/useAuthStore'
 import { toggleNavActions } from '../store/useMenuStore'
