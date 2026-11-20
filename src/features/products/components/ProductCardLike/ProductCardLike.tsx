@@ -18,7 +18,7 @@ const ProductCardLike = ({ productId }: ProductCardLikeType) => {
 	}
 
 	return (
-		<button type="button" className={clsx(styles.productCardLikeButton)} onClick={e => likeHandler(e, productId)}>
+		<button type="button" aria-label='Like' className={clsx(styles.productCardLikeButton)} onClick={e => likeHandler(e, productId)}>
 			<HeartSVG className={clsx(styles.heartSVG, { [styles.favorites]: productIds.includes(productId) })} />
 		</button>
 	)

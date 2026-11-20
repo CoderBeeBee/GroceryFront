@@ -11,7 +11,7 @@ type RHFInputType<T extends FieldValues> = {
 	name: Path<T>
 	type: 'text' | 'number' | 'password' | 'email' | 'date' | 'datetime-local'
 	id: string
-	label: string
+	label?: string
 	placeholder: string
 	isSubmitting: boolean
 	tipMessage?: string

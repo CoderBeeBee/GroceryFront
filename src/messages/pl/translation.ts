@@ -22,6 +22,7 @@ import contact from './Contact/contact.json'
 import categories from './HomePage/categories.json'
 import footer from './Footer/footer.json'
 import trustSection from './HomePage/trust.json'
+import newsletter from './Newsletter/newsletter.json'
 const messages = {
 	...mobile,
 	...common,
@@ -47,6 +48,7 @@ const messages = {
 	...categories,
 	...footer,
 	...trustSection,
+	...newsletter,
 }
 
 export default messages

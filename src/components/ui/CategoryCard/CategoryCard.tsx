@@ -25,7 +25,7 @@ const CategoryCard = ({ data, index, slideRef, translation }: CategoryCardType) 
 	}
 	return (
 		<Link ref={index === 0 ? slideRef : null} href={linkHref as NavigationHref} className={styles.cardSlide}>
-			<Image src={data.img} width={800} height={800} alt={data.titleKey} className={styles.cardImage} />
+			<Image src={data.img} loading="lazy" width={800} height={800} alt={data.titleKey} className={styles.cardImage} />
 			<div className={styles.cardText}>
 				<h3 className={styles.cardH3}>{t(data.titleKey)}</h3>
 				<p className={styles.cardP}>{t(data.desc)}</p>

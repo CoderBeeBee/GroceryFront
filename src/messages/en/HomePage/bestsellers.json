@@ -2,6 +2,7 @@
 	"Best": {
 		"Bestsellers": "Bestsellers",
 		"Label": "Our most loved organic pick",
-		"View": "View all"
+		"View": "View all",
+		"AriaLabel":"Top Picks"
 	}
 }

@@ -2,6 +2,7 @@
 	"Best": {
 		"Bestsellers": "Bestseller",
 		"Label": "Unsere beliebtesten Bio-Produkte",
-		"View": "Alle anzeigen"
+		"View": "Alle anzeigen",
+		"AriaLabel":"Top-Auswahl"
 	}
 }

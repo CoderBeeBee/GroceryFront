@@ -1,5 +1,6 @@
 import type { Ref } from 'react'
 import styles from './Icons.module.scss'
+import clsx from 'clsx'
 interface IconsProps {
 	arrowRef?: Ref<SVGSVGElement | null>
 	className?: string
@@ -21,7 +22,7 @@ const MenuSVG = ({ className }: IconsProps) => (
 		/>
 	</svg>
 )
-const SearchSVG = ({ className }:IconsProps) => {
+const SearchSVG = ({ className }: IconsProps) => {
 	return (
 		<svg
 			className={`${styles.icon} ${className ? className : ''}`}
@@ -82,4 +83,33 @@ const SettingsSVG = ({ className }: IconsProps) => (
 		<path d="M19.9,12.66a1,1,0,0,1,0-1.32L21.18,9.9a1,1,0,0,0,.12-1.17l-2-3.46a1,1,0,0,0-1.07-.48l-1.88.38a1,1,0,0,1-1.15-.66l-.61-1.83A1,1,0,0,0,13.64,2h-4a1,1,0,0,0-1,.68L8.08,4.51a1,1,0,0,1-1.15.66L5,4.79A1,1,0,0,0,4,5.27L2,8.73A1,1,0,0,0,2.1,9.9l1.27,1.44a1,1,0,0,1,0,1.32L2.1,14.1A1,1,0,0,0,2,15.27l2,3.46a1,1,0,0,0,1.07.48l1.88-.38a1,1,0,0,1,1.15.66l.61,1.83a1,1,0,0,0,1,.68h4a1,1,0,0,0,.95-.68l.61-1.83a1,1,0,0,1,1.15-.66l1.88.38a1,1,0,0,0,1.07-.48l2-3.46a1,1,0,0,0-.12-1.17ZM18.41,14l.8.9-1.28,2.22-1.18-.24a3,3,0,0,0-3.45,2L12.92,20H10.36L10,18.86a3,3,0,0,0-3.45-2l-1.18.24L4.07,14.89l.8-.9a3,3,0,0,0,0-4l-.8-.9L5.35,6.89l1.18.24a3,3,0,0,0,3.45-2L10.36,4h2.56l.38,1.14a3,3,0,0,0,3.45,2l1.18-.24,1.28,2.22-.8.9A3,3,0,0,0,18.41,14ZM11.64,8a4,4,0,1,0,4,4A4,4,0,0,0,11.64,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,11.64,14Z" />
 	</svg>
 )
-export { MenuSVG, SearchSVG, CloseSVG, CloseSVG2, SettingsSVG }
+
+// COLLECTION: Orchid Line Interface Icons
+// LICENSE: MIT License
+// AUTHOR: Orchid
+const EnvelopeSVG = ({ className }: IconsProps) => (
+	<svg
+		fill="#ffffff"
+		version="1.1"
+		id="Layer_1"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="796 796 200 200"
+		enableBackground="new 796 796 200 200"
+		stroke="currentColor"
+		transform="matrix(1, 0, 0, 1, 0, 0)"
+		className={clsx(styles.icon, className)}>
+		<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+		<g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+		<g id="SVGRepo_iconCarrier">
+			{' '}
+			<g>
+				{' '}
+				<path d="M804.741,875.343v112.208l64.08-56.083l-63.87-55.899C804.873,875.5,804.814,875.416,804.741,875.343z"></path>{' '}
+				<path d="M914.893,938.722l-5.973,5.229c-3.684,3.22-8.303,4.833-12.92,4.833c-4.618,0-9.236-1.612-12.918-4.833l-5.973-5.229 L811.667,996h168.67L914.893,938.722z"></path>{' '}
+				<path d="M976.498,869.595c0.859-0.77,1.348-1.872,1.342-3.026c-0.007-1.154-0.505-2.254-1.374-3.015l-74.735-65.41 c-3.268-2.86-8.193-2.86-11.46-0.001c0,0-59.979,52.454-75.222,65.757c-0.879,0.766-1.382,1.875-1.382,3.041 c0.001,1.166,0.507,2.273,1.385,3.039c15.249,13.31,75.219,65.755,75.219,65.755c3.267,2.857,8.192,2.858,11.46-0.001 C901.73,935.733,961.536,883.003,976.498,869.595z"></path>{' '}
+				<path d="M987.049,875.57l-63.869,55.899l64.079,56.085v-112.21C987.187,875.416,987.129,875.5,987.049,875.57z"></path>{' '}
+			</g>{' '}
+		</g>
+	</svg>
+)
+export { MenuSVG, SearchSVG, CloseSVG, CloseSVG2, SettingsSVG, EnvelopeSVG }

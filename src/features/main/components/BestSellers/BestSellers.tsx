@@ -18,10 +18,11 @@ const BestSellers = () => {
 						<span className={clsx(styles.bestSellersLabel)}>{t('Label')}</span>
 					</div>
 					<Button
+						type="button"
 						href={`/shop/[category]`}
 						params={'top-picks'}
 						size="sm"
-						ariaLabel="Top Picks"
+						ariaLabel={t('AriaLabel')}
 						className={clsx(styles.bestSellersButton)}>
 						{t('View')}
 					</Button>
@@ -32,7 +33,7 @@ const BestSellers = () => {
 							return <ProductCard key={index} data={item} index={index} />
 						})}
 
-					<HotDeals data={dealsData} styles={styles}/>
+					<HotDeals data={dealsData} styles={styles} />
 				</div>
 			</div>
 		</section>

@@ -10,9 +10,10 @@
 	margin: 5rem auto;
 	// padding: 0 5rem;
 	.reviewsName {
-		display: flex;
-		width: min-content;
-		min-width: 200px;
+		// display: flex;
+		// width: 100%;
+		flex: 0 1 0;
+		// max-width: 250px;
 		text-align: center;
 		text-wrap: balance;
 
@@ -30,6 +31,7 @@
 		padding-left: 4rem;
 
 		.reviewsName {
+			flex: 0 1 250px;
 			margin-top: 5rem;
 			text-align: left;
 			font-size: var(--fontSize_28);

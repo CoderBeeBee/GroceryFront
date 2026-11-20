@@ -37,7 +37,7 @@ const SignInForm = () => {
 
 	const onSubmit = async (data: signInType) => {
 		const res = await signIn(data).unwrap()
-		console.log(res)
+		
 		if (res) {
 			setSignIn(res)
 		}

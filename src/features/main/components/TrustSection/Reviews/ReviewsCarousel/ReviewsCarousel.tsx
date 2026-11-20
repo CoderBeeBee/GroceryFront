@@ -4,13 +4,9 @@ import styles from './ReviewsCarousel.module.scss'
 import useCarouselSlide from '@/src/hooks/useCarouselSlide'
 import ReviewsCard from '@/src/components/ui/ReviewsCard/ReviewsCard'
 import CarouselButton from '@/src/components/ui/CarouselButton/CarouselButton'
-import { reviewsType } from '../../../types/reviews.type'
-
-
+import { reviewsType } from '../../../../types/reviews.type'
 
 const ReviewsCarousel = ({ initialReviews }: { initialReviews: reviewsType[] }) => {
-	
-
 	const {
 		trackRef,
 		translateX,
@@ -21,12 +17,10 @@ const ReviewsCarousel = ({ initialReviews }: { initialReviews: reviewsType[] }) 
 		nextSlide,
 		handleSwipeStart,
 		handleSwipeEnd,
-		
 	} = useCarouselSlide<reviewsType, HTMLDivElement>({
 		data: initialReviews,
 	})
 
-	
 	return (
 		<div className={styles.reviewsCarouselWrapper}>
 			<div
@@ -44,15 +38,7 @@ const ReviewsCarousel = ({ initialReviews }: { initialReviews: reviewsType[] }) 
 					}}>
 					{extendedCards &&
 						extendedCards.map((item, index) => {
-							return (
-								<ReviewsCard
-									key={`${item._id}-${index}`}
-									data={item}
-									index={index}
-									slideRef={slideRef}
-									
-								/>
-							)
+							return <ReviewsCard key={`${item._id}-${index}`} data={item} index={index} slideRef={slideRef} />
 						})}
 				</div>
 			</div>
